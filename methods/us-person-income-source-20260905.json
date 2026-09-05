@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "purpose": "Genuine source-only restoration of the reported ASEC total person income (PTOTVAL) as a separate observed attachment, current-money readiness and exact replay; the following tax-unit control validation refused. Not a population calculation, graph run, fit, calibration or release.",
+  "run_date": "2026-09-05",
+  "status": "source_money_complete_tax_refused",
+  "historical_snapshot": true,
+  "snapshot_scope": "V3 source preparation and the student implementation status recorded before the later V4 completion; statements below are historical, not current build status",
+  "superseded_by": "us-source-preparation-v4-20260905.json",
+  "implementation_head": "e3cd8f3a2aecd0826279b374ddacf1bf406d4028",
+  "candidate_evaluation": false,
+  "release_eligible": false,
+  "graph_execution": false,
+  "fit": false,
+  "calibration": false,
+  "holdouts": false,
+  "prior_wages_added": false,
+  "policyengine_population_calculations": 0,
+  "rows": {
+    "person": 432523,
+    "household": 168852,
+    "tax_unit": 231007,
+    "spm_unit": 176039,
+    "family": 189401,
+    "marital_unit": 345873
+  },
+  "person_income_attachment": {
+    "filename": "asec_person_income_source.checkpoint.h5",
+    "sha256": "5f1ea11939b0013be976f598800ad720fc153eb59b2ab51636abd78b556543a6",
+    "size_bytes": 666333922,
+    "artifact_kind": "microcosm.asec_person_income_observation_attachment",
+    "reader": "authenticated_census_csv_exact_integer_no_fill_v1",
+    "encoding_contract": "independently_reconstructed_canonical_checkpoint_bytes_v1",
+    "join_keys": [
+      "source_year",
+      "PERIDNUM"
+    ],
+    "crosscheck_columns": [
+      "source_household_id",
+      "A_LINENO",
+      "A_AGE"
+    ],
+    "logical_field": "PTOTVAL",
+    "output_column": "asec_PTOTVAL",
+    "dtype": "int64",
+    "nominal_basis": "income_year_us_dollars",
+    "observation_sha256": "d0b2d8df2e032f0119e98daa8d1b624e42c579cbc13502dde6c327c30652b95c",
+    "implementation_closure_sha256": "e05492ea309926e1c479402ecae999149e8a85f2200e3397de9c93d23a037b77",
+    "input_checkpoint_sha256": "e2f2b7495bfcf1448dfb0acb0a17e93f86a6ab8bef8a70ec0a2981983028cbb5",
+    "household_attachment_sha256": "f7f086e262d9a1d9ec6fc1a0b7c32e577128578a4fc5b3f14e13fb8711f7ec2d",
+    "zero_origin_policy": "authenticated_census_csv_encoded_zero_v1",
+    "zero_claim": "encoded_source_value_not_respondent_answer",
+    "sources": [
+      {
+        "income_year": 2022,
+        "survey_year": 2023,
+        "official_member": "pppub23.csv",
+        "member_sha256": "19b56537e50e7663f954361ef2bb5ce9cef8d9d45f156fe1a69a99b654198ffe",
+        "source_rows": 146133,
+        "joined_rows": 146133,
+        "unreferenced_source_rows": 0,
+        "incumbent_compared_rows": 0,
+        "incumbent_conflicts": 0
+      },
+      {
+        "income_year": 2023,
+        "survey_year": 2024,
+        "official_member": "pppub24.csv",
+        "member_sha256": "21a2b9e0e4b08534563578a45acad77868af4ae9a7d46f23776b707d4a559aa7",
+        "source_rows": 144265,
+        "joined_rows": 144265,
+        "unreferenced_source_rows": 0,
+        "incumbent_compared_rows": 0,
+        "incumbent_conflicts": 0
+      },
+      {
+        "income_year": 2024,
+        "survey_year": 2025,
+        "official_member": "pppub25.csv",
+        "member_sha256": "06921fe83fc66c907e6c7b86b82255dc70458ee7d76258fc48297cb34f0c06b5",
+        "source_rows": 142125,
+        "joined_rows": 142125,
+        "unreferenced_source_rows": 0,
+        "incumbent_compared_rows": 142125,
+        "incumbent_conflicts": 0
+      }
+    ]
+  },
+  "current_money": {
+    "filename": "current_money.bin",
+    "transport_sha256": "27fd9fc0d2b59b8c1a52bd34080a3bb5da469e464563cd327dff834b753a908f",
+    "size_bytes": 154106694,
+    "header_sha256": "8fbfa4895d7e4b838e9a7b6b9efc84ea154e84d1221b240cc7e93327700b7696",
+    "content_sha256": "ef86fe6111e0c32d37d8b899d17db44cd58a030749b0efb783a9ff1e577c246e",
+    "replay_exact": true,
+    "money_fields": 33,
+    "global_zero_origin_policy": "frozen_fillna_zero_origin_unresolved",
+    "field_zero_origin_policy": {
+      "PTOTVAL": "authenticated_census_csv_encoded_zero_v1"
+    },
+    "zero_origin_codes": {
+      "0": "not_zero",
+      "1": "frozen_fillna_unresolved",
+      "2": "authenticated_census_encoded"
+    },
+    "PTOTVAL_zero_origin_counts": {
+      "0": 306084,
+      "1": 0,
+      "2": 126439
+    },
+    "semantics": "Code 2 records that the official Census CSV member encoded zero; it does not establish a respondent answer, including for people under 15 outside the question universe. Code 1 marks zeros whose blank-or-zero origin the frozen loader cannot resolve; it remains the policy for the other 32 money fields."
+  },
+  "refusal": {
+    "phase": "actual_microunit_tax_reconstruction",
+    "reason": "MICROUNIT_CONTROL_DTYPE",
+    "field": "contract",
+    "diagnosis": "Control validation refused before tax-unit construction. A_ENRLW and A_FTPT are absent for 290,398 people in the income-2022 and income-2023 cohort intermediates and for those people in the restored attachment; all three official CSV members contain complete 0/1/2 codes, and the 142,125 income-2024 values match the official CSV exactly. The other 15 required controls are complete.",
+    "persons_missing_student_controls": 290398,
+    "cohorts": [
+      {
+        "income_year": 2022,
+        "survey_year": 2023,
+        "official_member": "pppub23.csv",
+        "member_sha256": "19b56537e50e7663f954361ef2bb5ce9cef8d9d45f156fe1a69a99b654198ffe",
+        "rows": 146133,
+        "official_csv_missing": 0,
+        "carried_intermediate_missing": 146133,
+        "incumbent_compared_rows": 0,
+        "incumbent_mismatches": 0
+      },
+      {
+        "income_year": 2023,
+        "survey_year": 2024,
+        "official_member": "pppub24.csv",
+        "member_sha256": "21a2b9e0e4b08534563578a45acad77868af4ae9a7d46f23776b707d4a559aa7",
+        "rows": 144265,
+        "official_csv_missing": 0,
+        "carried_intermediate_missing": 144265,
+        "incumbent_compared_rows": 0,
+        "incumbent_mismatches": 0
+      },
+      {
+        "income_year": 2024,
+        "survey_year": 2025,
+        "official_member": "pppub25.csv",
+        "member_sha256": "06921fe83fc66c907e6c7b86b82255dc70458ee7d76258fc48297cb34f0c06b5",
+        "rows": 142125,
+        "official_csv_missing": 0,
+        "carried_intermediate_missing": 0,
+        "incumbent_compared_rows": 142125,
+        "incumbent_mismatches": 0
+      }
+    ],
+    "no_dependent_continuation": true
+  },
+  "student_controls_implementation": {
+    "status": "frozen_local_implementation_under_review",
+    "head": "553084def66b5abd315e0e25bae9cd5e986d4867",
+    "initial_head": "42b68452b976e445778626279370deb14e731d0c",
+    "base": "e3cd8f3a2aecd0826279b374ddacf1bf406d4028",
+    "tests": {
+      "initial_composition": {
+        "tests": 101,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 57.081
+      },
+      "io_successor": {
+        "tests": 15,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 42.484
+      }
+    },
+    "loaded_module_checks": {
+      "initial": 229,
+      "successor": 229
+    },
+    "t1_payload_exactly_equal": true,
+    "genuine_source_run": false,
+    "observation_semantics": "A_ENRLW and A_FTPT record school enrollment and full-time or part-time status during the preceding survey week for ages 16 to 54. They are survey-week controls, not annual attendance or five-month tax-student determinations.",
+    "annual_five_month_student_status_validated": false
+  },
+  "timing": {
+    "seconds": {
+      "preflight_input_hashes": 1.4100158750079572,
+      "restore_canonical_person_income_T": 35.878409957993426,
+      "authenticate_restored_source": 20.674645416991552,
+      "source_ready": 2.351203207988874,
+      "money_content_hash": 0.28323358300258406,
+      "encode_current_money": 0.28072095799143426,
+      "replay_current_money": 0.3051945410115877
+    },
+    "process_elapsed_seconds": 98.03536495800654,
+    "peak_rss_bytes": 6773489664,
+    "physical_ram_bytes": 137438953472
+  },
+  "integrated_composition_tests": {
+    "tests": 701,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 111.788,
+    "loaded_modules_verified": 258
+  },
+  "genuine_run_loaded_modules_verified": 169,
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "h5py": "3.16.0",
+    "microunit": "0.1.0",
+    "policyengine-us": "1.819.0",
+    "policyengine-core": "3.31.0"
+  },
+  "receipt_sha256": {
+    "source_preparation_v3": "eddcd4942ab7f545620ff03974efcc12b19c8f4699c8388b1b83bfac95769ba8",
+    "runtime": "01dcba273179057d9438361b98e9dbfcc36063b0d1b382225ae82c3a218941dd",
+    "student_controls_author": "ce937fdb4c52dcdf4d3c1a7b4898ec3788e9090f603411fddfa3ab5fd98e2f9f",
+    "student_controls_source_audit": "1a0ed7784f26f6725f9747e20301542ffcca5808c7877086fc433fe157f78b86"
+  },
+  "checks": [
+    "All eight pinned inputs rehashed before work and unchanged in hash and stat after refusal",
+    "Restored attachment independently reconstructed and canonically verified; every cohort joined one to one on source year and person key with zero incumbent or key/age conflicts",
+    "Restored source authenticated and current-money readiness completed for all 432,523 people",
+    "Entire ready-money payload encoded and replayed exactly",
+    "Integrated composition suite and the genuine run verified loaded modules against the exact head"
+  ],
+  "limitations": [
+    "Evidence for the completed source and money stages and this specific refusal; not launch certification or authority for downstream checkpoint reuse",
+    "No tax-result, housing-status or composed frame artifact was issued",
+    "The student-control attachment is a frozen local implementation; no genuine attachment has been produced, integrated or reviewed to completion",
+    "No corrected graph run, fit, calibration, holdout, reform, prior-wage addition or remote write occurred",
+    "Restoring PTOTVAL does not change the money mapping, income concept alignment or model accuracy"
+  ]
+}
