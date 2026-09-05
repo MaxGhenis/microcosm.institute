@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Methods and evidence status — microcosm</title>
+  <meta name="description" content="Read Microcosm methods and results with their population, source, geography and evaluation context. Current engineering status and data-access boundaries." />
+  <meta property="og:title" content="Methods and evidence status — microcosm" />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/svg+xml" href="/assets/microcosm-operator.svg" />
+  <link rel="stylesheet" href="/vendor/fonts/microcosm-fonts.css" />
+  <link rel="stylesheet" href="/vendor/microcosm-tokens.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .methods-hero { min-height: auto; padding-bottom: 48px; }
+    .method-section { padding-top: 56px; padding-bottom: 56px; }
+    .method-section .band-head { margin-bottom: 28px; }
+    .method-section h2 { max-width: 24ch; }
+    .method-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 28px; font-size: 14px; }
+    .method-nav a, .method-section a { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+    .method-table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.55; }
+    .method-table caption { text-align: left; color: var(--text-secondary); margin-bottom: 18px; }
+    .method-table th, .method-table td { padding: 18px 18px 18px 0; border-top: 1px solid var(--border-soft); text-align: left; vertical-align: top; }
+    .method-table th { width: 25%; font-weight: 600; }
+    .method-table td { color: var(--text-secondary); }
+    .method-table td p + p { margin-top: 10px; }
+    @media (max-width: 600px) {
+      .method-table th, .method-table td { display: block; width: auto; padding: 12px 0; }
+      .method-table td { border-top: 0; padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header class="nav">
+  <a class="brand" href="/" aria-label="microcosm home">
+    <svg class="wm" viewBox="-16 -690 5245 726" role="img" aria-label="microcosm"><g text-anchor="middle" font-family="Urbanist,'Avenir Next','Century Gothic',Futura,sans-serif" font-size="1000" font-weight="400" fill="currentColor"><text x="444.25" y="0" fill-opacity=".75">m</text><text x="1023.5" y="0" fill-opacity=".83">i</text><text x="1413.25" y="0" fill-opacity=".9">c</text><text x="1886.75" y="0" fill-opacity=".96">r</text><text x="2385.5" y="0">o</text><text x="2960.25" y="0" fill-opacity=".96">c</text><text x="3535" y="0" fill-opacity=".9">o</text><text x="4069.75" y="0" fill-opacity=".83">s</text><text x="4768.75" y="0" fill-opacity=".75">m</text></g><circle cx="2385.5" cy="-251" r="77" fill="var(--accent)"/></svg>
+  </a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="/#idea">the idea</a>
+    <a href="/#stack">the stack</a>
+    <a href="/#result">evidence</a>
+    <a href="/papers">papers</a>
+    <a href="/methods" aria-current="page">methods</a>
+  </nav>
+</header>
+
+<main class="strategy-main">
+  <section class="strategy-hero methods-hero">
+    <div class="strategy-hero-inner">
+      <p class="eyebrow">methods · evidence · release boundaries</p>
+      <h1>Methods and evidence status.</h1>
+      <p class="strategy-lede">Read each result with the population and experiment that produced it. This note distinguishes established methods, current engineering work and the evidence needed for a new release.</p>
+      <p class="mono hero-foot">Method note updated <time datetime="2026-09-05">September 5, 2026</time> · Eastern Time. Run dates appear with the engineering evidence below.</p>
+      <nav class="method-nav" aria-label="On this page">
+        <a href="#implementation">Implementation</a>
+        <a href="#evidence">Evidence identity</a>
+        <a href="#geography">Geographic scope</a>
+        <a href="#privacy">Data access and privacy</a>
+        <a href="#papers">Paper context</a>
+      </nav>
+    </div>
+  </section>
+
+  <section id="implementation" class="band method-section">
+    <div class="band-head"><span class="kicker mono">implementation</span><h2>Building and testing the next US population.</h2></div>
+    <table class="method-table">
+      <caption>Engineering status at this note's update</caption>
+      <tbody>
+        <tr><th scope="row">Established methods</th><td><a href="/support">Observed survey support and conditional imputation</a>, <a href="/calibration">weight calibration</a> and <a href="/sparsity">sparse record selection</a> have their own implementations and research evidence. Their pages identify the experiments behind their reported values.</td></tr>
+        <tr><th scope="row">Graph integration</th><td><p>Current work separates fitting a conditional model from applying it to recipient records. Typed model artifacts, declared dependencies and recorded random streams make model reuse and replay inspectable. This changes execution and provenance; it does not by itself establish a better estimator.</p><p><a href="https://github.com/PolicyEngine/microcosm/pull/873">Reusable models and transfer graphs</a> and an <a href="https://github.com/PolicyEngine/microcosm-dynamics/pull/420">optional mortality and ageing graph</a> remain implementation reviews. Integration of the production US construction path continues.</p></td></tr>
+        <tr id="assembly-check"><th scope="row">Local source assembly</th><td><p>On September 5, a 1% source sample produced an exportable assembly of 17,004 households and 38,604 people. The direct run took 663 seconds and peaked at 11.3 GiB of process memory on a machine with 128 GiB installed. These measurements cover source loading, stacking and checkpoint export; they do not measure a complete imputation or calibration run.</p><p>The graph build reproduced the complete checkpoint byte for byte. A fresh-process replay required zero kernel calls and reproduced it again in 25 seconds. The <a href="/methods/us-source-assembly-20260905.json">recorded engineering evidence</a> identifies all three checks and their local implementation. The assembly is uncalibrated and is not eligible for release.</p></td></tr>
+        <tr><th scope="row">Measured household observations</th><td><p>A separate source audit attached seven original household fields to the pooled 2022–2024 ASEC source, covering 168,852 households and 432,523 people. These include reported household cash income, tenure, living-quarters and household-type codes. The attachment matched each record by income year and its original household key, preserving the signed nominal integers and raw codes.</p><p>The audit took 8 seconds and peaked at 4.9 GiB of process memory. The original tables, weights and history remained unchanged through an exact saved-file round trip. The <a href="/methods/us-household-observations-20260905.json">source-attachment evidence</a> records the input and output identities. This is a source integrity check; monetary year alignment and comparable household-income evaluation remain unfinished.</p></td></tr>
+        <tr><th scope="row">New US release evidence</th><td>The new US national and congressional-district build is under development. Its initial scope is current-year cross-sectional analysis; prior-wage lookback analysis is excluded. Local stage checks and a completed build do not establish population accuracy. This page reports no new national or district acceptance result. Each candidate needs its own evaluated artifacts before publication.</td></tr>
+      </tbody>
+    </table>
+    <div class="prose" style="margin-top: 28px;"><p>Source contracts distinguish an observed value, an observed zero and a missing value where the source preserves those states. The frozen ASEC loader converts blanks to zero, so those inputs cannot establish which zeros were originally blank. Imputation fills declared gaps; source and clone lineage identifies which records supplied information. Calibration changes representation weights. Recorded evidence must retain these distinctions and ambiguities through replay.</p><p>The source graph now records two separate operations: assembling records with normalized survey design weights, then assigning the intended mixture through an explicit importance-weight transition. The stored history retains the source order and before-and-after mass. The geography stage also passed direct execution, graph execution and a fresh-process cache replay on the same 1% assembly. All three produced identical complete checkpoints; replay required zero kernel calls. The <a href="/methods/us-geography-assignment-20260905.json">geography engineering evidence</a> records those checks. This establishes assignment integrity. District calibration and acceptance have not run.</p></div>
+  </section>
+
+  <section id="evidence" class="band method-section">
+    <div class="band-head"><span class="kicker mono">evidence identity</span><h2>Bind the claim to the population.</h2></div>
+    <div class="prose">
+      <p>A comparison needs the release identifier and population digest, period and entity, model version, target or reference snapshot, and geographic definition. The population build run and the evaluation run can differ. Matching a file's digest verifies its bytes; an evaluation protocol determines what those bytes support.</p>
+      <p>Calibration fit measures agreement with facts used to choose weights. A related fact from the same source can share measurement error or information with those targets. Held-out evidence needs a recorded exclusion from fitting and a stated relationship to the training sources. A model's validation-reach inventory describes checks on that model; it does not automatically describe a selected population.</p>
+      <p>The candidate-evidence work keeps execution status separate from release eligibility. Missing attachments remain missing. A stale discovery feed dates its last update; it does not change a completed run's recorded status. A direct immutable reference can identify evidence even when a mutable discovery feed is unavailable.</p>
+      <p>Inspect the <a href="/calibration/dashboard/microcosm">calibration dashboard</a> and the <a href="/#releases">published release registry</a> for the artifacts they currently serve. Historical figures on the strategy pages retain their original experiment context.</p>
+    </div>
+  </section>
+
+  <section id="geography" class="band method-section">
+    <div class="band-head"><span class="kicker mono">geographic scope</span><h2>A district label needs a boundary vintage.</h2></div>
+    <div class="prose">
+      <p>Record the source geography, its vintage, the destination boundaries and any crosswalk separately. Allocating a source district's total across later boundaries creates a modeled geographic transformation. It does not turn the original observation into a direct measurement of the destination district.</p>
+      <p>National agreement can coexist with district errors. For each intended analysis area, inspect weighted distributions, missingness, record support and weight concentration alongside target fit and held-out comparisons. Effective sample size describes weight concentration; it does not measure bias or establish independent source coverage.</p>
+      <p>Existing local-area releases retain the scope and limitations declared in their own release records. The new build's acceptance work does not retrospectively certify or invalidate those releases. A compact member of a population family needs its own geographic evidence; it does not inherit district readiness from a larger member.</p>
+      <p>District estimates can describe incidence and distributional shape within their stated scope. A district label alone does not establish fiscal-note-grade district revenue accuracy. Compare candidate and incumbent only when periods, entities, weight definitions, bins and geography vintages align.</p>
+    </div>
+  </section>
+
+  <section id="privacy" class="band method-section">
+    <div class="band-head"><span class="kicker mono">data access and privacy</span><h2>Provenance and access controls serve different purposes.</h2></div>
+    <div class="prose">
+      <p>Source confidentiality and redistribution rights follow the data's origin and permitted derivations. Storage gating controls who can download a file. An authenticated repository can contain an openly redistributable artifact; a public endpoint does not make confidential source material releasable. The <a href="https://github.com/PolicyEngine/microcosm/blob/96faa5d53748316c940d91b8210d25c6aacc245f/packages/microcosm-build/src/microcosm/build/country_spec.py">release contract</a> records storage visibility and source-licence restrictions separately.</p>
+      <p>Synthetic records can preserve observed attributes, copy donor values or contain fitted draws. A deterministic transformation or fixed random seed preserves reproducibility, not a privacy guarantee. Imputation and reweighting do not erase confidential source ancestry.</p>
+      <p>The <a href="https://github.com/PolicyEngine/microcosm/blob/96faa5d53748316c940d91b8210d25c6aacc245f/DESIGN.md#the-commons-the-end-state">design charter</a> restricts proposed private-source contributions to certified conditional models and calls for disclosure checks, formal privacy certificates and composition of privacy budgets. It describes private-source attestation and audit infrastructure as unfinished. A fitted model alone does not satisfy those requirements.</p>
+      <p>This site makes no blanket differential-privacy or non-disclosure guarantee for synthetic data. Each release needs its own source, licence, derivation and disclosure statement. Public diagnostics should expose aggregate evidence within those release boundaries.</p>
+    </div>
+  </section>
+
+  <section id="papers" class="band method-section">
+    <div class="band-head"><span class="kicker mono">paper context</span><h2>Keep experiments attached to their claims.</h2></div>
+    <div class="prose">
+      <p>The <a href="/papers">paper index</a> distinguishes preprints, design documents and planned experiments. The <a href="https://github.com/PolicyEngine/microcosm.institute/pull/55">construction working-paper draft</a> brings the imputation and sparse-calibration stages together and remains under review. Its existing paper and experiment history remain the source for those results.</p>
+      <p>Separating model fitting from application does not replace the imputation benchmark. Rebuilding a population does not update an old comparison automatically. New claims need the new population identity, reference definitions, evaluation exposure and analysis scope alongside the historical result.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="mono foot-fine">Calibrated synthetic microdata for public policy. Open source · <a href="https://policyengine.org">a PolicyEngine project</a>.</p>
+</footer>
+<script src="/reveal.js" defer></script>
+</body>
+</html>
