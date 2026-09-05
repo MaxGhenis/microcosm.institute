@@ -54,6 +54,7 @@
       <p class="mono hero-foot">Method note updated <time datetime="2026-09-05">September 5, 2026</time> · Eastern Time. Run dates appear with the engineering evidence below.</p>
       <nav class="method-nav" aria-label="On this page">
         <a href="#implementation">Implementation</a>
+        <a href="#source-meaning">Survey definitions</a>
         <a href="#evidence">Evidence identity</a>
         <a href="#geography">Geographic scope</a>
         <a href="#privacy">Data access and privacy</a>
@@ -75,6 +76,25 @@
       </tbody>
     </table>
     <div class="prose" style="margin-top: 28px;"><p>Source contracts distinguish an observed value, an observed zero and a missing value where the source preserves those states. The frozen ASEC loader converts blanks to zero, so those inputs cannot establish which zeros were originally blank. Imputation fills declared gaps; source and clone lineage identifies which records supplied information. Calibration changes representation weights. Recorded evidence must retain these distinctions and ambiguities through replay.</p><p>The source graph now records two separate operations: assembling records with normalized survey design weights, then assigning the intended mixture through an explicit importance-weight transition. The stored history retains the source order and before-and-after mass. The geography stage also passed direct execution, graph execution and a fresh-process cache replay on the same 1% assembly. All three produced identical complete checkpoints; replay required zero kernel calls. The <a href="/methods/us-geography-assignment-20260905.json">geography engineering evidence</a> records those checks. This establishes assignment integrity. District calibration and acceptance have not run.</p></div>
+  </section>
+
+  <section id="source-meaning" class="band method-section">
+    <div class="band-head"><span class="kicker mono">survey definitions</span><h2>Preserve what the survey asked.</h2></div>
+    <div class="prose">
+      <p>A variable name does not fully define a measurement. The question, respondent instructions, population covered, response codes and survey vintage determine what an observed amount means. The construction pipeline needs those definitions alongside the data.</p>
+      <p>The 2024 ACS rent item illustrates this. The <a href="https://www2.census.gov/programs-surveys/acs/methodology/questionnaires/2024/quest24.pdf#page=10">paper questionnaire, item 18a</a>, asks for monthly rent. The <a href="https://www2.census.gov/programs-surveys/acs/tech_docs/subject_definitions/2024_ACSSubjectDefinitions.pdf#page=16">2024 Subject Definitions, printed page 16</a>, adds: “The respondent was to exclude subsidies paid by a local housing authority or other agency.” It also includes some payments by people or organizations outside the household. This is the publisher's description of its instructions; the question alone does not establish the subsidy exclusion.</p>
+      <p>That distinction affects a model that starts with rent before assistance and subtracts a modeled subsidy. Mapping the ACS reported amount directly to that input can subtract assistance twice. The reported amount, measured assistance status and the model's charge before assistance need separate definitions. The new US construction work has not yet established the final mapping or evaluated its national and district effects.</p>
+      <p>A local Chronicle implementation preserves the original public PDFs, exact extracted page text and checked byte spans for six excerpts from three Census documents. An independent consumer reopens each PDF and reproduces the extraction. The questionnaire, subject definition and a <a href="https://www.census.gov/content/dam/Census/library/working-papers/2019/demo/SEHSD-WP2019-37.pdf#page=2">2019 methodology paper's historical account of interview instructions</a> remain separate, dated claims. These artifacts have not been registered or witnessed as a Chronicle release.</p>
+    </div>
+    <table class="method-table" style="margin-top: 28px;">
+      <caption>Different records answer different questions</caption>
+      <tbody>
+        <tr><th scope="row">Publisher evidence</th><td>What did the source say? Retain the document identity, original bytes, page and exact excerpt. Descriptive annotations, including interview mode, stay explicit and can remain unknown.</td></tr>
+        <tr><th scope="row">Consumer interpretation</th><td>How does that observation enter this model? Record the concept, population, period, units and transformation. A link to an Axiom legal concept is a separate alignment assertion; a matching identifier does not establish equivalence.</td></tr>
+        <tr><th scope="row">Execution evidence</th><td>Which transformation ran on this population? Follow the graph's declared dependencies and actual run receipts. Citation and concept links provide context without becoming execution dependencies.</td></tr>
+      </tbody>
+    </table>
+    <div class="prose" style="margin-top: 28px;"><p>The <a href="/methods/acs-rent-documentation-20260905.json">local documentation evidence summary</a> records the source and excerpt identities. Matching bytes establishes reproducibility of the extraction, not the publisher's truth, semantic equivalence or population accuracy.</p></div>
   </section>
 
   <section id="evidence" class="band method-section">
