@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_source_coverage_and_authentication_note.v1",
+  "date": "2026-09-05",
+  "purpose": "SIPP December source-design-weight coverage and IRS Public Use File source authentication, header and join audits",
+  "status": "source_evidence_only",
+  "scope": "Source measurement and authentication. No admission, exclusion, period mapping, growth factor, imputation, fit, calibration, representativeness or release decision.",
+  "earlier_notes": [
+    "sipp-source-audit-20260905.json",
+    "sipp-annual-measurement-audit-20260905.json",
+    "sipp-source-documentation-20260905.json"
+  ],
+  "sipp_december_coverage": {
+    "producer_head": "7068feedcad540c53be9daf62785538267fe0b31",
+    "reference_year": 2022,
+    "survey_year": 2023,
+    "measurement_month": "December",
+    "coverage_sha256": "39f3d64126261af6c7db3051fd95df33324c8c8e448cf55bf929827ebebfc33a",
+    "completed_run_sha256": "c4352f6029cbd01097c29a3b5938b73b078628fd0cbfb1b4d2e49173ce2b48be",
+    "measurement_digest": "4ae1203d880b560234e2088bca3bcf7db317681cbc3282c4a0123c16d45bd131",
+    "membership_digest": "e040e25bfc9201ffe87e3eabc6fe85bff39ef39a46d5088bd7be633ab16f7779",
+    "full_counts": {
+      "december_people": 39513,
+      "december_residences": 17646,
+      "december_ssuids": 17314,
+      "multi_residence_ssuids": 318,
+      "zero_weight_december_people": 29,
+      "zero_weight_december_residences": 20
+    },
+    "weight_kind": "SOURCE_DESIGN",
+    "weight_completeness": "all_known",
+    "weight_definitions": {
+      "residence_targets": "mean of all December member WPFINWGT over the complete residence, taken before any target condition",
+      "bank_target": "each person's own December WPFINWGT"
+    },
+    "arithmetic": "fixed Decimal context, precision 80, ROUND_HALF_EVEN",
+    "targets": [
+      {
+        "concept": "THEQ_VEH",
+        "label": "Vehicle equity",
+        "basis": "reference_year_end_all_vehicle_equity",
+        "unit_of_measurement": "USD_nominal_2022",
+        "unit": "December_residence",
+        "denominator_units": 17646,
+        "known_units": 17608,
+        "unknown_units": 38,
+        "known_share_of_source_design_weight_mass_exact": "0.99721839293028133320879902329636716099523700699403502975945144199986268176204767",
+        "known_share_display_percent": "99.7218",
+        "unknown_reasons_nonexclusive": {
+          "household_copy_conflict": 38
+        },
+        "status_flag_observations": {
+          "9": 39513
+        }
+      },
+      {
+        "concept": "THVAL_VEH",
+        "label": "Vehicle value",
+        "basis": "reference_year_end_all_vehicle_value",
+        "unit_of_measurement": "USD_nominal_2022",
+        "unit": "December_residence",
+        "denominator_units": 17646,
+        "known_units": 17608,
+        "unknown_units": 38,
+        "known_share_of_source_design_weight_mass_exact": "0.99721839293028133320879902329636716099523700699403502975945144199986268176204767",
+        "known_share_display_percent": "99.7218",
+        "unknown_reasons_nonexclusive": {
+          "household_copy_conflict": 38
+        },
+        "status_flag_observations": {
+          "9": 39513
+        }
+      },
+      {
+        "concept": "THDEBT_VEH",
+        "label": "Vehicle debt",
+        "basis": "reference_year_end_all_vehicle_debt",
+        "unit_of_measurement": "USD_nominal_2022",
+        "unit": "December_residence",
+        "denominator_units": 17646,
+        "known_units": 17629,
+        "unknown_units": 17,
+        "known_share_of_source_design_weight_mass_exact": "0.99869460437137034376229779628623188961545390926169497104518374127986586031054130",
+        "known_share_display_percent": "99.8695",
+        "unknown_reasons_nonexclusive": {
+          "household_copy_conflict": 17
+        },
+        "status_flag_observations": {
+          "9": 39513
+        }
+      },
+      {
+        "concept": "TVEH_NUM",
+        "label": "Vehicle count",
+        "basis": "reference_period_owned_cars_trucks_vans",
+        "unit_of_measurement": "count",
+        "unit": "December_residence",
+        "denominator_units": 17646,
+        "known_units": 14673,
+        "unknown_units": 2973,
+        "known_share_of_source_design_weight_mass_exact": "0.82162487396963653738958606626701132688552806545980477184660676714465874208879586",
+        "known_share_display_percent": "82.1625",
+        "unknown_reasons_nonexclusive": {
+          "AVEH_NUM:not_in_universe": 2954,
+          "TVEH_NUM:blank": 2954,
+          "household_copy_conflict": 34
+        },
+        "status_flag_observations": {
+          "0": 5645,
+          "1": 32306,
+          "2": 1562
+        }
+      },
+      {
+        "concept": "TVAL_BANK",
+        "label": "Bank assets, age-eligible people",
+        "basis": "reference_year_end_financial_institution_assets_including_CDs",
+        "unit_of_measurement": "USD_nominal_2022",
+        "unit": "age_eligible_December_person",
+        "denominator_units": 33469,
+        "known_units": 33469,
+        "unknown_units": 0,
+        "known_share_of_source_design_weight_mass_exact": "1",
+        "known_share_display_percent": "100.0000",
+        "unknown_reasons_nonexclusive": {},
+        "status_flag_observations": {
+          "9": 33469
+        }
+      }
+    ],
+    "bank_age_scope": {
+      "age_15_to_90_people": 33469,
+      "below_15_people": 6044,
+      "unknown_age_people": 0,
+      "age_eligible_share_of_all_december_people_weight_mass_exact": "0.81944055983849727749520507565569003013427730042569053749216876360796622648939961",
+      "age_eligible_share_display_percent": "81.9441",
+      "note": "The 6,044 below-15 people stay outside the age-eligible denominator and remain visible in the full-person diagnostics. Their TVAL_BANK blanks carry AVAL_BANK not-in-universe."
+    },
+    "counting_rules": {
+      "count_vs_mass": "Each flag, quality and reason is counted once per target unit even if repeated on household members. Household counts in bank categories and all overlapping categories are not additive.",
+      "primary_reason_rule": "Known first; for unknown, copy conflict, then below bank age universe, then unknown bank age, then the lexicographically first existing reason. All actual reasons are retained as overlaps."
+    },
+    "runtime": {
+      "coverage_consumer_elapsed_seconds": 6.324684957973659,
+      "coverage_consumer_peak_process_rss_bytes_macos": 1415790592,
+      "coverage_bytes": 71404,
+      "original_CSV_reads": 0,
+      "existing_projection_payload_bytes": 4287344,
+      "root_added_consumer_checks": 16,
+      "full_december_run_elapsed_seconds": 94.20298937500047,
+      "full_december_run_produce_seconds": 60.00721941700613,
+      "full_december_run_consume_seconds": 31.24071370899037,
+      "full_december_run_peak_rss_bytes": 1632845824,
+      "full_december_recorded_outputs": 15,
+      "full_december_recorded_output_bytes": 4478972,
+      "full_december_rehashed_loaded_code_files": 53
+    }
+  },
+  "puf_source_authentication": {
+    "decision": "ACCEPT_AUTHENTICATED_LOCAL_SOURCE_HEADER_AUDIT_ONLY",
+    "completion_sha256": "e05d09a2c964885be05cddf9d270049d53c548fb12cc6b24c3ba843e0b9a2457",
+    "independent_summary_sha256": "9e5aa886051d7e2425689791ad368c920888a1c0afbe93625f1c3352c9d35b6d",
+    "headers": {
+      "main_fields": 222,
+      "demographic_fields": 7,
+      "documentary_order_match": true,
+      "missing_or_extra_fields": 0,
+      "duplicate_headers": 0,
+      "width_errors": 0,
+      "byte_order_mark": false,
+      "documentary_P22250_header_present": true,
+      "E22250_alias_repair_applied": false
+    },
+    "join": {
+      "grain": "source_return",
+      "method": "exact lexical RECID, main-left, no repair",
+      "main_records": 207696,
+      "demographic_records": 119675,
+      "matched_distinct_keys": 119675,
+      "main_records_without_demographics": 88021,
+      "demographic_orphan_records": 0,
+      "missing_demographics_not_zero": true,
+      "status": "one_to_one_subset_compatible"
+    },
+    "raw_code_frequencies": {
+      "FLPDYR": {
+        "2012": 311,
+        "2013": 1225,
+        "2014": 5134,
+        "2015": 201026
+      },
+      "FLPDMO": {
+        "12": 207696
+      },
+      "MARS": {
+        "0": 4,
+        "1": 64100,
+        "2": 121171,
+        "3": 4306,
+        "4": 18115
+      },
+      "DSI": {
+        "0": 201170,
+        "1": 6526
+      }
+    },
+    "publisher_aggregate_key_records": 4,
+    "runtime": {
+      "producer_elapsed_seconds": 4.123756874992978,
+      "producer_peak_rss_bytes_macos": 117997568,
+      "consumer_elapsed_seconds": 4.053527291995124,
+      "consumer_peak_rss_bytes_macos": 118226944,
+      "elapsed_basis": "worker process times, not measured whole-coordinator elapsed",
+      "reviewed_source_read_budget_display": "641.30 MB, a read budget rather than OS I/O telemetry",
+      "retained_private_capture_total_display": "128.26 MB"
+    },
+    "not_published_here": "Private source file digests, byte sizes, identifiers and any record content stay local. This note carries aggregate counts and code frequencies only."
+  },
+  "release_eligible": false,
+  "calibration": false,
+  "fit": false,
+  "representative": false,
+  "target_sums_computed": false,
+  "period_or_growth_mapping": false,
+  "donor_admission": false,
+  "income_or_wage_predictions_added": false,
+  "limitations": [
+    "All 33,469 known SIPP bank amounts and every vehicle amount recode carry status flag 9, component-derived with allocation unresolved. Known edited measurement does not establish respondent reporting.",
+    "38 vehicle equity and value conflicts and 17 debt conflicts among copied household records remain unknown and unrepaired. The 2,973 unknown vehicle counts combine overlapping missing-value and copy-conflict reasons.",
+    "Shares are source design-weight coverage. They are not calibration fit, target sums, national totals or accuracy of any policy result.",
+    "Bank subgroup shares are computed within each age subgroup, not as shares of all December people, except where the note states the all-person share explicitly.",
+    "The PUF audit observed mixed FLPDYR return years; the file name alone does not establish a 2015 tax period for every row.",
+    "The four MARS 0 publisher aggregate records cannot become four household observations.",
+    "PUF worker elapsed times exclude coordinator overhead, and the read budget is a declared bound rather than measured operating-system I/O.",
+    "Neither study opened original survey or return data during review, decoded monetary target amounts, or evaluated any model calculation.",
+    "This evidence does not establish launch readiness, representativeness, donor admission or policy accuracy."
+  ]
+}
