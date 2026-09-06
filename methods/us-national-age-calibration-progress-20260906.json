@@ -1422,5 +1422,5 @@
   "release_eligible": false,
   "standard_errors_used_by_solver": false,
   "quality_tolerance_declared": false,
-  "scope": "Three accepted age-only development experiments, with separately verified calibrated checkpoints for169 and17004 households. Historical calibration phase manifests were not saved; new instrumented executions are being prepared for the dashboard. No source parsing is required for those executions. No national or district launch validation."
+  "scope": "Three accepted historical age-only development experiments, with separately verified calibrated checkpoints for169 and17004 households. Historical calibration phase manifests were not saved. Fresh recorded executions are documented separately in us-recorded-age-development-20260906.json; they reproduce the historical numerical results exactly. No national or district launch validation."
 }
