@@ -314,7 +314,7 @@
     "Nominal December 2022 rent and utilities have no price bridge to the 2024 target period, and no counterfactual gross housing charge exists. Both are pending.",
     "No admitted fit weight exists for these residences. The summed household mean member WPFINWGT is a disclosed proxy, not a publisher household sampling weight and not a fit weight.",
     "Counts are observed source states. They carry no estimate precision and no statement about how well any later housing model fits.",
-    "The ASEC five-node income graph and the four bound SIPP housing modules have not completed a combined measurement; a separate combined-survey run is in progress.",
+    "The ASEC five-node income graph and the four bound SIPP housing modules have not been measured together; no combined measurement exists. The unrelated composed ASEC+ACS household-pool development drill (16 ASEC, 153 ACS; 169 households, 383 people) is now accepted as local engineering evidence; see methods#composed-asec-acs-169hh. It carries no housing measurement and does not touch this SIPP work.",
     "Root checked output digests, arithmetic and implementation identity; the reviewed runner performed the raw-source authentication and the measurement itself."
   ],
   "privacy": "Aggregate counts, digests and execution measurements only; no source identifier, source row, fitted value or model payload.",
