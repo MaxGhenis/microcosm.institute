@@ -19,12 +19,21 @@ Local implementation complete and verified. Independent exact-revision review pe
 ## Decisions
 - The acceptance file's recorded render URL is a localhost address, and the deployed dashboard's `/pipeline` page is a static explainer that ignores the `candidate` and `manifest_sha256` parameters. Fetching it confirmed it renders none of the sized profile's figures. The row therefore links the site's existing relative `/calibration/dashboard/microcosm` path and states plainly that the deployment does not carry this candidate. No localhost URL and no candidate deep link appears on the site.
 - The prose does not call the SIPP housing work a graph or count its modules as nodes, because the run is standard-library Decimal arithmetic bound to four modules, not a declared node graph. It states instead that the five-node reported-income graph and the four bound housing modules have not been measured together and that no combined run exists. The JSON records `asec_income_graph_nodes`, `bound_sipp_housing_modules` and `combined_asec_income_and_sipp_housing_measurement_has_run: false`.
-- The earlier genuine 1% composition evidence and every other pre-existing row are untouched. The methods diff is purely additive apart from five lines where `&rsquo;`/`&ldquo;` entities were normalized to the page's own straight-apostrophe and curly-double-quote convention.
+- The earlier genuine 1% composition evidence and every other pre-existing row are untouched. The methods diff against 7bac45d is purely additive: 49 insertions, 0 deletions, and every base line is still present verbatim. Five of the added lines were later normalized from `&rsquo;`/`&ldquo;` entities to the page's own straight-apostrophe and curly-double-quote convention; no pre-existing line was touched. The two paper pages each gain text inside one existing line.
+
+## Corrections after adversarial review
+
+A verification pass over the drafted change confirmed four defects against the artifacts, all now fixed:
+
+- The first32 rung observed 264 marker records, not 132. The artifact reports 132 rent and 132 utility marker records separately, two fields per person for 66 people. The prose quoted one group as the total, and the evidence file carried it under a key that said "per field", where per field is 66. Both now state 264 with the two groups named.
+- "Currently eligible" appeared nowhere in any artifact, and on a page whose next sentence says every step is a source state rather than a judgement about a household, it read as a program-eligibility finding. The class is now named as the artifacts and the evidence file name it: 4,348 residences admitted as unassisted renters.
+- "Report zero rent" and "report zero utilities" asserted respondent provenance that the same sentence then denied, and 291 of the 4,348 admitted rent amounts are imputed. Both now say the residences carry a zero amount.
+- "The only weight in this file" widened the artifact's own scope. The run read 29 of the file's 5,200 columns, so the sentence now says the only weight this projection carries.
 
 ## Verification
-- A cross-check script re-derives 89 displayed figures from the root artifacts and fails if any numeric token in the added HTML is unaccounted for. 89/89 pass, zero unaccounted tokens.
+- A cross-check script re-derives 91 displayed figures from the root artifacts and fails if any numeric token in the added HTML is unaccounted for. 91/91 pass, zero unaccounted tokens. It also re-checks that the first32 marker total is four fields times 66 people.
 - The link checker passes on all three changed pages. Both new JSON files parse.
-- Actual WebKit at 390 and 1280 passed 174 checks: both new anchors, every displayed figure, both tables and their row counts, the adapter row, fragment landings clear of the sticky header, no horizontal overflow, the paper-page anchors navigating to the methods anchors, both JSON files served with every release flag false and no local path, and the absence of any localhost URL or candidate deep link. Screenshots are saved beside the other site captures.
+- Actual WebKit at 390 and 1280 passed 178 checks: both new anchors, every displayed figure, both tables and their row counts, the adapter row, fragment landings clear of the sticky header, no horizontal overflow, the paper-page anchors navigating to the methods anchors, both JSON files served with every release flag false and no local path, and the absence of any localhost URL or candidate deep link. Screenshots are saved beside the other site captures.
 - `/support/paper.html` emits one page error, "TypeError: Attempted to assign to readonly property.", at the base commit 7bac45d as well. It is pre-existing and unrelated to this change; the render assertion requires that this lane introduce no new error.
 - Local preview: ports 4571 and 4572, both stopped after the render. No deployment or remote changes.
 
