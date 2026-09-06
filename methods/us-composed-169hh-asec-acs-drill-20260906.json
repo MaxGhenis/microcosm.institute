@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_composed_asec_acs_household_pool_engineering_drill.v1",
+  "date": "2026-09-06",
+  "purpose": "A development engineering drill exercising the graph on a pool combining ASEC- and ACS-sourced households",
+  "status": "accepted_local_engineering_drill",
+  "implementation_head": "84e7a011f7bc4d8cb5a7cbd2599b4d893558b1e0",
+  "run_receipt_sha256": "99d0335641effc8352dce63e6bddb8904733ddc431f4e1bf7e4244fb39943021",
+  "root_output_files_rehashed": 4897,
+  "root_output_bytes_rehashed": 5385553098,
+  "root_git_verified_module_records": 1090,
+  "root_git_verified_unique_module_files": 218,
+  "sample_fraction": 0.0001,
+  "sample_seed": 578,
+  "cohort_stratified_selection_claimed": false,
+  "entity_rows": {
+    "family": 170,
+    "household": 169,
+    "marital_unit": 307,
+    "person": 383,
+    "spm_unit": 169,
+    "tax_unit": 231
+  },
+  "arm_rows": {
+    "family": { "acs": 153, "asec": 17, "other": 0 },
+    "household": { "acs": 153, "asec": 16, "other": 0 },
+    "marital_unit": { "acs": 270, "asec": 37, "other": 0 },
+    "person": { "acs": 335, "asec": 48, "other": 0 },
+    "spm_unit": { "acs": 153, "asec": 16, "other": 0 },
+    "tax_unit": { "acs": 212, "asec": 19, "other": 0 }
+  },
+  "final_frame": {
+    "checkpoint_sha256": "96d1be7f1a9028f0779934f7f693bf3542f1ecfbe99427750f04201bead6b283",
+    "people": 383,
+    "minimum_age": 1,
+    "maximum_age": 94,
+    "missing_age": 0,
+    "canonical_age_matches_carried_A_AGE": true,
+    "household_weight_kind": "importance",
+    "age_period_harmonized": false
+  },
+  "checks": {
+    "cold_kernel_calls": 9,
+    "fresh_warm_cache_hits": 9,
+    "fresh_warm_kernel_calls": 0,
+    "cold_and_warm_checkpoints_byte_identical": true,
+    "note": "Graph key construction may hash source bytes; zero parser calls does not mean zero byte reads."
+  },
+  "executions": {
+    "direct": { "elapsed_seconds": 3917.0861011669913 },
+    "cold": { "elapsed_seconds": 4156.099690499977, "peak_worker_rss_bytes": 11216928768 },
+    "baseline": { "elapsed_seconds": 45.92239104199689, "peak_worker_rss_bytes": 2023489536 },
+    "bind": { "elapsed_seconds": 37.891545625025174, "peak_worker_rss_bytes": 2273968128 },
+    "warm": { "elapsed_seconds": 45.470889916003216, "peak_worker_rss_bytes": 2025832448 }
+  },
+  "maximum_measured_worker_rss_bytes": 12253937664,
+  "timing_caveat": "Full source parsing and tracemalloc dominate this tiny run; this timing is not a large-pool capacity estimate.",
+  "puf_clone_attached": false,
+  "prior_wage_lookback_attached": false,
+  "release_eligible": false,
+  "calibration": false,
+  "fit": false,
+  "district_analysis": false,
+  "representative": false,
+  "next_step": "Bounded development national age calibration against the final bound population, preserving the original graph design anchor and incoming importance weights. The calibration runner is still being prepared; no calibration has run.",
+  "limitations": [
+    "Tiny 169-household sample, not representative-quality evidence.",
+    "No calibration, transfer fit, national or congressional-district validation, policy-engine evaluation, certification or release.",
+    "Age derives from observed A_AGE; dates are not harmonized across source cohorts.",
+    "ASEC sex and household-reference mappings remain unbound pending source adjudication.",
+    "Direct and cold execution both parse the full source and run under tracemalloc; this timing is not a large-pool capacity estimate.",
+    "This pool holds only ASEC- and ACS-sourced survey records; no PUF clone and no prior-year wage lookback is attached, consistent with assembling the survey multispine before constructing PUF-enriched clones of that combined survey pool.",
+    "Distinct from the earlier 505-household ASEC-only execution check and its evidence display, which remain separate, ASEC-only evidence and are not relabeled as combined."
+  ],
+  "privacy": "Aggregate counts, digests and execution measurements only; no source identifier, source row, local path, fitted value or model payload.",
+  "root_acceptance_recorded_at": "2026-09-06T13:30:29.817977+00:00"
+}

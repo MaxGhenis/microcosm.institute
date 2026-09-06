@@ -1,0 +1,118 @@
+{
+  "attachment": {
+    "artifact_kind": "microcosm.asec_household_observation_attachment",
+    "household_identity": {
+      "id_dtype": "int64",
+      "ordered_ids_sha256": "a09cce9d42e2ca571cf5a7399879de30c18bc35bf1230397db125121759ad866",
+      "rows": 168852
+    },
+    "input_checkpoint_sha256": "e2f2b7495bfcf1448dfb0acb0a17e93f86a6ab8bef8a70ec0a2981983028cbb5",
+    "input_structural_identity_sha256": "75cf06110f99dfae861c0395605d2a89ea1a10992381678e05582df5d62a5cf7",
+    "join_keys": [
+      "income_year",
+      "H_SEQ"
+    ],
+    "outputs": {
+      "asec_GESTFIPS": {
+        "dtype": "int64",
+        "sha256": "bf39f4d903f723e729cb509121740bf79221889e429235b986c21772b6301cb1",
+        "source_column": "GESTFIPS"
+      },
+      "asec_HRHTYPE": {
+        "dtype": "int64",
+        "sha256": "04ce7e523fe4af8c9163c7dea1ed226e4b17bb6a2d34744bf2ee8b02a0da02d5",
+        "source_column": "HRHTYPE"
+      },
+      "asec_HTOTVAL": {
+        "dtype": "int64",
+        "sha256": "f279d30534c551ce33b1ff4d52a786b73c5a6b07e2550e51eee8ab0052acc135",
+        "source_column": "HTOTVAL"
+      },
+      "asec_H_HHTYPE": {
+        "dtype": "int64",
+        "sha256": "20e279fbb5af8f03d4ce57187ee93eb3afa959bd2a76630b430bb47df77b0be5",
+        "source_column": "H_HHTYPE"
+      },
+      "asec_H_LIVQRT": {
+        "dtype": "int64",
+        "sha256": "78b4d558e64b0b82bfee23db632930d8d9e313bae2c6e9b09909d903e6d96081",
+        "source_column": "H_LIVQRT"
+      },
+      "asec_H_SEQ": {
+        "dtype": "int64",
+        "sha256": "86e398275a229f138edc332f86854e3bbd591b37ec3b112563ea1f81061994dc",
+        "source_column": "H_SEQ"
+      },
+      "asec_H_TENURE": {
+        "dtype": "int64",
+        "sha256": "2bd64d9499e8c7dbcae43936f78e9f3a23542fa44bd8bfb8a6d3dad394a2524a",
+        "source_column": "H_TENURE"
+      }
+    },
+    "reader": "pandas_fixed_hdf_numeric_int64_v1",
+    "schema_version": 1,
+    "semantics": "Observed nominal signed integers and raw codes; no price adjustment or universe classification.",
+    "sources": [
+      {
+        "income_year": 2022,
+        "joined_rows": 56839,
+        "sha256": "7ccca976284bb47815d84460cc4f75a0a65d26d7754ab0a0f417de351b3d474e",
+        "source_rows": 56839,
+        "unreferenced_source_rows": 0
+      },
+      {
+        "income_year": 2023,
+        "joined_rows": 56251,
+        "sha256": "cb57817327799f42b741caed5f9be94d04021c2e6809c1ad7bd0686da5428d88",
+        "source_rows": 56251,
+        "unreferenced_source_rows": 0
+      },
+      {
+        "income_year": 2024,
+        "joined_rows": 55762,
+        "sha256": "ec36604cb735a660b51b0b2f90be27d803b5878f3464fb30d0eacead59c1260d",
+        "source_rows": 55762,
+        "unreferenced_source_rows": 0
+      }
+    ]
+  },
+  "candidate_evaluation": false,
+  "checks": [
+    "Original checkpoint authenticated before and after loading and attachment",
+    "Raw household files authenticated before and after numeric-only reads",
+    "Original entity tables, row identities, canonical weights, strata and history unchanged",
+    "Attached output survives an exact checkpoint roundtrip",
+    "New artifact kind refuses original-v4 interpretation"
+  ],
+  "helper_source_sha256": "d483cfdae2a43787337278767a80ec16de9528afa7b691d751c12e15c2c1afd8",
+  "implementation_head": "34a6628ac00fad0fd9f78d24c383b0b65f862342",
+  "output": {
+    "filename": "asec_household_observations.h5",
+    "sha256": "f7f086e262d9a1d9ec6fc1a0b7c32e577128578a4fc5b3f14e13fb8711f7ec2d",
+    "size_bytes": 662871719
+  },
+  "peak_rss_bytes": 5294276608,
+  "purpose": "Source authentication, exact household-key attachment and roundtrip only",
+  "receipt_sha256": "31e949b81e005c8c827b708a3448f19402645239b47f8593c7a3c49e350a183a",
+  "release_eligible": false,
+  "rows": {
+    "family": 189401,
+    "household": 168852,
+    "marital_unit": 345873,
+    "person": 432523,
+    "spm_unit": 176039,
+    "tax_unit": 231007
+  },
+  "run_date": "2026-09-05",
+  "runner_sha256": "c532b3cfa08ff3693d70da9346d64bc30c3a1d770f88191477e54ec6e2195876",
+  "schema_version": 1,
+  "status": "completed",
+  "versions": {
+    "h5py": "3.16.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "pyarrow": "25.0.0",
+    "tables": "3.11.1"
+  },
+  "wall_seconds": 7.997737917001359
+}

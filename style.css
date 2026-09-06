@@ -72,8 +72,7 @@ body::before {
   align-items: center;
   justify-content: space-between;
   padding: 22px clamp(20px, 5vw, 56px);
-  backdrop-filter: blur(7px);
-  background: linear-gradient(var(--ink), transparent);
+  background: var(--ink);
   border-bottom: 1px solid var(--line-soft);
 }
 

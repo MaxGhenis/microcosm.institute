@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_source_audit_note.v1",
+  "purpose": "Aggregate-only summary of a read-only lexical and panel-coverage scan of Microcosm's authenticated local mirror of the 2023 SIPP public-use person-month file; not a publisher statement, imputation, validity, universe or applicability decision",
+  "attribution": "Microcosm-derived observation of the mirror's lexical encoding and record coverage. Publisher definitions are cited separately in sipp-source-documentation-20260905.json; this file does not restate them as publisher claims.",
+  "run_date": "2026-09-05",
+  "status": "completed",
+  "candidate_evaluation": false,
+  "release_eligible": false,
+  "audit_kind": "microcosm.sipp_source_aggregate_audit.v1",
+  "audit_receipt_sha256": "db7cc29cdf617c247ea4c951945db766d162f549a17c1d59b266be90aa970d8d",
+  "runner_sha256": "fd258a21b0dfe6d0d3c578456e111bb9deaa9590dfe1054c965c796943a82675",
+  "source": {
+    "dataset": "2023 SIPP public-use person-month file (pu2023.csv), U.S. Census Bureau",
+    "mirror_sha256": "5c30439e365fc26483318ef61d1d8f4bb2f0e9d6bb47c22c06756a7698733ee2",
+    "mirror_size_bytes": 3726010471,
+    "authenticated_before_and_after_scan": true,
+    "bytes_unchanged": true
+  },
+  "registry": {
+    "sha256": "1c4e84d4c73a7fe5fc9594c47c03df342904596c4478d1765353c28a73da6dd5",
+    "api_documents": 265,
+    "selected_fields": 265,
+    "header_columns": 5200,
+    "registry_fields_absent_from_header": 0
+  },
+  "scan": {
+    "smoke_rows": 1000,
+    "complete_file_scan": true,
+    "rows_read": 476744,
+    "elapsed_seconds": 52.01671520799573,
+    "peak_rss_bytes": 415678464
+  },
+  "panel": {
+    "unique_person_keys": 40263,
+    "persons_with_12_month_records": 39250,
+    "persons_with_fewer_than_12_month_records": 1013,
+    "persons_with_december_record": 39513,
+    "persons_with_december_but_fewer_than_12_months": 263,
+    "persons_without_december_record": 750,
+    "duplicate_person_month_rows": 0,
+    "invalid_key_or_month_rows": 0,
+    "month_row_counts": {
+      "1": 39998,
+      "2": 39999,
+      "3": 39942,
+      "4": 39867,
+      "5": 39780,
+      "6": 39714,
+      "7": 39670,
+      "8": 39589,
+      "9": 39572,
+      "10": 39561,
+      "11": 39539,
+      "12": 39513
+    },
+    "observed_month_count_distribution": {
+      "1": 45,
+      "2": 102,
+      "3": 119,
+      "4": 145,
+      "5": 117,
+      "6": 88,
+      "7": 132,
+      "8": 73,
+      "9": 55,
+      "10": 65,
+      "11": 72,
+      "12": 39250
+    },
+    "semantics": "Record coverage only. Complete records are not evidence of complete reporting, residence duration or correct annual weighting."
+  },
+  "lexical": {
+    "entirely_blank_columns": 20,
+    "entirely_blank_column_names": [
+      "ADIS6AMT",
+      "ADIS8AMT",
+      "ADIS9AMT",
+      "AJB5_TXAMT",
+      "AJB6_TXAMT",
+      "AJB7_JBORSE",
+      "AJB7_MSUM",
+      "AJB7_MSUMALT",
+      "AJB7_OCC",
+      "AJB7_TXAMT",
+      "EJB7_JBORSE",
+      "TDIS6AMT",
+      "TDIS8AMT",
+      "TDIS9AMT",
+      "TJB5_TXAMT",
+      "TJB6_TXAMT",
+      "TJB7_MSUM",
+      "TJB7_MSUMALT",
+      "TJB7_OCC",
+      "TJB7_TXAMT"
+    ],
+    "api_label_suppressed_columns": 20,
+    "consumed_fields_with_api_label_suppressed": 11,
+    "consumed_fields_with_api_label_suppressed_names": [
+      "AJB5_TXAMT",
+      "AJB6_TXAMT",
+      "AJB7_TXAMT",
+      "TDIS6AMT",
+      "TDIS8AMT",
+      "TDIS9AMT",
+      "TJB5_TXAMT",
+      "TJB6_TXAMT",
+      "TJB7_MSUM",
+      "TJB7_OCC",
+      "TJB7_TXAMT"
+    ],
+    "TJB7_MSUM_blank_rows": 476744,
+    "nonnumeric_nonblank_tokens": 0,
+    "literal_sentinel_tokens": 0,
+    "literal_sentinel_tokens_checked": [
+      ".",
+      ".N",
+      "N",
+      "NA",
+      "NaN",
+      "nan"
+    ],
+    "numeric_tokens_outside_api_domains": 0,
+    "WPFINWGT_nonintegral_rows": 475526,
+    "semantics": "A blank token is missing in the mirror; it is not a reported zero. Publisher and internal-file sentinel descriptions do not substitute for the mirror's actual encoding."
+  },
+  "signed_fields": {
+    "TPTOTINC_negative_rows": 1451,
+    "TINC_RENT_negative_rows": 2148,
+    "semantics": "Repeated person-month source counts, not population estimates or annual incidence. Signed domains are documented in the dictionary excerpts."
+  },
+  "field_contract_root_audit": {
+    "implementation_head": "e3cd8f3a2aecd0826279b374ddacf1bf406d4028",
+    "registry_sha256": "1c4e84d4c73a7fe5fc9594c47c03df342904596c4478d1765353c28a73da6dd5",
+    "documents_checked": 265,
+    "all_document_hashes_and_labels_domains_match": true,
+    "six_consumer_blobs_match_integration": true,
+    "findings": [
+      {
+        "id": "R1",
+        "finding": "31 API dictionary labels are classified questionnaire_item_text without instrument verification. Preserve as API labels; a question-shaped description is not by itself authenticated questionnaire verbatim."
+      },
+      {
+        "id": "R2",
+        "finding": "Prose calls TINC_RENT the only signed monetary input, but used TPTOTINC is also signed. Registry itself correctly preserves both ranges. Successor TPEARN is signed too."
+      }
+    ],
+    "scope": "Root local verification of research evidence, no microdata reads or source implementation change"
+  },
+  "scope": "Read-only source aggregates, no persisted keys/rows/values, no model/fit/calibration, no new source authority. Partial scans establish parser behavior only. Full twelve-month record coverage does not establish observation quality, residence duration or correct annual weighting.",
+  "checks": [
+    "Mirror SHA-256 and inode, size and mtime unchanged before and after the scan",
+    "1,000-row smoke scan passed before the complete scan",
+    "All 265 registry fields present in the 5,200-column header",
+    "Entirely blank columns equal the set of fields the Census API labels Suppressed",
+    "Panel totals reconcile: month row counts sum to rows read; month-count distribution sums to unique person keys"
+  ],
+  "limitations": [
+    "Source auditing only; not a model, fit, calibration, certified source producer or new source authority",
+    "Does not convert any blank to a reported answer or decide source applicability from syntax alone",
+    "Annual recodes, monthly flows and end-period stocks retain separate period definitions not tested here",
+    "The remaining ten suppressed consumed fields were not individually checked in the dictionary PDF; whole-variable suppression is documented for TJB7_MSUM",
+    "No prior-wage feature, factor, imputation, target measurement or calibration is authorized by this evidence"
+  ]
+}

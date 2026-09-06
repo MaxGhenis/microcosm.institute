@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_source_preparation_note.v4",
+  "purpose": "Completed local source preparation with authenticated money, restored survey-week student observations, actual microunit tax reconstruction and raw housing-status attachment; no population calculation or calibration",
+  "completed_utc": "2026-09-05T20:23:08.956247+00:00",
+  "status": "completed",
+  "implementation_head": "9ff943e6896ee6c487c853e4da96ccdfd7d96ed5",
+  "historical_predecessor": "us-person-income-source-20260905.json",
+  "source_rows": {
+    "person": 432523,
+    "household": 168852,
+    "tax_unit": 231007,
+    "spm_unit": 176039,
+    "family": 189401,
+    "marital_unit": 345873
+  },
+  "prepared_rows": {
+    "person": 432523,
+    "household": 168852,
+    "tax_unit": 226139,
+    "spm_unit": 176039,
+    "family": 189401,
+    "marital_unit": 345873
+  },
+  "money": {
+    "header_sha256": "8fbfa4895d7e4b838e9a7b6b9efc84ea154e84d1221b240cc7e93327700b7696",
+    "content_sha256": "ef86fe6111e0c32d37d8b899d17db44cd58a030749b0efb783a9ff1e577c246e",
+    "PTOTVAL_zero_origin_counts": {
+      "0": 306084,
+      "1": 0,
+      "2": 126439
+    },
+    "replay_exact": true
+  },
+  "student_controls": {
+    "content_sha256": "8d584ffef0d9f27958f42d19a03d3b9b52bc1d0baf8e9c69c8a57475bbe83081",
+    "canonical_reconstruction_readback": true,
+    "reference_period": "Preceding survey week in the survey following the income cohort; ages 16–54",
+    "annual_five_month_student_status_validated": false,
+    "allocation_flags_included": false
+  },
+  "preservation": {
+    "source_input_count": 9,
+    "all_source_inputs_identical_after": true,
+    "existing_person_income_attachment_preserved": true,
+    "money_header_content_and_serialized_file_match_v3": true,
+    "output_files_rehashed": 6,
+    "loaded_modules_reverified": 170
+  },
+  "outputs": [
+    {
+      "artifact": "asec-current-money-profile-v4/current_money.bin",
+      "bytes": 154106694,
+      "sha256": "27fd9fc0d2b59b8c1a52bd34080a3bb5da469e464563cd327dff834b753a908f"
+    },
+    {
+      "artifact": "asec-student-controls-source-v1/asec_student_controls.bin",
+      "bytes": 24227847,
+      "sha256": "8947df1c856eafd6746ccd9c354d9ac11c639f2973d2c4a50b9a29c41eb7fcd5"
+    },
+    {
+      "artifact": "asec-student-controls-source-v1/receipt.json",
+      "bytes": 6725,
+      "sha256": "4238154eef73064f82b780c91afb38964008bfd0cee1485248b6034ec2b1dedd"
+    },
+    {
+      "artifact": "asec-current-money-profile-v4/housing_status.bin",
+      "bytes": 17229037,
+      "sha256": "cdfc3ca405f7fbc608691742cc240470c8410833e3a8a82d77d50e85ea1d9b1f"
+    },
+    {
+      "artifact": "asec-current-money-profile-v4/tax_units.checkpoint.h5",
+      "bytes": 673176691,
+      "sha256": "887077de181056076fee8851ea2e874a850a8f0cb2968a12babde150a6223de6"
+    },
+    {
+      "artifact": "asec-current-money-profile-v4/housing_attached.checkpoint.h5",
+      "bytes": 675562428,
+      "sha256": "549df02e00a2f26b45511ded4aa2deef9c7178092ebbecd97f576a77bc4eabe9"
+    }
+  ],
+  "timing": {
+    "elapsed_seconds": 163.16951537500427,
+    "peak_rss_bytes": 7325155328,
+    "physical_ram_bytes": 137438953472
+  },
+  "source_only_boundary": {
+    "actual_microunit_tax_prepared": true,
+    "raw_housing_authenticated_replayed_attached": true,
+    "money_unchanged_from_v3": true,
+    "existing_T1_preserved": true,
+    "new_S_canonical_replay": true,
+    "PolicyEngine_population_calculations": 0,
+    "graph_execution": false,
+    "fit": false,
+    "calibration": false,
+    "prior_wages_added": false,
+    "release_eligible": false
+  },
+  "release_eligible": false,
+  "checks": {
+    "small_integration_test_receipt_sha256": "b5aa9cbae9201403bc7f0bc29ececadc4e1d2ebd806e3afa0560021472fa06ac",
+    "small_integration_tests": {
+      "tests": 105,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "profile_receipt_sha256": "862a240cf06831a06d25e7eb1a2e19a90935914359ba911d8e621c2b76f5373b",
+    "author_receipt_sha256": "84db93c2fda21b2b3027a540d8d832050c1b86e0039ae1e3fff2ab7a1dca3670",
+    "verification_receipt_sha256": "b20716eae5577e242853481fc291d921613265bef6f2224ed10fe763aa2ee1c5",
+    "runner_sha256": "66c58370d6aedb5eed7927c8788126cd760d91f226bd7f87ffd4b7281fa60558"
+  },
+  "limitations": [
+    "Unweighted pooled source records, not population estimates",
+    "Student observations do not establish annual tax-student status",
+    "Raw housing status is not annual benefit participation or rent before assistance",
+    "Other current-money zero-origin and concept/period limitations remain",
+    "No graph, policy population, fit, calibration or holdout ran; capacity for a larger population has not been measured"
+  ]
+}

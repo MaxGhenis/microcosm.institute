@@ -1,0 +1,73 @@
+{
+  "schema": "microcosm.local_source_fit_engineering_summary.v1",
+  "recorded_date": "2026-09-06",
+  "scope": "Local source decoding, fitting and graph replay checks",
+  "release_eligible": false,
+  "population_quality_validated": false,
+  "sipp_vehicle_equity": {
+    "implementation_commit": "5b904ac9d03869cf489c0bdc6e8351a59d06352d",
+    "source_period": "December 2022",
+    "source_field": "THEQ_VEH",
+    "monetary_basis": "Signed nominal December 2022 dollars",
+    "donor_households": 17588,
+    "recipient_households": 5,
+    "recipient_kind": "invented engineering fixture",
+    "predictors": [
+      "household_size"
+    ],
+    "forest_trees": 2,
+    "complete_run_seconds": 21.148002583009657,
+    "worker_seconds": {
+      "direct": 6.849637042003451,
+      "cold": 7.456646333012031,
+      "warm": 1.550047833006829
+    },
+    "peak_worker_rss_bytes": {
+      "direct": 1514045440,
+      "cold": 1513881600,
+      "warm": 417415168
+    },
+    "cold_kernel_calls": 5,
+    "warm_kernel_calls": 0,
+    "donor_evidence_direct_cold_warm_equal": true,
+    "cold_warm_model_and_draws_equal": true,
+    "independently_rehashed_output_files": 97,
+    "model_accuracy_validated": false,
+    "target_2024_transfer": false,
+    "policy_variable_mapping": false
+  },
+  "puf_source_status": {
+    "implementation_commit": "2fd9a5cbc85615c929c0fc4e4c8f2b39f6438d84",
+    "source_records": 207696,
+    "demographic_matches": 119675,
+    "missing_demographics": 88021,
+    "publisher_aggregate_records": 4,
+    "period_semantics": "unresolved_raw_FLPDYR",
+    "weight_units": "S006_hundredths",
+    "untyped_source_columns": 216,
+    "worker_seconds": {
+      "direct": 3.2497585829987656,
+      "cold": 5.488587125000777,
+      "warm": 1.3589986250153743
+    },
+    "peak_worker_rss_bytes": {
+      "cold": 858996736,
+      "direct": 984547328,
+      "warm": 580206592
+    },
+    "cold_kernel_calls": 2,
+    "warm_kernel_calls": 0,
+    "direct_cold_warm_equal": true,
+    "money_fields_decoded": false,
+    "population_admission": false
+  },
+  "unmeasured": [
+    "fit accuracy",
+    "policy input adequacy",
+    "national calibration",
+    "congressional district validation",
+    "population distributions",
+    "release readiness"
+  ],
+  "privacy": "Aggregate counts and execution measurements only; no source identifiers, fitted values or model payload."
+}
