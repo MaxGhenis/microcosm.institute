@@ -1,0 +1,180 @@
+{
+  "schema": "microcosm.public_engineering_note.v1",
+  "experiment": "us-reference-composition-integration-20260906-v1",
+  "scope": "district_reference_coverage_and_code_integration",
+  "measurement_scope": "Completeness of a frozen public ACS reference projection over the district roster, a separately acquired direct national ACS reference capture, and a local integration test run over invented fixtures. No composed population, calibration, candidate scoring, target activation or release decision is measured here.",
+  "code_scope": "Local working trees, not a published release",
+  "recorded_date": "2026-09-06",
+  "district_reference_coverage": {
+    "associated_commit": "e24d9c5ee7b18b01cc63a69864a3450625150c35",
+    "run_receipt_sha256": "f27c14f2c40635c6e1f7645a245e629a1a3b77a52b6429b9639b3e207abc8746",
+    "output_sha256": "ba9da981714f61f2454346a4076d09508ce66284582f80779f7aa406948d0ff2",
+    "inventory_sha256": "f064227151ac27a5188e6a7e7ea0f35be040cc343303a43e8da703983019c2c6",
+    "protocol_sha256": "f7574a2a00734ce64ceb9c101ebc52469a176d37ee32b02c140d3ea2e6c568ea",
+    "inventory_size_bytes": 38686741,
+    "inventory_identity_verified": true,
+    "acs_year": 2024,
+    "target_congress": 119,
+    "roster_scope": "50 states and the District of Columbia; Puerto Rico excluded",
+    "roster_district_count": 436,
+    "districts_complete": 436,
+    "districts_incomplete": 0,
+    "blocks": {
+      "population_total": {
+        "cells_projected": 436,
+        "expected_cells_per_district": 1,
+        "adapter_class_counts": {
+          "estimate:numeric": 436,
+          "moe:controlled_estimate": 7,
+          "moe:numeric": 429
+        },
+        "precision_readings": 436,
+        "precision_status_counts": {
+          "adequate": 429,
+          "controlled_unknown": 7
+        },
+        "exposure_families": [
+          "S0101"
+        ]
+      },
+      "age_distribution": {
+        "cells_projected": 16132,
+        "expected_cells_per_district": 37,
+        "adapter_class_counts": {
+          "estimate:numeric": 16132,
+          "moe:controlled_estimate": 7,
+          "moe:numeric": 16125
+        },
+        "precision_readings": 7848,
+        "precision_status_counts": {
+          "adequate": 7848
+        },
+        "exposure_families": [
+          "S0101"
+        ]
+      }
+    },
+    "controlled_margin_cells": {
+      "distinct_cells": 7,
+      "note": "One set of seven at-large district totals whose published margin is a controlled sentinel, counted under both projected blocks rather than fourteen distinct cells."
+    },
+    "check_count": 199,
+    "git_verified_loaded_modules": 174,
+    "wall_time_seconds": 28.21944054099731,
+    "peak_rss_bytes_macos": 1940750336,
+    "reserved_families_indexed_for_structure": [
+      "B19001",
+      "B25003"
+    ],
+    "reserved_families_with_cells_read": [],
+    "reserved_families_exposure_consumed": [],
+    "national_reference_cells_from_district_sums": "not_available; district sums are not published national rows and require separately acquired direct national references",
+    "candidate_scoring": false,
+    "target_activation": false,
+    "target_registration": false,
+    "threshold_selection": false,
+    "exposure_ledger_write": false,
+    "release_approved": false,
+    "claims_not_established": [
+      "population truth",
+      "policy accuracy",
+      "a hypothesis test of truth error",
+      "independent-source evidence",
+      "national published reference conformity",
+      "launch or release approval",
+      "candidate scoring",
+      "protocol scoring authorization",
+      "exposure freshness or holdout eligibility",
+      "target registration",
+      "statistical readiness"
+    ]
+  },
+  "national_reference_capture": {
+    "status": "ACCEPT_LOCAL_NATIONAL_REFERENCE_CAPTURE",
+    "inventory_sha256": "750b624e89557944c442600befb5557847dd75be6ce439c20daa9dfea5a0baf7",
+    "inventory_bytes": 319719,
+    "independent_verifier_sha256": "28dd66d828c75e1c28f8386ecbc73156e783fd26c393af82c0c9f7eb883537a7",
+    "peer_receipt_sha256": "8329b56cf36980af7151e4ca4df1137e29a1c6dee1d85216676503771802dd3a",
+    "root_recomputed_cells": 297,
+    "tables": {
+      "S0101": {
+        "national_rows": 1,
+        "cells": 228,
+        "balance_checks": {},
+        "reservation_status": "inventory_only",
+        "targets_allowed": false,
+        "tuning_allowed": false
+      },
+      "B01001": {
+        "national_rows": 1,
+        "cells": 49,
+        "balance_checks": {
+          "male_plus_female_equals_total": true
+        },
+        "reservation_status": "inventory_only",
+        "targets_allowed": false,
+        "tuning_allowed": false
+      },
+      "B19001": {
+        "national_rows": 1,
+        "cells": 17,
+        "balance_checks": {
+          "income_bins_sum_matches_total": true
+        },
+        "reservation_status": "reserved_same_source_holdout",
+        "targets_allowed": false,
+        "tuning_allowed": false
+      },
+      "B25003": {
+        "national_rows": 1,
+        "cells": 3,
+        "balance_checks": {
+          "owner_plus_renter_equals_total": true
+        },
+        "reservation_status": "reserved_same_source_holdout",
+        "targets_allowed": false,
+        "tuning_allowed": false
+      }
+    },
+    "source_independence": "ACS tabulations and ACS PUMS share a source, so these rows are an inventory and not independent-source validation.",
+    "derivation": "Directly acquired national rows; never summed from district rows.",
+    "targets_activated": false,
+    "release_eligible": false
+  },
+  "code_integration": {
+    "status": "accepted_for_local_development",
+    "associated_commit": "194a54f6890fb8a6ddb675bcf49ce4afd80bf271",
+    "components": [
+      "composed_population_ab86b5d2",
+      "demographic_calibration_48dacb64",
+      "cd_reference_e24d9c5e",
+      "household_income_379ca753"
+    ],
+    "tests": 174,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "wall_time_seconds": 118.597,
+    "test_input_scope": "invented fixtures only; no genuine references, source microdata or model calculations",
+    "loaded_module_records": 923,
+    "git_verified_unique_module_versions": 300,
+    "genuine_composed_population": false,
+    "calibrated_population": false,
+    "candidate_scoring": false,
+    "release_approved": false
+  },
+  "household_income_measurement": {
+    "asec_occupied_unit_status": "The prepared ASEC household total is printed for the All Households universe, so it does not by itself establish occupied-housing-unit membership. A consumer comparing against an occupied-unit reference must bind a separately carried housing-universe mask first.",
+    "component_sums": "Both arms read the publisher's own household total. The carried ACS person roster holds six of the publisher's eight income types, so a component sum would be an incomplete total wearing a complete total's name."
+  },
+  "unmeasured": [
+    "genuine composed population",
+    "population calibration",
+    "national validation",
+    "congressional district validation",
+    "pruned release checks",
+    "reference conformity of any candidate"
+  ],
+  "release_eligible": false,
+  "privacy": "Aggregate counts, execution measurements and digests only. No reference estimate or margin value, no reserved-family value, no module roster, no local path and no credential."
+}
