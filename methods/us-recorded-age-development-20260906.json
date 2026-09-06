@@ -1,7 +1,7 @@
 {
   "schema": "microcosm.recorded_age_development_evidence.v1",
   "recorded_at": "2026-09-06T18:39:48.807902+00:00",
-  "scope": "New, actual recorded executions at169 and17004 households. Numerical results match historical age-only experiments. Local aggregate exports accepted; local US browser checks passed; final display peer review pending. No release or district validation.",
+  "scope": "New, actual recorded executions at169 and17004 households. Numerical results match historical age-only experiments. Local aggregate exports accepted; local US browser checks passed; final display changes independently accepted. No release or district validation.",
   "records": [
     {
       "households": 169,
@@ -113,12 +113,22 @@
     }
   ],
   "browser_validation": {
-    "status": "root_checks_passed_peer_review_pending",
-    "frontend_head": "8ed272e5990599eaa414e2dbb0395e830e640cbb",
+    "status": "root_checks_passed_independent_display_review_accepted",
+    "frontend_head": "280ff436c803788f17599d45c5fadcbbcb4b1a59",
     "desktop_and_mobile_checks": 137,
-    "population_history_regression_checks": 17,
+    "population_history_regression_checks": 29,
     "numerical_values_unchanged": true,
-    "country_data_availability": "Separate UK/default-country data-service errors remain outside the US candidate checks."
+    "country_data_availability": "Country switching passed14 behavioral checks; a separate error gate remains failed on aborted Next prefetches and the UK releases endpoint HTTP502.",
+    "independent_review": {
+      "model": "Fable5.1",
+      "verdict": "ACCEPT",
+      "scope": "Local US display and navigation, not scientific release eligibility"
+    },
+    "unit_tests": {
+      "passed": 656,
+      "failed": 0,
+      "assertions": 2247
+    }
   },
   "public_deployment_updated": false,
   "historical_manifests_reconstructed": false
