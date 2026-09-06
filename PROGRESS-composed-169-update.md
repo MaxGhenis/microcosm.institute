@@ -28,7 +28,8 @@ Key accepted facts to present: 169 households = 16 ASEC + 153 ACS, 383 people,
 checkpoints byte-identical (sha256 `96d1be7f1a9028f0779934f7f693bf3542f1ecfbe99427750f04201bead6b283`).
 
 ## State
-Implementation in progress.
+Local implementation complete and verified. Independent exact-revision review pending.
+Nothing pushed, deployed, merged remotely or published.
 
 ## Done
 - Inspected parent worktree: branch, clean status, HEAD 8e93a6e, AGENTS file search
@@ -59,20 +60,55 @@ Implementation in progress.
 - Accidentally overwrote the shared `PROGRESS.md` with `Write`; caught immediately
   via `git status`/`git diff --stat`, reverted with `git checkout -- PROGRESS.md`
   before any commit, and moved this log to its own file.
+- Added `methods/us-composed-169hh-asec-acs-drill-20260906.json`, a compact
+  evidence file (32 top-level keys) generated only from the two compact root
+  artifacts, matching the site's existing per-row evidence-file convention.
+  It carries entity/arm counts, checkpoint digests, execution measurements and
+  the same disclaimers as the root acceptance, and states explicitly that no
+  PUF clone and no prior-year wage lookback are attached.
+- Added one `methods/index.html` table row, `#composed-asec-acs-169hh`, in the
+  same position/style as neighboring rows (after `#sized-505-display`), stating
+  169 households (16 ASEC, 153 ACS), 383 people, 9 cold kernel calls, 9 fresh
+  warm cache hits, 0 warm kernel calls, and explicitly distinguishing this pool
+  from the separate 505-household ASEC-only evidence.
+- Rewrote the one stale "in progress" limits bullet in
+  `methods/sipp-housing-measurement-20260906.json` to state the drill's
+  acceptance while restoring the original, still-accurate claim that the ASEC
+  income graph and SIPP housing modules have not been measured together (that
+  claim is unrelated to this drill and was not weakened or removed).
+- Added one linking sentence each to `composition/paper.html` and
+  `papers/index.html`'s running evidence-status caveat paragraphs, referencing
+  `#composed-asec-acs-169hh`; neither paper's plan-stage/TODO status changed.
+- Left untouched: `support/index.html`'s "ACS channel is planned" architecture
+  language, the "survey multispine first, then PUF clones" diagrams, the
+  505-household rows, and all SIPP/PUF source-only scope statements.
+- Verification: all touched/added JSON parses (`python3 -m json.tool`);
+  `python3 -m html.parser` parses all three touched HTML files cleanly;
+  `scripts/check_site_links.py` passes with zero failures on the four changed
+  pages, and a full-site run (all 27 HTML pages) shows the same pre-existing
+  failures (one missing PDF in `dynamics/web`, several missing LaTeX-generated
+  fragment anchors in `firms/web` and `sparsity/web`) as the unmodified parent
+  commit — confirmed identical by running the same checker against the parent
+  worktree at 8e93a6e, so no new failures were introduced.
+- Confirmed ports 4574 and 4562 were already in use by other sessions (left
+  untouched) and 4575 was free. Served the new worktree on 127.0.0.1:4575 with
+  `python3 -m http.server`, fetched all five changed/added URLs (all HTTP 200),
+  round-tripped the new JSON's key figures via `urllib`/`json` to re-confirm
+  169/16/153/383/9/9/0 against the served copy, then killed the server and
+  confirmed the port was free again.
+- Committed the content change as `de809e1` on top of the progress-log commit
+  `dbb829c`. Verified the exact recorded message with `git log -1 --format=%B`
+  and confirmed a clean working tree afterward. No commit hooks fired (only
+  `.sample` hooks exist in this repo's `.git/hooks`, confirming hooks are
+  disabled here).
+- Re-confirmed after the content commit: parent worktree still at 8e93a6e with
+  a clean tree, and `git worktree list` still shows all 18 pre-existing
+  worktrees plus this one (19 total) — nothing else was touched.
 
 ## Next
-- Add a new `methods/index.html` table row + compact `methods/*.json` evidence
-  file presenting the accepted 169hh drill (household/person counts, ASEC/ACS
-  arm split, cold/warm kernel-call counts), matching the page's existing row
-  style and disclaimers.
-- Update `methods/sipp-housing-measurement-20260906.json`'s limits bullet to
-  stop calling the combined-survey run "in progress" and instead state its
-  accepted completion, while keeping the ASEC-income/SIPP-housing "not measured
-  together" claim intact and unrelated.
-- Add one linking sentence each to `composition/paper.html` and
-  `papers/index.html`'s running evidence-status caveats.
-- Run local static/link checks (no browser automation); build/serve on port
-  4575 only after confirming it's free (do not touch 4574/4562).
 - Write the final report to
   `/Users/maxghenis/architecture-reviews/microcosm-20260904/us-site-composed-169-update-REPORT.md`
   and `.json`.
+- This lane's local verification is complete; independent exact-revision
+  review, any push/deploy/merge, and root acceptance of this lane remain
+  separate and out of scope here.
