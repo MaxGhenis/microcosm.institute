@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_reported_income_graph_note.v1",
+  "date": "2026-09-06",
+  "purpose": "Reported source income, housing classification and replay on a small genuine ASEC sample",
+  "status": "completed_engineering_check",
+  "implementation_head": "9ece4cadddd1933524231a46a959086b0ff74429",
+  "run_receipt_sha256": "471c92e594a4a1956c86ae83f94a18fc5ee3466b1e3746a09ebae9d7b1bf2448",
+  "runner_sha256": "10bed5d8b94d3c42a4c3b0b5617f8c34ae686d63cadd9c37aa769b6e34d954ea",
+  "source_roster_sha256": "fed9afc2accd7326c61b95ef9f639f3690ab71066aa68c9b0010a1f6d29ba292",
+  "root_output_review_sha256": "1246400033cd0c12c4eef569d3666be745c5fe0fe63dbe3d91019b25eca9331e",
+  "prior_housing_graph": "us-housing-universe-graph-20260905.json",
+  "source_cohorts": [
+    2022,
+    2023,
+    2024
+  ],
+  "target_engine_period": 2024,
+  "income_price_basis": "Annual source amounts expressed in 2024 prices; cohort identity retained.",
+  "entity_rows": {
+    "family": 16,
+    "household": 15,
+    "marital_unit": 43,
+    "person": 52,
+    "spm_unit": 16,
+    "tax_unit": 25
+  },
+  "full_prepared_parent_rows": {
+    "person": 432523,
+    "household": 168852
+  },
+  "sample_households_by_cohort": {
+    "2022": 5,
+    "2023": 5,
+    "2024": 5
+  },
+  "roots": [
+    "capital_gains",
+    "dividend_income",
+    "employment_income",
+    "social_security"
+  ],
+  "checks": {
+    "graph_nodes": 5,
+    "direct_graph_engine_arrays_equal": true,
+    "complete_checkpoints_equal": true,
+    "money_fields": 33,
+    "axes_per_field": 4,
+    "all_money_axes_equal": true,
+    "housing_universe_fields": 7,
+    "housing_source_ancestry_and_selected_values_equal": true,
+    "income_observation_fields": 8,
+    "income_accounting_columns": 28,
+    "reported_result_columns": [
+      "asec_reported_cash_public_assistance_2024_price",
+      "asec_reported_income_unallocated_2024_price",
+      "asec_reported_net_self_employment_income_2024_price",
+      "asec_reported_ssi_2024_price",
+      "asec_reported_total_income_2024_price",
+      "asec_reported_wage_income_2024_price"
+    ],
+    "reported_result_digests": {
+      "asec_reported_cash_public_assistance_2024_price": "7f389f60c78169ac6d0f91ceb6b07bfb495586a67166d27e1a8ae094866093f5",
+      "asec_reported_income_unallocated_2024_price": "b826528a343ad5008e805024f4ab29818e6ef28bc8bf9aaa4d3bc5b99005f973",
+      "asec_reported_net_self_employment_income_2024_price": "cd26e61754fc921d095a58b8933c36191d8c8af76d99a1f54cb5401396d6663a",
+      "asec_reported_ssi_2024_price": "cdef7d38756c85bdddf845712e4cdc5f4f4331f6cccc96c2776abdc3ee29f7ec",
+      "asec_reported_total_income_2024_price": "9e70048ea58a6acc5ddbce9ef7f68edc935dfc01a95b3fcc991b2c324b39635e",
+      "asec_reported_wage_income_2024_price": "f4bf7b613d14c6b7defa1abf5283bdcbc009c8c44bf2f78b1f2864fc6b8a349e"
+    },
+    "reported_evidence_axes_equal": true,
+    "selected_paw_source_bytes_equal": true,
+    "arithmetic_order": "W=WSAL_VAL;E=SEMP_VAL+FRSE_VAL;S=SSI_VAL;P=PAW_VAL_2024_price;T=PTOTVAL;U=T-(((W+E)+S)+P)",
+    "unallocated_income_retains_its_sign": true,
+    "sample_signed_value_counts": {
+      "asec_reported_cash_public_assistance_2024_price": {
+        "negative": 0,
+        "positive": 1,
+        "zero": 51
+      },
+      "asec_reported_income_unallocated_2024_price": {
+        "negative": 0,
+        "positive": 25,
+        "zero": 27
+      },
+      "asec_reported_net_self_employment_income_2024_price": {
+        "negative": 0,
+        "positive": 1,
+        "zero": 51
+      },
+      "asec_reported_ssi_2024_price": {
+        "negative": 0,
+        "positive": 1,
+        "zero": 51
+      },
+      "asec_reported_total_income_2024_price": {
+        "negative": 0,
+        "positive": 35,
+        "zero": 17
+      },
+      "asec_reported_wage_income_2024_price": {
+        "negative": 0,
+        "positive": 29,
+        "zero": 23
+      }
+    },
+    "expected_direct_graph_lineage_differences": [
+      "selected_money_sha256",
+      "selection_producer_key",
+      "selection_sha256",
+      "source_producer_key"
+    ],
+    "loaded_modules_per_execution": 214,
+    "output_files_rehashed_in_separate_root_review": 52,
+    "source_snapshot_identities_unchanged": true
+  },
+  "executions": {
+    "direct": {
+      "elapsed_seconds": 240.60690462499042,
+      "peak_rss_bytes": 8862203904,
+      "source_preparations": 1,
+      "housing_attachments": 1,
+      "income_source_loads": 1,
+      "receipt_sha256": "c1af7336c4c3733389011cbd6c1887017eea58ae3cd118146b26ec7feff86e36"
+    },
+    "cold": {
+      "elapsed_seconds": 253.18892575000064,
+      "peak_rss_bytes": 8869756928,
+      "source_preparations": 1,
+      "housing_attachments": 1,
+      "income_source_loads": 1,
+      "receipt_sha256": "044f8faf6fb269111448d3bc2928ab2bc3d01e5038b87779a85ccd4bec933c35",
+      "kernel_calls": 5,
+      "all_cache_hits": false
+    },
+    "warm": {
+      "elapsed_seconds": 36.93257674999768,
+      "peak_rss_bytes": 5870944256,
+      "source_preparations": 0,
+      "housing_attachments": 0,
+      "income_source_loads": 0,
+      "receipt_sha256": "2368c1becf09092d1ddc8b999bfa4408f0b41346b69fdeba8415673cd694bbb8",
+      "kernel_calls": 0,
+      "all_cache_hits": true
+    }
+  },
+  "elapsed_seconds": 546.9152932079742,
+  "peak_process_rss_bytes": 8869756928,
+  "checkpoint_sha256": "781e8db5278bed40d44b80317768a1ff035d22c6704dd7d4502d2a946b805a8b",
+  "graph_content_key": "cfcb72fefcf0069f115c8381cee56c828722d32780d58fb6c6190e7f7c0040a5",
+  "release_eligible": false,
+  "calibration": false,
+  "fit": false,
+  "district_analysis": false,
+  "representative": false,
+  "prior_wages_added": false,
+  "completed_eight_component_acs_income": false,
+  "annual_five_month_student_status_validated": false,
+  "all_current_money_consumers_wired": false,
+  "limitations": [
+    "Direct and cold each prepare the full source before selecting 15 households; this is not a small-sample memory forecast.",
+    "A fresh-process warm replay executes no kernels but still initializes the inherited engine and verifies source, runtime and cache identities.",
+    "The approved runner performed array and engine comparisons. Root separately rehashed outputs and implementation files; this public note uses aggregate receipts only.",
+    "The 52 selected people have no negative reported-income values. Invented tests cover signed behavior; the small sample does not cover every source state.",
+    "Reported public assistance and SSI are source observations, not replacement inputs from simulated benefit entitlements.",
+    "The residual remains unallocated; a complete eight-category ACS income mapping, year transfers for other sources, fitting and calibration remain separate.",
+    "Interview-week student controls do not establish annual attendance or the five-month tax-student test.",
+    "No sample-quality, national or district finding, composition-study result or release eligibility follows."
+  ]
+}
