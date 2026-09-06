@@ -49,7 +49,7 @@
         "unknown_reasons_nonexclusive": {
           "household_copy_conflict": 38
         },
-        "status_flag_observations": {
+        "source_person_record_flag_observations": {
           "9": 39513
         }
       },
@@ -67,7 +67,7 @@
         "unknown_reasons_nonexclusive": {
           "household_copy_conflict": 38
         },
-        "status_flag_observations": {
+        "source_person_record_flag_observations": {
           "9": 39513
         }
       },
@@ -85,7 +85,7 @@
         "unknown_reasons_nonexclusive": {
           "household_copy_conflict": 17
         },
-        "status_flag_observations": {
+        "source_person_record_flag_observations": {
           "9": 39513
         }
       },
@@ -105,7 +105,7 @@
           "TVEH_NUM:blank": 2954,
           "household_copy_conflict": 34
         },
-        "status_flag_observations": {
+        "source_person_record_flag_observations": {
           "0": 5645,
           "1": 32306,
           "2": 1562
@@ -123,7 +123,7 @@
         "known_share_of_source_design_weight_mass_exact": "1",
         "known_share_display_percent": "100.0000",
         "unknown_reasons_nonexclusive": {},
-        "status_flag_observations": {
+        "source_person_record_flag_observations": {
           "9": 33469
         }
       }
@@ -137,7 +137,7 @@
       "note": "The 6,044 below-15 people stay outside the age-eligible denominator and remain visible in the full-person diagnostics. Their TVAL_BANK blanks carry AVAL_BANK not-in-universe."
     },
     "counting_rules": {
-      "count_vs_mass": "Each flag, quality and reason is counted once per target unit even if repeated on household members. Household counts in bank categories and all overlapping categories are not additive.",
+      "count_vs_mass": "Known/unknown and overlapping reason counts use the stated target unit. source_person_record_flag_observations counts original December person records, including repeated household recodes; it is not a count of residences. Overlapping reason categories are not additive.",
       "primary_reason_rule": "Known first; for unknown, copy conflict, then below bank age universe, then unknown bank age, then the lexicographically first existing reason. All actual reasons are retained as overlaps."
     },
     "runtime": {
@@ -232,7 +232,7 @@
     "The PUF audit observed mixed FLPDYR return years; the file name alone does not establish a 2015 tax period for every row.",
     "The four MARS 0 publisher aggregate records cannot become four household observations.",
     "PUF worker elapsed times exclude coordinator overhead, and the read budget is a declared bound rather than measured operating-system I/O.",
-    "Neither study opened original survey or return data during review, decoded monetary target amounts, or evaluated any model calculation.",
+    "The SIPP producer parsed asset measurements from the source, and its coverage consumer reconstructed them from the accepted projection. The PUF audit decoded headers, keys and status codes but no monetary field. Later output reviews read aggregate evidence without reopening the microdata. Neither study evaluated a model calculation.",
     "This evidence does not establish launch readiness, representativeness, donor admission or policy accuracy."
   ]
 }
