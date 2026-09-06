@@ -1,0 +1,83 @@
+{
+  "status": "accepted_source_and_development_weight_choice",
+  "date": "2026-09-06",
+  "source_head": "61f2f4998c08778c247a6ce050d482e71e153293",
+  "helper_head": "dbd52143e1cbb36458727657735e366e16971a11",
+  "source_sha256": "5c30439e365fc26483318ef61d1d8f4bb2f0e9d6bb47c22c06756a7698733ee2",
+  "source_artifact_sha256": "a8ef5c6b4291acedbee26c078baaf8845cb5294e14a9848f810126dfa433db65",
+  "completion_sha256": "3bde75acc78ef2bc0e2a23f8356b719289314cd1d4b8109c6ad3f459835c88ac",
+  "households": 17646,
+  "people": 39513,
+  "source_sample_units": 17314,
+  "elapsed_seconds": 118.77661379100755,
+  "peak_rss_bytes": 4971266048,
+  "mean_weight_status": {
+    "positive": 17626,
+    "zero": 20
+  },
+  "interview_reference_weight_status": {
+    "multiple_interview_reference_members": 43,
+    "no_interview_reference_member": 106,
+    "positive": 17489,
+    "reference_member_out_of_monthly_frame": 7,
+    "zero": 1
+  },
+  "admitted_unassisted_renters": {
+    "households": 4348,
+    "mean_weight_status": {
+      "positive": 4348
+    },
+    "reference_weight_status": {
+      "multiple_interview_reference_members": 3,
+      "no_interview_reference_member": 44,
+      "positive": 4301
+    }
+  },
+  "reported_rent_donors": {
+    "households": 4057,
+    "mean_weight_status": {
+      "positive": 4057
+    },
+    "reference_weight_status": {
+      "multiple_interview_reference_members": 3,
+      "no_interview_reference_member": 41,
+      "positive": 4013
+    }
+  },
+  "zero_weight_counts": {
+    "mixed_zero_positive_households": 0,
+    "households_with_zero_weight_members": 20,
+    "zero_weight_members": 29
+  },
+  "zero_weight_members_by_RIN_UNIV": {
+    "available:2": 28,
+    "available:1": 1
+  },
+  "fit_weight_choice": {
+    "primary": "arithmetic_mean_of_all_current_December_members_WPFINWGT",
+    "source_methods_ranked_by_Census": false,
+    "zeros_retained_in_denominator": true,
+    "unknown_weights_propagate": true,
+    "positive_known_fit_weights_required": true,
+    "reference_candidate_retained": true,
+    "reference_weight_month": "December2022",
+    "reference_person_designation": "interview",
+    "independent_review": "Fable5.1 ACCEPT development choice",
+    "release_checks_pending": [
+      "common-positive-row mean/reference/unweighted fit comparison",
+      "structural-predictor characterization of reference-candidate exclusions",
+      "weight concentration with explicit formula, not design-based ESS"
+    ]
+  },
+  "guide": {
+    "url": "https://www2.census.gov/programs-surveys/sipp/tech-documentation/methodology/2023_SIPP_Users_Guide_OCT24.pdf",
+    "sha256": "37a20da6ac81d5dea28f744f02b96975f846f44b53c23588abd88bea7d985d86",
+    "household_weight_methods_printed_page": 160,
+    "calendar_year_weight_printed_page": 162
+  },
+  "annual_income_bridge_adopted": false,
+  "monetary_bridge_adopted": false,
+  "housing_fit_executed": false,
+  "release_eligible": false,
+  "limitations": "Source characterization and a development fitting-weight choice. No transfer accuracy, national or congressional-district population quality is established."
+}

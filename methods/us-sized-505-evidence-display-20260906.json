@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_sized_505_evidence_display_note.v1",
+  "date": "2026-09-06",
+  "purpose": "A local engineering-evidence display of the accepted 505-household reported-income run in the calibration dashboard application",
+  "status": "completed_engineering_check",
+  "root_verdict": "ACCEPT_LOCAL_ENGINEERING_EVIDENCE_DISPLAY",
+  "source_run_head": "ab10f77854b7b9e8057a07dbec40d15c10b96297",
+  "producer_head": "bef53c092794080519e78e882c5ab824b504c0ba",
+  "frontend_head": "8abfc783c0b454720bd19584b8aa575ca93492dc",
+  "producer_schema": "income_v3_measured_505hh",
+  "profile": "us_asec_income_v3_five_node_sized_v1",
+  "candidate_release_id": "us-asec-income-sized-505hh-20260906-v1",
+  "manifest_sha256": "d2c92b67d4ec63e73a9a0efca9f52d17ea9e4ee09d14e776be5a2d7a64d8e67e",
+  "run_receipt_sha256": "e4392fd94c89bf81e8eb640729555e665995144680c3629f01c779cb1f9988d7",
+  "roster_sha256": "98f34a356852fb30cfb49bc0fb2005288549ce42e44cbaf1b7c9dc35982bb74e",
+  "runner_sha256": "ef099f911568f9021143cf72aed35d740cb43c3c517e5d8ca3cc260ed237e934",
+  "prior_reported_income_graph_note": "us-reported-income-graph-505hh-20260906.json",
+  "displayed_counts": {
+    "household": 505,
+    "person": 1316,
+    "tax_unit": 674
+  },
+  "selected_entity_rows": {
+    "family": 563,
+    "household": 505,
+    "marital_unit": 1058,
+    "person": 1316,
+    "spm_unit": 532,
+    "tax_unit": 674
+  },
+  "households_by_cohort": {
+    "2022": 170,
+    "2023": 168,
+    "2024": 167
+  },
+  "eligible_households_by_cohort": {
+    "2022": 56839,
+    "2023": 56251,
+    "2024": 55762
+  },
+  "cohort_rule": "floor(sample_fraction * eligible households in the cohort)",
+  "sample_fraction": 0.003,
+  "root_tests": {
+    "exporter_tests": 135,
+    "exporter_git_verified_module_files": 128,
+    "frontend_tests": 528,
+    "frontend_assertions": 1872,
+    "typecheck_passed": true,
+    "production_build_passed": true,
+    "webkit_checks": 37,
+    "webkit_page_errors": 0,
+    "webkit_engine_version": "26.0",
+    "webkit_viewport_widths": [
+      390,
+      1440
+    ]
+  },
+  "root_binding_checks": 455,
+  "root_binding_git_verified_modules": 214,
+  "loaded_module_count": 214,
+  "export": {
+    "elapsed_seconds": 0.3051881790161133,
+    "verified_attachments": 2,
+    "verified_attachment_bytes": 52946,
+    "exporter_sha256": "b781734a6ce959c65e54f82fc1ccf292043559114ad201e509afc305602d77a7",
+    "reviewed_exporter_sha256": "0259cbc64af1c860beeab5f73f4ccb10618854133a6d78df0a1aa511241f7a71",
+    "build_summary_sha256": "4d2a990b559a2f4b41e38a53fa3a16551d3f69e8f58a2cbb9de483344f161198",
+    "graph_receipts_sha256": "d5c46740695ccb8d637368cd8eba92b840773a85da87f933d53568b99f83359c",
+    "writer_sha256": "f1831c10ba74fd7d19809aa3e1f3ae522479c1142664914033a85204457c9aaf"
+  },
+  "root_accepted_artifact_digests": {
+    "us-income-sized-505hh-root-export.json": "abf6c20d14f1c82f5de12d4a37ef5bf538e70ae5fef9c3820f5b0df680a8db5a",
+    "us-income-sized-505hh-root-output-verification.json": "8ae2a496a40025f221637f2ca1e08d6e32a65275cea3c0d57f6f8e2e2eee7022",
+    "us-sized-505-genuine-root-webkit-r4.json": "89a89e81bcfdbc97bea4d58178f1c0ec5eba71305c62ea8ee7965b08500a44cc",
+    "us-sized-dashboard-floor-root-build.json": "9fe5452e389b3bf3b50167f1eebb0558cbc29b14eb956f1ee9d826142954c6d8"
+  },
+  "peer_reviews": {
+    "count": 2,
+    "scope": "Static review; root executed tests and genuine export/render independently.",
+    "required_defects_remaining": 0
+  },
+  "display_location": {
+    "published_dashboard_path": "/calibration/dashboard/microcosm",
+    "rendered_from_locally_served_build": true,
+    "published_to_the_deployed_dashboard": false,
+    "note": "The render used a locally served build of the dashboard application at the recorded frontend revision. The deployed dashboard does not carry this candidate, so no candidate-specific public URL exists."
+  },
+  "release_eligibility": {
+    "reason": "2024 target-period engineering sample. Uncalibrated; no population-quality or national or congressional-district release claim.",
+    "status": "excluded"
+  },
+  "release_eligible": false,
+  "calibration": false,
+  "fit": false,
+  "representative": false,
+  "district_analysis": false,
+  "newly_recomputed_policy_outputs_in_the_export": false,
+  "published_or_promoted": false,
+  "limitations": [
+    "Uncalibrated ASEC engineering sample",
+    "No national or congressional-district quality validation",
+    "No publication or promotion",
+    "No newly recomputed policy outputs in the export",
+    "The two peer reviews were static; root executed the tests, the export and the render itself.",
+    "Displayed counts are the selected engineering sample, not a population estimate; no precision follows from them.",
+    "The first two preview attempts failed because static assets were absent at server startup; the failed receipts are preserved beside the passing one."
+  ]
+}

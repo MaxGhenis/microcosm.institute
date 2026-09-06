@@ -1,0 +1,50 @@
+{
+  "status": "ACCEPT_LOCAL_PUF_V3_GENUINE_MONETARY_SOURCE_PROJECTION",
+  "head": "688d00ca24060dbbe04e489ee99b7527750f9628",
+  "helper_head": "94c198ee3fdf895e277b321648e3214e57dff5f9",
+  "completion_sha256": "4e0da1e5f2faec3f1e8d9fc2dc3ac1802d14437937ccbf729f3a17f9b2c1bb74",
+  "runner_sha256": "60f1d27765b3a9ab925c9b764b796e2bc0f08a22fc21f076d1c76d021dd6995a",
+  "roster_sha256": "d582d8da32fd9335a233d7d048018730e4766325bc89622258f5106731f777c0",
+  "execution_approval_sha256": "53a2aca5a0cc18957d7315a049e61b1344fd5f164d5dbcbca4fb2e053374e86d",
+  "root_receipt_files_rehashed": 9,
+  "root_git_verified_module_records": 704,
+  "root_git_verified_unique_modules": 176,
+  "root_readback_git_verified_modules": 176,
+  "artifact_sha256": "1dfb4ec5b6dcd40ee11c5b774a8f54209931a8437fdd2a007072527bed260857",
+  "artifact_bytes": 54442095,
+  "artifact_store_key": "37ed7f87132f17238ae6827de96f1dd19da714a988e6f171912cdbec0a19bd2b",
+  "status_artifact_sha256": "439ddfe044c2bc8ddc1561d882088dc3141604abc486250910863a41f1b5b714",
+  "rows": 207696,
+  "projected_columns": 12,
+  "row_class_rows": {
+    "disclosure_aggregate": 4,
+    "demographic_matched": 119675,
+    "demographic_unmatched": 88017
+  },
+  "amount_universe": {
+    "aggregate_rows": 4,
+    "all_aggregate_slots_are_sentinel": true,
+    "amount_known_sha256": "c9a90a00f71e007acca3e9af7b2055fe27385faefa081d70d7cdc7413c95df27",
+    "known_rows": 207692,
+    "no_ordinary_slot_is_sentinel": true
+  },
+  "source_and_status_content_and_stats_unchanged": true,
+  "cold_kernel_calls": 4,
+  "fresh_warm_cache_hits": 4,
+  "fresh_warm_kernel_calls": 0,
+  "root_decoded_actual_artifact_and_verified_aggregate_separation": true,
+  "peak_rss_bytes": {
+    "cold": 1047035904,
+    "direct": 1086701568,
+    "status": 1032962048,
+    "warm": 727072768
+  },
+  "scope": "Genuine PUF source artifact in an invented one-household graph host; not a PUF-enriched survey population.",
+  "target_year_use": "refused_pending_independent_growth_decision",
+  "fit_admission": false,
+  "semantic_admission": false,
+  "release_eligible": false,
+  "schema": "microcosm.public_puf_monetary_source_evidence.v1",
+  "recorded_date": "2026-09-06",
+  "root_acceptance_sha256": "bd1431979ae06ba3022a512ff49c010f274417bbfbdeec792312c2bcb680e5c5"
+}

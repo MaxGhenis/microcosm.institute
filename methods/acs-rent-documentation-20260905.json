@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "purpose": "Local public-documentation extraction and source-fidelity evidence; not population evaluation",
+  "run_date": "2026-09-05",
+  "status": "completed_local_verification",
+  "custody_status": "local_unregistered",
+  "registered": false,
+  "witnessed": false,
+  "candidate_evaluation": false,
+  "release_eligible": false,
+  "chronicle_implementation_head": "f529b772822fce53a0a48b6eabe6c246cb18e754",
+  "documentation_manifest_sha256": "b8c2897d8898cc657a410b5bafa3839af5fcb606fcc004fb00e9e7a16abaeaf3",
+  "claims_file_sha256": "9d1625289e0e17b79826161dd27b3431bfe7feddedbad6a06f94fa5c21439a05",
+  "extractor": {
+    "library": "pypdf",
+    "method": "PageObject.extract_text",
+    "settings": {
+      "extraction_mode": "plain",
+      "orientations": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "reader_strict": true,
+      "space_width": 200.0
+    },
+    "version": "6.11.0"
+  },
+  "claim_count": 6,
+  "source_document_count": 3,
+  "claims": [
+    {
+      "byte_end": 463,
+      "byte_start": 293,
+      "claim_key": "chronicle.documentation_claim.v1:00445e7aaed861d5bd55f703f2d10995b0e394c3725543424e8c7803c6ed0c03",
+      "claim_kind": "universe",
+      "instrument_mode": "unknown",
+      "page_text_sha256": "2b588ad0d49652b2382fe6f7e4bc922ed21be6ef460e5adbb34e1db87384e4c1",
+      "pdf_page_index": 15,
+      "pdf_sha256": "6e0c5b1a5d3ebf7e300e583ac6424cbd5f09de50d69e7ef03aa6d070d9c4a7a8",
+      "source_file": "2024_ACSSubjectDefinitions.pdf",
+      "source_url": "https://www2.census.gov/programs-surveys/acs/tech_docs/subject_definitions/2024_ACSSubjectDefinitions.pdf"
+    },
+    {
+      "byte_end": 1796,
+      "byte_start": 1705,
+      "claim_key": "chronicle.documentation_claim.v1:072eccec0d7e2a0877b1cbdcf5e69f8516ebf3fdc7afd8cc9eb4f84f66810bfa",
+      "claim_kind": "respondent_instruction",
+      "instrument_mode": "unknown",
+      "page_text_sha256": "2b588ad0d49652b2382fe6f7e4bc922ed21be6ef460e5adbb34e1db87384e4c1",
+      "pdf_page_index": 15,
+      "pdf_sha256": "6e0c5b1a5d3ebf7e300e583ac6424cbd5f09de50d69e7ef03aa6d070d9c4a7a8",
+      "source_file": "2024_ACSSubjectDefinitions.pdf",
+      "source_url": "https://www2.census.gov/programs-surveys/acs/tech_docs/subject_definitions/2024_ACSSubjectDefinitions.pdf"
+    },
+    {
+      "byte_end": 962,
+      "byte_start": 810,
+      "claim_key": "chronicle.documentation_claim.v1:0b6855b6c4b600c74bda71800317481b4a988bafb16b30c7cc7ed51238f287e6",
+      "claim_kind": "definition",
+      "instrument_mode": "unknown",
+      "page_text_sha256": "2b588ad0d49652b2382fe6f7e4bc922ed21be6ef460e5adbb34e1db87384e4c1",
+      "pdf_page_index": 15,
+      "pdf_sha256": "6e0c5b1a5d3ebf7e300e583ac6424cbd5f09de50d69e7ef03aa6d070d9c4a7a8",
+      "source_file": "2024_ACSSubjectDefinitions.pdf",
+      "source_url": "https://www2.census.gov/programs-surveys/acs/tech_docs/subject_definitions/2024_ACSSubjectDefinitions.pdf"
+    },
+    {
+      "byte_end": 2137,
+      "byte_start": 2025,
+      "claim_key": "chronicle.documentation_claim.v1:63bbe44feed6c635fc008e9540dfe49db3263c97947f7c103360ada9c1c4e0f5",
+      "claim_kind": "routing",
+      "instrument_mode": "paper",
+      "page_text_sha256": "968808183840c1c1a54dfe467a55ccbce2fe1143548998da95000e4017211104",
+      "pdf_page_index": 9,
+      "pdf_sha256": "de57122d329683e66d4cc03bc6daa8504e039ed27fd22d9ea0ac7e17bd17e45b",
+      "source_file": "quest24.pdf",
+      "source_url": "https://www2.census.gov/programs-surveys/acs/methodology/questionnaires/2024/quest24.pdf"
+    },
+    {
+      "byte_end": 2213,
+      "byte_start": 2145,
+      "claim_key": "chronicle.documentation_claim.v1:9e946b19d78b8bff6cc11cbc8f906250210e45b8cc6c2265acc636cd6479dd93",
+      "claim_kind": "question_text",
+      "instrument_mode": "paper",
+      "page_text_sha256": "968808183840c1c1a54dfe467a55ccbce2fe1143548998da95000e4017211104",
+      "pdf_page_index": 9,
+      "pdf_sha256": "de57122d329683e66d4cc03bc6daa8504e039ed27fd22d9ea0ac7e17bd17e45b",
+      "source_file": "quest24.pdf",
+      "source_url": "https://www2.census.gov/programs-surveys/acs/methodology/questionnaires/2024/quest24.pdf"
+    },
+    {
+      "byte_end": 2524,
+      "byte_start": 2371,
+      "claim_key": "chronicle.documentation_claim.v1:a50ff46de37258eb523fbf1e77f735deaf554368ca3bd8115a6b2492a110da39",
+      "claim_kind": "methodology_statement",
+      "instrument_mode": "unknown",
+      "page_text_sha256": "918d364ca7606f7eeb1393298781ef495a85a6dfca2727fd6b6f3111d9a9736f",
+      "pdf_page_index": 1,
+      "pdf_sha256": "d6123b1ccb2e25ab7044a9c53ab97dedcc6c0e7ea479cfd89ebe701b9374d4ca",
+      "source_file": "SEHSD-WP2019-37.pdf",
+      "source_url": "https://www.census.gov/content/dam/Census/library/working-papers/2019/demo/SEHSD-WP2019-37.pdf"
+    }
+  ],
+  "checks": [
+    "Original PDF SHA-256 and byte size match retained bytes",
+    "Consumer reopens original PDF and re-extracts each page with the pinned profile",
+    "Exact page UTF-8 hash and half-open byte span match each literal excerpt",
+    "Root independently regenerated all eight artifact files byte for byte",
+    "Independent source-fidelity, contract and boundary reviews passed"
+  ],
+  "limitations": [
+    "Publisher attribution and descriptive annotations require source review",
+    "Source definitions and historical mode statements remain separate claims",
+    "No inferred publication, acceptance or witness timestamp",
+    "No completed pre-subsidy-rent modeling or national/CD acceptance result"
+  ]
+}

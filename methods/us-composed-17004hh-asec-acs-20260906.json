@@ -1,0 +1,95 @@
+{
+  "schema": "microcosm.public_composed_survey_evidence.v1",
+  "recorded_date": "2026-09-06",
+  "status": "local_composition_verified",
+  "source_commit": "84e7a011f7bc4d8cb5a7cbd2599b4d893558b1e0",
+  "run_receipt_sha256": "51c6e2de00abe4600d5b76461903623e029e4fd9a0ca11aaa7e5328f417c6a01",
+  "root_acceptance_sha256": "dc182288bbdedd52c53570ad1843ae57c33cbbb4bc30d6f0ccc27d88e00bd019",
+  "sample_fraction": 0.01,
+  "sample_seed": 578,
+  "sampling_scope": "per_survey_arm",
+  "cohort_stratified": false,
+  "entity_rows": {
+    "family": 17212,
+    "household": 17004,
+    "marital_unit": 30917,
+    "person": 38604,
+    "spm_unit": 17079,
+    "tax_unit": 23124
+  },
+  "arm_rows": {
+    "family": {
+      "acs": 15316,
+      "asec": 1896,
+      "other": 0
+    },
+    "household": {
+      "acs": 15316,
+      "asec": 1688,
+      "other": 0
+    },
+    "marital_unit": {
+      "acs": 27467,
+      "asec": 3450,
+      "other": 0
+    },
+    "person": {
+      "acs": 34293,
+      "asec": 4311,
+      "other": 0
+    },
+    "spm_unit": {
+      "acs": 15316,
+      "asec": 1763,
+      "other": 0
+    },
+    "tax_unit": {
+      "acs": 20859,
+      "asec": 2265,
+      "other": 0
+    }
+  },
+  "population": {
+    "checkpoint_sha256": "8a27b0f82f1e1493881380edd5f00e2dba19713d9d865ccec0e57b04af10dc06",
+    "people": 38604,
+    "minimum_age": 0,
+    "maximum_age": 96,
+    "missing_age": 0,
+    "canonical_age_matches_carried_A_AGE": true,
+    "household_weight_kind": "importance",
+    "age_period_harmonized": false
+  },
+  "execution": {
+    "cold_kernel_calls": 9,
+    "warm_hits": 9,
+    "warm_kernel_calls": 0,
+    "warm_source_parser_calls": 0,
+    "phase_seconds": {
+      "direct": 1680.4864311249985,
+      "cold": 968.3110705410072,
+      "baseline": 44.08292933300254,
+      "bind": 33.962499208020745,
+      "warm": 43.82339508298901
+    },
+    "allocation_tracing_enabled": false,
+    "peak_worker_rss_bytes": 12577193984
+  },
+  "verification": {
+    "output_files_rehashed": 4897,
+    "output_bytes_rehashed": 6456687810,
+    "git_verified_module_records": 1090,
+    "git_verified_source_files": 218
+  },
+  "limits": [
+    "17,004-household development sample; size alone does not establish representativeness or launch quality.",
+    "No calibration, transfer fit, national or congressional-district validation, policy-engine evaluation, certification or release.",
+    "Age derives from observed A_AGE; dates are not harmonized across source cohorts.",
+    "ASEC sex and household-reference mappings remain unbound pending source adjudication."
+  ],
+  "calibration": false,
+  "national_validation": "not_evaluated",
+  "congressional_district_validation": "not_evaluated",
+  "release_eligible": false,
+  "puf_clones": "not_constructed",
+  "prior_wages": "outside_cross_section_scope"
+}
