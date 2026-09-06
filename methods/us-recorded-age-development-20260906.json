@@ -1,7 +1,7 @@
 {
   "schema": "microcosm.recorded_age_development_evidence.v1",
   "recorded_at": "2026-09-06T18:39:48.807902+00:00",
-  "scope": "New, actual recorded executions at169 and17004 households. Numerical results match historical age-only experiments. Local aggregate exports accepted; browser checks pending. No release or district validation.",
+  "scope": "New, actual recorded executions at169 and17004 households. Numerical results match historical age-only experiments. Local aggregate exports accepted; local US browser checks passed; final display peer review pending. No release or district validation.",
   "records": [
     {
       "households": 169,
@@ -112,7 +112,14 @@
       "release_eligible": false
     }
   ],
-  "browser_validation": "pending",
+  "browser_validation": {
+    "status": "root_checks_passed_peer_review_pending",
+    "frontend_head": "8ed272e5990599eaa414e2dbb0395e830e640cbb",
+    "desktop_and_mobile_checks": 137,
+    "population_history_regression_checks": 17,
+    "numerical_values_unchanged": true,
+    "country_data_availability": "Separate UK/default-country data-service errors remain outside the US candidate checks."
+  },
   "public_deployment_updated": false,
   "historical_manifests_reconstructed": false
 }
