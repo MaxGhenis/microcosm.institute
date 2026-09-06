@@ -129,7 +129,8 @@
     "utilities_topcode_marker_blank_households": 17546,
     "utilities_topcode_partial_marking_households": 0,
     "utilities_at_domain_maximum_households": 0,
-    "utilities_zero_households": 731
+    "utilities_zero_households": 731,
+    "rent_zero_admitted_allocation_split": "not_measured"
   },
   "marker_observation": {
     "fields": {
@@ -210,7 +211,17 @@
       "unassisted_allocated": "188705.80773284666666666666666666666666666666666666666666666666666666666666666667"
     },
     "not_a_publisher_household_sampling_weight": true,
-    "not_a_rent_model_sampling_weight": true
+    "not_a_rent_model_sampling_weight": true,
+    "by_exclusion": {
+      "admitted": "43070613.950946116230158730158730158730158730158730158730158730158730158730158732",
+      "assistance_assisted": "6092044.6609901138095238095238095238095238095238095238095238095238095238095238094",
+      "assistance_unassisted_allocated": "182713.72943614666666666666666666666666666666666666666666666666666666666666666667",
+      "rent_copy_conflict": "86080.921843775",
+      "tenure_copy_conflict": "151827.61852724500000000000000000000000000000000000000000000000000000000000000001",
+      "tenure_no_payment": "3843026.8887877840476190476190476190476190476190476190476190476190476190476190479",
+      "tenure_owner": "87062582.852441418189588189588189588189588189588189588189588189588189588189588199",
+      "weight_not_positive": "0"
+    }
   },
   "execution": {
     "wall_seconds": 42.69412404100876,
@@ -306,5 +317,15 @@
     "The ASEC five-node income graph and the four bound SIPP housing modules have not been measured together; no combined run exists.",
     "Root checked output digests, arithmetic and implementation identity; the reviewed runner performed the raw-source authentication and the measurement itself."
   ],
-  "privacy": "Aggregate counts, digests and execution measurements only; no source identifier, source row, fitted value or model payload."
+  "privacy": "Aggregate counts, digests and execution measurements only; no source identifier, source row, fitted value or model payload.",
+  "voucher_answer_quality": {
+    "hot_deck_imputed": 9,
+    "not_in_universe": 16770,
+    "reported": 867
+  },
+  "person_month_receipt_comparison": {
+    "person_month_receipt_in_admitted_households": 4,
+    "person_month_receipt_in_explicit_unassisted_households": 5,
+    "no_person_month_receipt_in_assisted_households": 25
+  }
 }

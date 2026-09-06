@@ -1,3 +1,5 @@
+> Historical author record for head 67f42a6d, September 6, 2026. The successor local branch incorporates this work and corrects the independent review findings on voucher allocation, exclusion weight evidence and zero-rent scope; it also records contrary person-month receipt evidence and fixes duplicate MathJax loading. The author run counts below describe the earlier revision. Subsequent root checks passed 174 browser assertions, 30 correction checks and four mobile/desktop equation-render checks. This note does not claim publication or national/CD validation.
+
 # Progress: 505-household evidence display and December housing measurement (2026-09-06)
 
 Branch `us-505-sipp-evidence-site-20260906`, cut from the frozen accepted parent 7bac45d (`us-reference-composition-site-root-20260906`). Scope: methods notes, two aggregate evidence files and three paper status sentences. No push, deploy, publication, dynamics/, PDF or historical-result edits. The parent worktree stays at 7bac45d and is not touched.
