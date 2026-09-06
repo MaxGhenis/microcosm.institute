@@ -69,7 +69,7 @@
     "Age derives from observed A_AGE; dates are not harmonized across source cohorts.",
     "ASEC sex and household-reference mappings remain unbound pending source adjudication.",
     "Direct and cold execution both parse the full source and run under tracemalloc; this timing is not a large-pool capacity estimate.",
-    "This pool holds only ASEC- and ACS-sourced survey records; no PUF clone and no prior-year wage lookback is attached, consistent with assembling the survey multispine before cloning donor records.",
+    "This pool holds only ASEC- and ACS-sourced survey records; no PUF clone and no prior-year wage lookback is attached, consistent with assembling the survey multispine before constructing PUF-enriched clones of that combined survey pool.",
     "Distinct from the earlier 505-household ASEC-only execution check and its evidence display, which remain separate, ASEC-only evidence and are not relabeled as combined."
   ],
   "privacy": "Aggregate counts, digests and execution measurements only; no source identifier, source row, local path, fitted value or model payload.",
