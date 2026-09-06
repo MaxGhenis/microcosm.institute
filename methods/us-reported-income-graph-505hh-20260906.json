@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_reported_income_graph_scale_note.v1",
+  "date": "2026-09-06",
+  "purpose": "A larger local execution check for the reported-income graph",
+  "status": "completed_engineering_check",
+  "implementation_head": "ab10f77854b7b9e8057a07dbec40d15c10b96297",
+  "run_receipt_sha256": "e4392fd94c89bf81e8eb640729555e665995144680c3629f01c779cb1f9988d7",
+  "runner_sha256": "ef099f911568f9021143cf72aed35d740cb43c3c517e5d8ca3cc260ed237e934",
+  "source_roster_sha256": "98f34a356852fb30cfb49bc0fb2005288549ce42e44cbaf1b7c9dc35982bb74e",
+  "root_output_review_sha256": "80ef302490cea29a1e16a0476549d6f858ea4618848a5413aee4b130c3b29958",
+  "prior_reported_income_graph": "us-reported-income-graph-20260906.json",
+  "source_cohorts": [
+    2022,
+    2023,
+    2024
+  ],
+  "target_engine_period": 2024,
+  "income_price_basis": {
+    "name": "census_ccpiu_annual_2024",
+    "target_year": 2024,
+    "description": "Census annual chained CPI adjustments; source income cohort remains separate."
+  },
+  "entity_rows": {
+    "family": 563,
+    "household": 505,
+    "marital_unit": 1058,
+    "person": 1316,
+    "spm_unit": 532,
+    "tax_unit": 674
+  },
+  "full_prepared_parent_rows": {
+    "person": 432523,
+    "household": 168852
+  },
+  "sample_households_by_cohort": {
+    "2022": 170,
+    "2023": 168,
+    "2024": 167
+  },
+  "sample_fraction": 0.003,
+  "sample_seed": 578,
+  "roots": [
+    "capital_gains",
+    "dividend_income",
+    "employment_income",
+    "social_security"
+  ],
+  "checks": {
+    "graph_nodes": 5,
+    "direct_graph_engine_arrays_equal": true,
+    "complete_checkpoints_equal": true,
+    "money_fields": 33,
+    "axes_per_field": 4,
+    "all_money_axes_equal": true,
+    "housing_universe_fields": 7,
+    "income_accounting_columns": 28,
+    "reported_result_digests": {
+      "asec_reported_cash_public_assistance_2024_price": "ce85a8816e3c34e5f4fce6767ed6eeb0351bce574e596f82b5a4573877aff30a",
+      "asec_reported_income_unallocated_2024_price": "41884a41d271177ebf62f3c5cb2d42259286d72329105b1742e54326f365697c",
+      "asec_reported_net_self_employment_income_2024_price": "abb2c9e89a41818f5b790ca511d3ec451aea5cf0f44e04ffd6f8e6a3b4e821d8",
+      "asec_reported_ssi_2024_price": "4701b9a49c0e4527df9e7b6e9ac8bce316c13fb95e39430a24f17520943d5dc6",
+      "asec_reported_total_income_2024_price": "a866bc2c0f0fcd850981a847292050af3624d9f531024d7447f32ebe6763de65",
+      "asec_reported_wage_income_2024_price": "3e73f4df85af5473a12b6ba97bdaf48415d5ba6cfec101e6c3090499c81720af"
+    },
+    "sample_signed_value_counts": {
+      "asec_reported_cash_public_assistance_2024_price": {
+        "negative": 0,
+        "positive": 8,
+        "zero": 1308
+      },
+      "asec_reported_income_unallocated_2024_price": {
+        "negative": 1,
+        "positive": 705,
+        "zero": 610
+      },
+      "asec_reported_net_self_employment_income_2024_price": {
+        "negative": 3,
+        "positive": 45,
+        "zero": 1268
+      },
+      "asec_reported_ssi_2024_price": {
+        "negative": 0,
+        "positive": 17,
+        "zero": 1299
+      },
+      "asec_reported_total_income_2024_price": {
+        "negative": 0,
+        "positive": 897,
+        "zero": 419
+      },
+      "asec_reported_wage_income_2024_price": {
+        "negative": 0,
+        "positive": 603,
+        "zero": 713
+      }
+    },
+    "unallocated_income_retains_its_sign": true,
+    "loaded_modules_per_execution": 214,
+    "output_files_rehashed_in_separate_root_review": 57,
+    "prepared_receipt_held_fields": 28,
+    "prepared_receipt_changed_identity_fields": 20,
+    "warm_all_cache_hits": true,
+    "warm_kernel_calls": 0
+  },
+  "executions": {
+    "direct": {
+      "elapsed_seconds": 236.64985512499698,
+      "peak_rss_bytes": 8932605952,
+      "receipt_sha256": "5616361103f831f5a2c8f13af5f650a62541ca673652fa78aa1cac5d89365269"
+    },
+    "cold": {
+      "elapsed_seconds": 250.41029154098942,
+      "peak_rss_bytes": 8989966336,
+      "receipt_sha256": "6aeb66a1dc3315c977f63c077208519a5e36fb525df56f2b72b32c2318038dba"
+    },
+    "warm": {
+      "elapsed_seconds": 39.021056708006654,
+      "peak_rss_bytes": 5710381056,
+      "receipt_sha256": "224e65f92e00f1fed09529dbd16c82eb517b33eb63a5f2a3f5a08723d1814a0d"
+    }
+  },
+  "elapsed_seconds": 543.0064117500151,
+  "peak_process_rss_bytes": 8989966336,
+  "checkpoint_sha256": "27b7fd58f3c1f1e1e0e7b646fd768def87220b6a2861c69d7a264188c4d04719",
+  "graph_content_key": "4304edec53dc36ec846c0482e0b1178b5bda63f09108aa74b73c6469d5f88c18",
+  "release_eligible": false,
+  "calibration": false,
+  "fit": false,
+  "district_analysis": false,
+  "representative": false,
+  "prior_wages_added": false,
+  "completed_eight_component_acs_income": false,
+  "limitations": [
+    "Direct and cold each prepare the full source before selecting households; these measurements do not predict final-population memory requirements.",
+    "The accepted 15-household continuity check uses its original parent positions; the two samples are not claimed to be nested.",
+    "The approved runner performed array comparisons. Root separately rehashed output and implementation files and checked receipts.",
+    "Negative source self-employment and residual amounts were retained; this does not establish a complete interpretation of the unallocated residual.",
+    "A fresh-process cache replay initializes and verifies the runtime but executes zero graph kernels.",
+    "No imputation quality, calibration, representativeness, national or district accuracy, or release readiness follows."
+  ]
+}
