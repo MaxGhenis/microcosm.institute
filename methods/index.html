@@ -24,9 +24,16 @@
     .method-table th { width: 25%; font-weight: 600; }
     .method-table td { color: var(--text-secondary); }
     .method-table td p + p { margin-top: 10px; }
+    .method-table.coverage-table th { width: auto; }
+    .method-table.coverage-table thead th { font-size: 14px; font-weight: 600; color: var(--text-secondary); padding-bottom: 10px; }
+    .method-table.coverage-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
     @media (max-width: 600px) {
       .method-table th, .method-table td { display: block; width: auto; padding: 12px 0; }
       .method-table td { border-top: 0; padding-top: 0; }
+      .method-table.coverage-table { font-size: 14px; }
+      .method-table.coverage-table th, .method-table.coverage-table td { display: table-cell; padding: 12px 10px 12px 0; }
+      .method-table.coverage-table td { border-top: 1px solid var(--border-soft); padding-top: 12px; }
+      .method-table.coverage-table thead th { padding-bottom: 8px; }
     }
   </style>
 </head>
@@ -95,7 +102,39 @@
       <p>A Microcosm <a href="/methods/sipp-source-audit-20260905.json">aggregate audit of the pinned public file</a> inspected 265 fields across 476,744 person-month rows. Twenty inspected columns were entirely blank. Of 40,263 people, 39,250 had twelve distinct month records. These are measured properties of that file, not publisher statements or proof of complete annual income. The source corrections and their effects on fitted models remain under development.</p>
       <p>A <a href="/methods/sipp-annual-measurement-audit-20260905.json">follow-up measurement audit</a> compared amounts, flags and household membership on the same records. Only 16,456 of the 39,250 people with twelve records had numeric total earnings in every month under the alternate month-length measure, TPEARN_ALT; missing months still need their source-defined interpretation. Among those complete numeric cases, 7,798 annual sums differed from December earnings on that same basis multiplied by twelve. The household audit also found 38 of 17,646 December residence groups whose members disagreed about total vehicle value. Complete record coverage, annual measurement and household consistency therefore need separate checks.</p>
       <p>A second local <a href="/methods/sipp-source-documentation-20260905.json">Chronicle documentation artifact</a> retains nine SIPP excerpts from three original PDFs. An independent consumer re-extracted the pages and verified all nine text spans. It preserves the question, fill, universe, definition and methodology as distinct claims. This artifact also remains unregistered and unwitnessed.</p>
+      <p id="sipp-source-coverage">A September 5 follow-up measured how much of the December source each asset target actually covers. All 39,513 people and 17,646 December residences from the full source run reconstruct the accepted measurement digest, and the coverage consumer read the existing 4.3 MB projection rather than rereading the original CSV. Vehicle shares weight each complete residence by the mean December WPFINWGT of all its members, taken before any target condition; bank shares use each person's own December weight. Every denominator weight is known, so the unknown share is a property of the measurement, not of the weights.</p>
+      <p>The shares below are source design-weight coverage: the fraction of the December design-weight mass whose target value the source states. They are not calibration fit, target sums or national totals, and a high share does not make the measurement respondent-reported. Every known bank amount and every vehicle amount recode carries <a href="https://www2.census.gov/programs-surveys/sipp/tech-documentation/data-dictionaries/2023/2023_SIPP_Data_Dictionary.pdf#page=8">status flag 9</a>, component-derived with allocation unresolved, which the earlier flag discussion above already separates from “as reported.”</p>
     </div>
+    <table class="method-table coverage-table" style="margin-top: 28px;">
+      <caption>SIPP December 2022 source design-weight coverage, by target</caption>
+      <thead>
+        <tr><th scope="col">Target</th><th scope="col">Unit</th><th scope="col" class="num">Known units</th><th scope="col" class="num">Unknown units</th><th scope="col" class="num">Known design-weight share</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Vehicle equity, THEQ_VEH</th><td>December residence</td><td class="num">17,608</td><td class="num">38</td><td class="num">99.7218%</td></tr>
+        <tr><th scope="row">Vehicle value, THVAL_VEH</th><td>December residence</td><td class="num">17,608</td><td class="num">38</td><td class="num">99.7218%</td></tr>
+        <tr><th scope="row">Vehicle debt, THDEBT_VEH</th><td>December residence</td><td class="num">17,629</td><td class="num">17</td><td class="num">99.8695%</td></tr>
+        <tr><th scope="row">Vehicle count, TVEH_NUM</th><td>December residence</td><td class="num">14,673</td><td class="num">2,973</td><td class="num">82.1625%</td></tr>
+        <tr><th scope="row">Bank assets, TVAL_BANK</th><td>Age-eligible December person</td><td class="num">33,469</td><td class="num">0</td><td class="num">100%</td></tr>
+      </tbody>
+    </table>
+    <div class="prose" style="margin-top: 28px;">
+      <p>The three vehicle amounts lose units only to copied household records whose members disagree: 38 residences for equity and value, 17 for debt. None were repaired. Vehicle count is different in kind. Its 2,973 unknown residences combine 2,954 outside the published question universe with 34 copy conflicts, and those reasons overlap, so the counts are not additive. Bank assets reach 100% of the age-eligible denominator because the 6,044 people below age 15 sit outside that denominator rather than inside it as missing; they stay visible in the full-person diagnostics, where the age-eligible group holds 81.9441% of all December person design-weight mass.</p>
+      <p>The coverage consumer took 6.3247 seconds and peaked at 1.416 GB of process memory (1,415,790,592 bytes). The full December source run that it reads took 94.203 seconds, 60.007 producing and 31.241 reading back, and peaked at 1,632,845,824 bytes; it recorded 15 outputs totalling 4,478,972 bytes and rehashed 53 loaded code files. The <a href="/methods/us-source-coverage-and-authentication-20260905.json">aggregate coverage and authentication evidence</a> carries the exact shares, counts, overlapping reasons and digests behind the displayed rounding. This completes the weighted-coverage prerequisite for a separate, explicit donor-rule decision. No exclusion, target sum, price or period transfer, fit or calibration followed.</p>
+      <h3 id="puf-source-audit">Public Use File headers, joins and return years</h3>
+      <p>A parallel September 5 audit authenticated the local IRS Public Use File deliveries and inspected their structure without decoding any monetary field. A producer and an independent consumer reconstructed identical summaries. All 222 main headers and 7 demographic headers match documentary order exactly, with no missing, extra or duplicated field, no width error and no byte-order mark. The documentary P22250 header is present, and no E22250 alias repair ran.</p>
+      <p>The main delivery holds 207,696 returns with unique lexical RECID. The 119,675 demographic rows all match a main return, with no duplicates and no orphans, leaving 88,021 main returns with no demographics. Those returns must stay missing rather than become zero; a left join that fills them silently would invent demographics for 42% of the file.</p>
+      <p>Two observed code patterns constrain any later period mapping. FLPDYR is mixed: 311 rows for 2012, 1,225 for 2013, 5,134 for 2014 and 201,026 for 2015, so a file name does not establish a 2015 tax period for every row. All 207,696 FLPDMO values are 12. Four records carry MARS 0 and are publisher aggregates; they cannot become four household observations. The remaining filing statuses are MARS 1 for 64,100 returns, 2 for 121,171, 3 for 4,306 and 4 for 18,115, and DSI is 0 for 201,170 and 1 for 6,526. These are observed source codes, not a row-period or tax-unit mapping decision.</p>
+      <p>Producer and consumer workers took 4.124 and 4.054 seconds and peaked at 117,997,568 and 118,226,944 bytes. Those are worker process times, not measured whole-coordinator elapsed, and the 641.30 MB figure is the reviewed source read budget rather than operating-system I/O telemetry. The audit did not reread the raw captures or originals. The same <a href="/methods/us-source-coverage-and-authentication-20260905.json">aggregate evidence file</a> records the header, join and code-frequency results; the private file digests, byte sizes and record content stay local.</p>
+    </div>
+    <table class="method-table" style="margin-top: 28px;">
+      <caption>What each source still needs before an adapter</caption>
+      <tbody>
+        <tr><th scope="row">SIPP December assets</th><td>Coverage is measured; the donor rule is not written. A separate decision has to say what happens to the 38, 17 and 2,973 unknown residences, whether flag 9 component-derived amounts are admissible at all, and how a December 2022 nominal amount reaches the target period. None of that has been decided.</td></tr>
+        <tr><th scope="row">IRS Public Use File</th><td>The adapter must retain the raw FLPDYR return year per row, keep every source code unmapped, carry the 88,021 missing-demographic returns as missing, and exclude the four publisher aggregate records explicitly. The growth-factor allowlist remains empty.</td></tr>
+        <tr><th scope="row">Both</th><td>Field, period and policy-concept mappings, donor inclusion, imputation, fits and calibration are all still open. Neither audit produced a target sum, an income or wage prediction, or any evidence about representativeness or launch readiness.</td></tr>
+      </tbody>
+    </table>
     <table class="method-table" style="margin-top: 28px;">
       <caption>Different records answer different questions</caption>
       <tbody>
