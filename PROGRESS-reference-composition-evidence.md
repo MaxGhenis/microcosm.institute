@@ -25,3 +25,7 @@ Local implementation complete and verified. Independent exact-revision review pe
 
 ## Next
 Independent exact-revision review. A genuine composed population, calibration, national and district validation and pruned release checks remain outside this change.
+
+## Root scope correction
+
+The first draft said no genuine composed population existed, which could contradict the earlier genuine 1% assembly and geography evidence. The revised notes scope that absence to this invented-input integration test and its unmeasured calibrated candidate. They explicitly distinguish the 7,848 age precision checks from the 16,132 projected age cells. New methods rows were shortened without changing recorded numerical results.

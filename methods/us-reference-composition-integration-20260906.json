@@ -51,7 +51,8 @@
         },
         "exposure_families": [
           "S0101"
-        ]
+        ],
+        "precision_scope_note": "The 7,848 precision checks cover a subset of the 16,132 projected age cells."
       }
     },
     "controlled_margin_cells": {
@@ -161,11 +162,12 @@
     "genuine_composed_population": false,
     "calibrated_population": false,
     "candidate_scoring": false,
-    "release_approved": false
+    "release_approved": false,
+    "scope_note": "The genuine_composed_population flag describes this invented-input test run only; it does not negate the earlier genuine 1% source assembly and geography checks."
   },
   "household_income_measurement": {
     "asec_occupied_unit_status": "The prepared ASEC household total is printed for the All Households universe, so it does not by itself establish occupied-housing-unit membership. A consumer comparing against an occupied-unit reference must bind a separately carried housing-universe mask first.",
-    "component_sums": "Both arms read the publisher's own household total. The carried ACS person roster holds six of the publisher's eight income types, so a component sum would be an incomplete total wearing a complete total's name."
+    "component_sums": "Both arms have a measurement of the publisher's household total. The six carried person-income quantities omit two of the publisher's eight income types."
   },
   "unmeasured": [
     "genuine composed population",
