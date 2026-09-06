@@ -252,7 +252,12 @@
       "answer_present": 1,
       "expected_blank_not_in_universe": 32
     },
-    "marker_records_per_field": 132,
+    "marker_records_by_group": {
+      "rent": 132,
+      "utilities": 132
+    },
+    "marker_records_total": 264,
+    "marker_group_basis": "Two recipe marker fields per person, in a rent group and a utilities group",
     "marker_records_marked": 0,
     "seconds": 28.35991508301231,
     "peak_rss_bytes": 419659776,
