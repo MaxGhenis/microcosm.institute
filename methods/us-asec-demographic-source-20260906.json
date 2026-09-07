@@ -1,0 +1,49 @@
+{
+  "schema": "microcosm.asec_demographic_source_evidence.v1",
+  "source_head": "2b901467e95b65d8f3921d3289d8a03d12666710",
+  "helper_head": "86463db5f2479f82ee983f1c9ba3d6cabe823aa0",
+  "root_acceptance_sha256": "c64e0dcce96e600ef2973a32b84ff936008d37959547820f84c4a5ed011fc3ca",
+  "run_receipt_sha256": "ee87a3dd5c6a6e17877bf880fc6cfa3d10cef21355d1730a3ed9e8573555b711",
+  "people": 432523,
+  "households": 168852,
+  "by_income_cohort": {
+    "2022": {
+      "rows": 146133,
+      "households": 56839,
+      "female": 74834,
+      "male": 71299,
+      "allocated": 353,
+      "references": 56839,
+      "survey_year": 2023
+    },
+    "2023": {
+      "rows": 144265,
+      "households": 56251,
+      "female": 73824,
+      "male": 70441,
+      "allocated": 407,
+      "references": 56251,
+      "survey_year": 2024
+    },
+    "2024": {
+      "rows": 142125,
+      "households": 55762,
+      "female": 72582,
+      "male": 69543,
+      "allocated": 477,
+      "references": 55762,
+      "survey_year": 2025
+    }
+  },
+  "elapsed_seconds": 52.8641245419858,
+  "peak_rss_bytes": 5801066496,
+  "source_inputs_rehashed_unchanged": 5,
+  "loaded_source_files_git_verified": 102,
+  "checkpoint_sha256": "3ecd08e7f70fedb4f99e88d5bf712e4c6b4e5088523f11791375773341fff20a",
+  "allocation_flags_preserved": true,
+  "sequence_used_as_headship_fallback": false,
+  "independent_demographic_state_and_household_partition_checks": true,
+  "live_graph_binding": false,
+  "source_dates_harmonized": false,
+  "release_eligible": false
+}

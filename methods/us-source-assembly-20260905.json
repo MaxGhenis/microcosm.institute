@@ -1,0 +1,65 @@
+{
+  "started_at_utc": "2026-09-05T05:39:57.177602+00:00",
+  "scope": "assembly_only_development",
+  "sample_fraction": 0.01,
+  "sample_seed": 578,
+  "status": "passed_engineering_checks",
+  "release_eligible": false,
+  "rows": {
+    "person": 38604,
+    "household": 17004,
+    "tax_unit": 23179,
+    "spm_unit": 17079,
+    "family": 17212,
+    "marital_unit": 30917
+  },
+  "implementation_sha256": "18e1570b739557c70f3133988542747149c6a5977f7cb75ef492f7b4dba658d0",
+  "population_sha256": "95a9b4d3cb3719ef9e831ae258e281699ab00ff0f6a2d34d20a5352797ec6fea",
+  "wall_time_seconds": 663.0812317089949,
+  "peak_rss_bytes_macos": 12166447104,
+  "schema": "microcosm.public_engineering_note.v1",
+  "experiment": "us-graph-f001-assembly-20260905-v3",
+  "measurement_scope": "Direct source loading, assembly, and checkpoint export only",
+  "code_scope": "Local working tree, not a published release",
+  "associated_commit": "c71e31654faf0e3f874e68e8c100b09c7eb9955f",
+  "source_profile_sha256": "378b6afa336ed23c96c09c919a8bf379b1b8549a480c587f8abbb6386f6f1fec",
+  "physical_memory_bytes": 137438953472,
+  "graph_execution_status": "passed",
+  "required_cache_replay_status": "passed",
+  "calibration_status": "not_run",
+  "national_acceptance_status": "not_evaluated",
+  "congressional_district_acceptance_status": "not_evaluated",
+  "runs": [
+    {
+      "mode": "direct",
+      "started_at_utc": "2026-09-05T05:39:57.177602+00:00",
+      "status": "passed_engineering_checks",
+      "wall_time_seconds": 663.0812317089949,
+      "peak_rss_bytes_macos": 12166447104,
+      "population_sha256": "95a9b4d3cb3719ef9e831ae258e281699ab00ff0f6a2d34d20a5352797ec6fea",
+      "source_profile_sha256": "378b6afa336ed23c96c09c919a8bf379b1b8549a480c587f8abbb6386f6f1fec"
+    },
+    {
+      "mode": "cold",
+      "started_at_utc": "2026-09-05T05:51:49.142003+00:00",
+      "status": "passed_engineering_checks",
+      "wall_time_seconds": 727.5078294170016,
+      "peak_rss_bytes_macos": 12125585408,
+      "population_sha256": "95a9b4d3cb3719ef9e831ae258e281699ab00ff0f6a2d34d20a5352797ec6fea",
+      "source_profile_sha256": "6062e151fa554507ea8398b8a2913789270c6cfc9c152cc3a095f11a1ea56ec6",
+      "kernel_calls": 2,
+      "manifest_sha256": "a884221c8fe1119e48a5a0770a169ecd83d0675c77d768dd93e114e56d9e406a"
+    },
+    {
+      "mode": "resume",
+      "started_at_utc": "2026-09-05T06:04:26.899654+00:00",
+      "status": "passed_engineering_checks",
+      "wall_time_seconds": 25.301325790998817,
+      "peak_rss_bytes_macos": 2152841216,
+      "population_sha256": "95a9b4d3cb3719ef9e831ae258e281699ab00ff0f6a2d34d20a5352797ec6fea",
+      "source_profile_sha256": "1315b9e29f7240330c0a6963f5431ab142f83c0514b15adcd8baace9abd8419b",
+      "kernel_calls": 0,
+      "manifest_sha256": "a884221c8fe1119e48a5a0770a169ecd83d0675c77d768dd93e114e56d9e406a"
+    }
+  ]
+}

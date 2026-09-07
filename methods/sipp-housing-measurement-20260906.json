@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_sipp_december_housing_measurement_note.v1",
+  "date": "2026-09-06",
+  "purpose": "Aggregate source measurement of December 2022 SIPP housing tenure, assistance, rent and utilities",
+  "status": "completed_source_measurement",
+  "root_verdict": "ACCEPT_LOCAL_SOURCE_MEASUREMENT_RUNG",
+  "implementation_head": "5534a0fc155dfdfe3b399725ed44fbb9d42f859e",
+  "proposal_version": "sipp-december-housing-extraction-proposal/3",
+  "recipe_version": "sipp-december-housing-projection/2",
+  "recipe_digest": "d59e3a208a35c1b25ac7fef9220d798a1b622f997cad4e463bd8d4ae9d84ae50",
+  "implementation_binding": "88ae14db156eb48ece85862cd230386d4ca31df047974584c7348ffc5a208fb3",
+  "bound_module_sha256": {
+    "microcosm.build.sipp_december_source": "faa97d8699028111de48c7b065e0463def3007e985f1ae5cca35cf13ff129d4c",
+    "microcosm.build.sipp_housing_measurements": "4e8183c772896f26230442e1be9563b04dbd3eb3e14123ac1268015303d503f5",
+    "microcosm.build.sipp_housing_projection": "2a539d372c4bf8a3acbb5a847ecd9bb3d0ac0deed557e480d0eff1f7c388924b",
+    "microcosm.build.sipp_measurements": "81fac9866b72cf42dbd98a2eb24a9c1087893ede3fa57c8ccdbd411812510b2c"
+  },
+  "loaded_module_records": 55,
+  "source": {
+    "name": "sipp_2023_pu2023",
+    "bytes": 3726010471,
+    "sha256": "5c30439e365fc26483318ef61d1d8f4bb2f0e9d6bb47c22c06756a7698733ee2",
+    "header_columns": 5200,
+    "physical_person_month_records": 476744,
+    "december_person_month_records": 39513,
+    "continuity_note": "The parent SHA-256, byte count and the 39,513 / 17,646 / 17,314 / 318 / 29 December reconciliation are the frozen producer's existing evidence. Reproducing them here is a continuity check, not a new source proof."
+  },
+  "december_population": {
+    "people": 39513,
+    "residences": 17646,
+    "ssuids": 17314,
+    "multi_residence_ssuids": 318,
+    "zero_weight_people": 29
+  },
+  "projection_fields": [
+    "SSUID",
+    "PNUM",
+    "MONTHCODE",
+    "ERESIDENCEID",
+    "WPFINWGT",
+    "ETENURE",
+    "ATENURE",
+    "TRENTMORT",
+    "ARENTMORT",
+    "TUTILS",
+    "AUTILS",
+    "ERENTSUB",
+    "ARENTSUB",
+    "EVOUCHER",
+    "AVOUCHER",
+    "EPRDEBT",
+    "APRDEBT",
+    "EMHDEBT",
+    "AMHDEBT",
+    "EEHC_TEN",
+    "AEHC_TEN",
+    "EEHC_RENTSUB",
+    "AEHC_RENTSUB",
+    "EEHC_VOUCHER",
+    "AEHC_VOUCHER",
+    "TRNTMT_MED",
+    "TRNTMT_STD",
+    "TUTILS_MED",
+    "TUTILS_STD"
+  ],
+  "projection_field_count": 29,
+  "tenure_classes": {
+    "no_payment": 420,
+    "owner": 11972,
+    "renter": 5239,
+    "tenure_copy_conflict": 15
+  },
+  "assistance_classes": {
+    "assistance_unknown": 15,
+    "assisted_with_voucher": 341,
+    "assisted_without_voucher": 535,
+    "explicit_unassisted": 4762,
+    "not_in_assistance_universe": 11972,
+    "unassisted_allocated": 21
+  },
+  "voucher_evidence_states": {
+    "answer_present": 876,
+    "expected_blank_not_in_universe": 16770
+  },
+  "voucher_evidence_states_admitted": {
+    "expected_blank_not_in_universe": 4348
+  },
+  "exclusion_order_exclusive": [
+    "tenure_copy_conflict",
+    "tenure_unknown",
+    "tenure_owner",
+    "tenure_no_payment",
+    "assistance_universe_conflict",
+    "assistance_copy_conflict",
+    "assistance_not_in_universe",
+    "assistance_voucher_unresolved",
+    "assistance_assisted",
+    "assistance_unassisted_allocated",
+    "assistance_unknown",
+    "rent_copy_conflict",
+    "rent_unknown",
+    "weight_unknown",
+    "weight_not_positive"
+  ],
+  "exclusions_exclusive": {
+    "admitted": 4348,
+    "assistance_assisted": 851,
+    "assistance_unassisted_allocated": 19,
+    "rent_copy_conflict": 9,
+    "tenure_copy_conflict": 15,
+    "tenure_no_payment": 420,
+    "tenure_owner": 11972,
+    "weight_not_positive": 12
+  },
+  "admitted_unassisted_renter_households": 4348,
+  "admitted_rent_quality": {
+    "hot_deck_imputed": 213,
+    "range_imputed": 78,
+    "reported": 4057
+  },
+  "boundaries": {
+    "rent_topcode_marked_households": 86,
+    "rent_topcode_marker_blank_households": 17560,
+    "rent_topcode_partial_marking_households": 0,
+    "rent_at_domain_maximum_admitted": 0,
+    "rent_zero_admitted": 157,
+    "utilities_topcode_marked_households": 100,
+    "utilities_topcode_marker_blank_households": 17546,
+    "utilities_topcode_partial_marking_households": 0,
+    "utilities_at_domain_maximum_households": 0,
+    "utilities_zero_households": 731,
+    "rent_zero_admitted_allocation_split": "not_measured"
+  },
+  "marker_observation": {
+    "fields": {
+      "TRNTMT_MED": {
+        "lexical_classes": {
+          "blank": 39315,
+          "numeric": 198
+        },
+        "marked": 198,
+        "records": 39513,
+        "unclassified_residual": 0,
+        "zero_subset_of_marked": 0
+      },
+      "TRNTMT_STD": {
+        "lexical_classes": {
+          "blank": 39315,
+          "numeric": 198
+        },
+        "marked": 198,
+        "records": 39513,
+        "unclassified_residual": 0,
+        "zero_subset_of_marked": 0
+      },
+      "TUTILS_MED": {
+        "lexical_classes": {
+          "blank": 39303,
+          "numeric": 210
+        },
+        "marked": 210,
+        "records": 39513,
+        "unclassified_residual": 0,
+        "zero_subset_of_marked": 0
+      },
+      "TUTILS_STD": {
+        "lexical_classes": {
+          "blank": 39303,
+          "numeric": 210
+        },
+        "marked": 210,
+        "records": 39513,
+        "unclassified_residual": 0,
+        "zero_subset_of_marked": 0
+      }
+    },
+    "people": 39513,
+    "scope": "Aggregate observed lexical states only; numeric markers including zero do not independently establish a topcode event. Zero is a subset of marked. Exactly one observation per person per marker field is asserted."
+  },
+  "weights": {
+    "statistic": "sum_of_household_mean_member_WPFINWGT",
+    "basis": "December_2022_mean_all_members",
+    "household": {
+      "count": 17646,
+      "known_denominator": 17646,
+      "known_weight_sum": "140488890.62297259894355644355644355644355644355644355644355644355644355644355659",
+      "unknown_count": 0,
+      "zero_count": 20
+    },
+    "person": {
+      "count": 39513,
+      "known_denominator": 39513,
+      "known_weight_sum": "328601184.99999393",
+      "unknown_count": 0,
+      "zero_count": 29
+    },
+    "admitted_weight_sum": "43070613.950946116230158730158730158730158730158730158730158730158730158730158732",
+    "by_tenure_class": {
+      "no_payment": "3843026.8887877840476190476190476190476190476190476190476190476190476190476190479",
+      "owner": "87062582.852441418189588189588189588189588189588189588189588189588189588189588199",
+      "renter": "49431453.263216151706349206349206349206349206349206349206349206349206349206349208",
+      "tenure_copy_conflict": "151827.61852724500000000000000000000000000000000000000000000000000000000000000001"
+    },
+    "by_assistance_class": {
+      "assistance_unknown": "151827.61852724500000000000000000000000000000000000000000000000000000000000000001",
+      "assisted_with_voucher": "2665716.8633219581746031746031746031746031746031746031746031746031746031746031745",
+      "assisted_without_voucher": "3609018.8672910823015873015873015873015873015873015873015873015873015873015873017",
+      "explicit_unassisted": "46811038.613658048611111111111111111111111111111111111111111111111111111111111116",
+      "not_in_assistance_universe": "87062582.852441418189588189588189588189588189588189588189588189588189588189588199",
+      "unassisted_allocated": "188705.80773284666666666666666666666666666666666666666666666666666666666666666667"
+    },
+    "not_a_publisher_household_sampling_weight": true,
+    "not_a_rent_model_sampling_weight": true,
+    "by_exclusion": {
+      "admitted": "43070613.950946116230158730158730158730158730158730158730158730158730158730158732",
+      "assistance_assisted": "6092044.6609901138095238095238095238095238095238095238095238095238095238095238094",
+      "assistance_unassisted_allocated": "182713.72943614666666666666666666666666666666666666666666666666666666666666666667",
+      "rent_copy_conflict": "86080.921843775",
+      "tenure_copy_conflict": "151827.61852724500000000000000000000000000000000000000000000000000000000000000001",
+      "tenure_no_payment": "3843026.8887877840476190476190476190476190476190476190476190476190476190476190479",
+      "tenure_owner": "87062582.852441418189588189588189588189588189588189588189588189588189588189588199",
+      "weight_not_positive": "0"
+    }
+  },
+  "execution": {
+    "wall_seconds": 42.69412404100876,
+    "peak_rss_bytes": 3201761280,
+    "python": "3.14.4 (main, Apr 14 2026, 14:46:33) [Clang 22.1.3 ]"
+  },
+  "output_digests": {
+    "root-marker-observation.json": {
+      "bytes": 826,
+      "sha256": "76202bb77a2acc3abed28aecf328a53e41618ad831b6ae83e7bf51c84bd69fde"
+    },
+    "housing-projection-receipt.json": {
+      "bytes": 25998,
+      "sha256": "b8885f954b22d3d1035a75dbac74eafeee40d3c57ef3cffcc1c4e0b7eeabb398"
+    },
+    "housing-projection-diagnostics.json": {
+      "bytes": 7879,
+      "sha256": "e832c183ca43701ee37534f555ce30566604e7b73705e66b5fc4c5472c81a329"
+    },
+    "housing-projection-run.json": {
+      "bytes": 4137,
+      "sha256": "0f32a11f8f5d16ab88cdff4e80bc92ff4482b4660a35a66830b4332e56f84d0b"
+    }
+  },
+  "root_output_review_checks": {
+    "total": 96,
+    "measurement_and_output": 37,
+    "module_identity": 55,
+    "receipt_bound_module": 4,
+    "all_passed": true
+  },
+  "preceding_first32_rung": {
+    "root_verdict": "ACCEPT_LOCAL_SOURCE_MEASUREMENT_RUNG",
+    "selected_ssuids": 32,
+    "households": 33,
+    "people": 66,
+    "admitted_unassisted_renters": 15,
+    "observed_voucher_evidence": {
+      "answer_present": 1,
+      "expected_blank_not_in_universe": 32
+    },
+    "marker_records_by_group": {
+      "rent": 132,
+      "utilities": 132
+    },
+    "marker_records_total": 264,
+    "marker_group_basis": "Two recipe marker fields per person, in a rent group and a utilities group",
+    "marker_records_marked": 0,
+    "seconds": 28.35991508301231,
+    "peak_rss_bytes": 419659776,
+    "root_output_review_checks": {
+      "total": 86,
+      "measurement_and_output": 27,
+      "module_identity": 55,
+      "receipt_bound_module": 4,
+      "all_passed": true
+    },
+    "next_rung_allowed": "all_ssuids using unchanged reviewed projection, with new output identity and explicit full marker-state review"
+  },
+  "publication_flags": {
+    "content_store_write": false,
+    "network_request": false,
+    "release_or_promotion": false,
+    "source_row_printed": false
+  },
+  "nominal_price_period": "December 2022",
+  "target_engine_period": 2024,
+  "price_bridge_2022_to_2024": "pending",
+  "counterfactual_gross_housing_charge": "pending",
+  "admitted_fit_weight": "pending",
+  "asec_income_graph_nodes": 5,
+  "bound_sipp_housing_modules": 4,
+  "combined_asec_income_and_sipp_housing_measurement_has_run": false,
+  "release_eligible": false,
+  "calibration": false,
+  "fit": false,
+  "representative": false,
+  "district_analysis": false,
+  "donor_transfer": false,
+  "root_review_limits": [
+    "This measures source support and encoding, not donor-transfer predictive accuracy.",
+    "Nominal December2022 rent/utilities remain unbridged to target2024 and counterfactual gross housing charge.",
+    "Mean member WPFINWGT remains a disclosed proxy, not a publisher household sampling weight or admitted fit weight.",
+    "Root independently checked output hashes/arithmetic and implementation; the reviewed runner performed raw-source authentication and measurement.",
+    "No calibration, national/CD validation or release approval."
+  ],
+  "limitations": [
+    "The measurement covers source support and encoding. It does not measure donor-transfer accuracy, and no donor transfer has run.",
+    "The population is uncalibrated. No calibration, national or congressional-district validation and no release approval follows.",
+    "Nominal December 2022 rent and utilities have no price bridge to the 2024 target period, and no counterfactual gross housing charge exists. Both are pending.",
+    "No admitted fit weight exists for these residences. The summed household mean member WPFINWGT is a disclosed proxy, not a publisher household sampling weight and not a fit weight.",
+    "Counts are observed source states. They carry no estimate precision and no statement about how well any later housing model fits.",
+    "The ASEC five-node income graph and the four bound SIPP housing modules have not been measured together; no combined measurement exists. The unrelated composed ASEC+ACS household-pool development drill (16 ASEC, 153 ACS; 169 households, 383 people) is now accepted as local engineering evidence; see methods#composed-asec-acs-169hh. It carries no housing measurement and does not touch this SIPP work.",
+    "Root checked output digests, arithmetic and implementation identity; the reviewed runner performed the raw-source authentication and the measurement itself."
+  ],
+  "privacy": "Aggregate counts, digests and execution measurements only; no source identifier, source row, fitted value or model payload.",
+  "voucher_answer_quality": {
+    "hot_deck_imputed": 9,
+    "not_in_universe": 16770,
+    "reported": 867
+  },
+  "person_month_receipt_comparison": {
+    "person_month_receipt_in_admitted_households": 4,
+    "person_month_receipt_in_explicit_unassisted_households": 5,
+    "no_person_month_receipt_in_assisted_households": 25
+  }
+}

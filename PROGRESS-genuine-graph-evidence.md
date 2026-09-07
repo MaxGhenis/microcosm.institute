@@ -1,0 +1,5 @@
+# Genuine current-income engineering evidence
+
+Fresh child of reviewed site5b3817c; fetched origin/master remains its ancestor (seven commits behind). Adds an aggregate JSON note for the completed genuine15-household direct/cold/warm run and concise methods/paper links. No historic experiment, older evidence JSON, composition finding, source byte, data release or deployment changes. The original source-preparation sentence now expressly refers to that earlier run.
+
+All new counts/times/identities derive from immutable run68fedbc5 and its stage receipts; four roots,15HH52people,five/cohort,2024evaluation versus mixed source clocks, cold4/warm0,full-source preparation overhead,exclusion and incomplete broader model closure are explicit. Independent native audit fbf88432 and root acceptance are linked by digest. Public data use a closed allowlist with no host/path/PID or record-value outputs. The documentation-only change is verified by artifact reconstruction and focused actual WebKit at390/1280; no new unit tests or source/model reruns.

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_housing_universe_graph_note.v1",
+  "date": "2026-09-05",
+  "purpose": "ASEC housing classification, typed source lineage and replay on a small genuine sample",
+  "status": "completed",
+  "implementation_head": "1b34d23283af43a26b43ca93ad9600d868a64272",
+  "run_receipt_sha256": "72879e796cd2509fe5673ce8522b2ee241ea6497ecb96c7ac8e6695d8a15e0e4",
+  "runner_sha256": "d5ae77c52ad1585916e62df4a96d0a0c52de21eb059ed4f981bb828517d4f399",
+  "source_roster_sha256": "05c0dad3e7321269a0680dadc47da08e14a5fc9900fabb3aa08b14427f3ba9e1",
+  "earlier_income_graph": "us-current-money-graph-20260905.json",
+  "earlier_income_graph_head": "d4bddcb6ac2aba52903cd8dace90330cee4a21e1",
+  "historical_preparation": "us-source-preparation-v4-20260905.json",
+  "source_cohorts": [
+    2022,
+    2023,
+    2024
+  ],
+  "target_engine_period": 2024,
+  "housing_source_period": "interview_household_universe",
+  "period_basis": "Housing observations describe the survey interview; evaluation period 2024 does not change the original cohort or survey clocks.",
+  "entity_rows": {
+    "family": 16,
+    "household": 15,
+    "marital_unit": 43,
+    "person": 52,
+    "spm_unit": 16,
+    "tax_unit": 25
+  },
+  "full_prepared_parent_rows": {
+    "person": 432523,
+    "household": 168852
+  },
+  "sample_households_by_cohort": {
+    "2022": 5,
+    "2023": 5,
+    "2024": 5
+  },
+  "roots": [
+    "capital_gains",
+    "dividend_income",
+    "employment_income",
+    "social_security"
+  ],
+  "engine_runtime_identity": {
+    "packages": {
+      "policyengine-core": {
+        "files": 175,
+        "source_and_parameters_sha256": "fbcc6f3d8e86c023c29e0782d95103155828cfa4ef6a80ed6f785f619be6439e",
+        "version": "3.31.0"
+      },
+      "policyengine-us": {
+        "files": 12313,
+        "source_and_parameters_sha256": "12c474205741021bb45ae618f85ddd6d15e8cbb51dece8334f2d52c04500c674",
+        "version": "1.819.0"
+      }
+    },
+    "policy": "installed_baseline_no_reforms"
+  },
+  "checks": {
+    "direct_graph_engine_arrays_equal": true,
+    "complete_checkpoints_equal": true,
+    "money_fields": 33,
+    "axes_per_field": 4,
+    "all_money_axes_equal": true,
+    "earlier_income_graph_money_axes_preserved": true,
+    "original_design_weights_preserved": true,
+    "source_input_files": 10,
+    "source_snapshot_identities_unchanged": true,
+    "native_housing_artifact_sha256": "52fb3faa751336361e4fc08d95b014feced3ee3c5a12f66670df5dfbaeae4a88",
+    "housing_definition_sha256": "97c4552fb5a674f61c064859dcfdd50e27ddf2cc2e7b8ad1ccbea370f1d0a484",
+    "native_housing_alias_count": 7,
+    "native_dtype": "uint8",
+    "graph_dtype": "int64",
+    "native_parent_frame_sha256": "a34eddd5b139d299b9f92f2eb7192f3b771368d899b85628e3e458aa9e5ab2f1",
+    "native_housing_frame_sha256": "17cc6894808a1248e695480b3568a64e490824ab84f83d88f718511ce6964536",
+    "selected_raw_housing_controls_and_aliases_equal": true,
+    "typed_create_producer_and_selected_source_ancestry_verified": true,
+    "typed_housing_artifact": {
+      "artifact": "housing_universe",
+      "key": "7fc5465121ad92b940907244ad5258bfbd4383cf6120334f3be55674983a2349",
+      "numerics": {
+        "numeric": "platform_bitwise",
+        "platform": "arm64/darwin/py3.14",
+        "tolerance": null
+      },
+      "producer": "asec_prepared.create",
+      "producer_key": "b208b4de21cc338d6a4ac9f1a6fa7e38b06c13aa53fa0c3005b48fd2adda53b1",
+      "type": {
+        "name": "microcosm.us.asec_bound_housing_universe",
+        "schema_version": 1
+      }
+    },
+    "loaded_modules_per_execution": 209,
+    "output_files_rehashed_in_separate_root_review": 42,
+    "root_output_review_sha256": "5d3845e96b572fedfecd17e6277e6f3660017e11fe1e2c10a6f5f72b3cb0b23b"
+  },
+  "executions": {
+    "direct": {
+      "elapsed_seconds": 246.35448804100452,
+      "peak_rss_bytes": 8779808768,
+      "source_preparations": 1,
+      "housing_universe_attachments": 1,
+      "checkpoint_sha256": "40542cac745095606b8a6c401893666e107f13e4beec1357f19022df7fe1b152",
+      "receipt_sha256": "f4c1952be99d4ecd8da42e2ad3f7fa3d833b452d17cd7ae78e4f679c939b27dc"
+    },
+    "cold": {
+      "elapsed_seconds": 276.367902833008,
+      "peak_rss_bytes": 8890531840,
+      "source_preparations": 1,
+      "housing_universe_attachments": 1,
+      "checkpoint_sha256": "40542cac745095606b8a6c401893666e107f13e4beec1357f19022df7fe1b152",
+      "receipt_sha256": "8b272cc03e6021f27306c9e59645641747746a60d32efe052d4e6e750412d459",
+      "kernel_calls": 4,
+      "all_cache_hits": false
+    },
+    "warm": {
+      "elapsed_seconds": 42.015391249995446,
+      "peak_rss_bytes": 5903286272,
+      "source_preparations": 0,
+      "housing_universe_attachments": 0,
+      "checkpoint_sha256": "40542cac745095606b8a6c401893666e107f13e4beec1357f19022df7fe1b152",
+      "receipt_sha256": "0605c670396a26561a03023e7e9351186b57a593ac9d1a812c9aca5bef807718",
+      "kernel_calls": 0,
+      "all_cache_hits": true
+    }
+  },
+  "elapsed_seconds": 582.8965018340095,
+  "peak_process_rss_bytes": 8890531840,
+  "release_eligible": false,
+  "calibration": false,
+  "fit": false,
+  "district_analysis": false,
+  "representative": false,
+  "prior_wages_added": false,
+  "annual_five_month_student_status_validated": false,
+  "all_current_money_consumers_wired": false,
+  "limitations": [
+    "Direct and cold execution each prepare the full source before selecting 15 households; these costs are not a small-sample memory forecast.",
+    "Warm replay computes no kernels, source preparations or housing attachments, but still initializes the inherited engine ABI and performs source/runtime/cache verification.",
+    "The reviewed runner compared real arrays and source ancestry. The separate root output audit rehashed 42 recorded outputs and 209 implementation files; this public note reads saved aggregate JSON only.",
+    "The 33 selected monetary fields preserve the earlier d4 evidence; the housing extension produces a different full checkpoint from that earlier run.",
+    "ASEC classification does not establish a shared ACS housing definition, ACS B25003 or district eligibility, or representation of every group-quarters and unknown-tenure case in this sample.",
+    "Interview-week student controls do not establish the annual five-month tax-student test. Income-component closure remains incomplete.",
+    "No tax-benefit score, sample-quality finding, fit, calibration, holdout evaluation, national or district result, paper-study result or release certification follows."
+  ]
+}

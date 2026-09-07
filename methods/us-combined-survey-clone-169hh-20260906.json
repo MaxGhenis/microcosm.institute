@@ -1,0 +1,124 @@
+{
+  "completion_sha256": "58b1741886081cbc4d05bd23e51bf5670d57b6a9941bc4645616f0c3e472723f",
+  "design_weight_reference": {
+    "after_rows": 338,
+    "after_sha256": "73407445ff21ab210478fe5304dbe65dc48e7e08f1699929186870c2a1351b4d",
+    "before_rows": 169,
+    "before_sha256": "df405b7e2810caac6722a6cdcb60b05bc89b550e44ebbe0315520ee7980fc337",
+    "future_calibration_caps_validated": false,
+    "source_anchor_copied_unhalved": true,
+    "total_after": 551632058.6804897,
+    "total_before": 275816029.34024477,
+    "total_ratio": 2.0000000000000004
+  },
+  "entity_rows": {
+    "family": {
+      "after": 340,
+      "before": 170
+    },
+    "household": {
+      "after": 338,
+      "before": 169
+    },
+    "marital_unit": {
+      "after": 614,
+      "before": 307
+    },
+    "person": {
+      "after": 766,
+      "before": 383
+    },
+    "spm_unit": {
+      "after": 338,
+      "before": 169
+    },
+    "tax_unit": {
+      "after": 462,
+      "before": 231
+    }
+  },
+  "execution": {
+    "extension_calls": 2,
+    "fresh_required_warm_hits": 11,
+    "nodes": 11,
+    "upstream_hits": 9,
+    "warm_calls": 0
+  },
+  "execution_manifest_key": "e5166c8bad41fa96007264c1ca6b058510c90ba2ce30559869cb17ec15fc5efa",
+  "execution_manifest_sha256": "30d8fbc4b0f34ce068628bd5cbd83a90f954feefd85e3e6b1f390f2c94ce1ba6",
+  "independent_output_verification": {
+    "carried_entity_columns_checked_in_raw_hdf": 295,
+    "household_pair_weight_bits_preserved": true,
+    "loaded_source_modules_checked_against_git": 219,
+    "persisted_files_hashed": 6564,
+    "person_to_group_memberships_checked": 5,
+    "strata_bytes_preserved": true
+  },
+  "independent_review": {
+    "model": "Fable5.1",
+    "review_sha256": "2a904b4df66bbca62aace5f0ebb88ebea28879addeb470b256aa03427c806129",
+    "verdict": "ACCEPT for this exact bounded runner"
+  },
+  "limits": [
+    "Clones preserve source support; they add no independent survey observations.",
+    "PUF donor matching and amounts are not present.",
+    "Current household importance weight is split equally; each original design anchor is copied unhalved to both descendants. Later calibration must explicitly define cap allocation.",
+    "Typed upstream artifacts retain their original population grain; rebinding to descendants is separate work.",
+    "No imputation fit, recalibration, national or congressional-district validation, pruning, certification or release was run.",
+    "No dashboard display verification of this candidate is claimed by this evidence record."
+  ],
+  "peak_worker_rss_bytes": 1999159296,
+  "phases": {
+    "extend": {
+      "exit_code": 0,
+      "pid": 7419,
+      "sampled_peak_rss_bytes": 1994817536,
+      "wall_seconds": 107.20271675000004
+    },
+    "stage": {
+      "exit_code": 0,
+      "pid": 2314,
+      "sampled_peak_rss_bytes": 97976320,
+      "wall_seconds": 28.34033087500029
+    },
+    "warm": {
+      "exit_code": 0,
+      "pid": 30233,
+      "sampled_peak_rss_bytes": 1999175680,
+      "wall_seconds": 54.29940375000024
+    }
+  },
+  "population_checkpoint_sha256": "caf2f0f7e9872e465d6e63b3f6bdc3eb1022442d822c75746454257bba18b648",
+  "recorded_date": "2026-09-06",
+  "root_acceptance_sha256": "eaa481dc6c318bbcaf452c99926ad345d6c05f5a19acd27584aeb0d2ecf63b7f",
+  "runner_commit": "8f02ad5bdcaaf58916b0db6b0e98a9aa33da54b7",
+  "schema": "microcosm.local_combined_clone_evidence.v1",
+  "scope": {
+    "acs": "2024 one-year national PUMS",
+    "asec_income_reference_years": [
+      2022,
+      2023,
+      2024
+    ],
+    "asec_survey_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "base_household_arms": {
+      "acs": 153,
+      "asec": 16
+    },
+    "base_households": 169,
+    "calibration_executed": false,
+    "clone_roles_per_base_household": 2,
+    "output_households": 338,
+    "output_people": 766,
+    "prior_wage_stage": false,
+    "puf_donor_attached": false,
+    "release_eligible": false,
+    "target_standard_errors_consumed": false
+  },
+  "source_commit": "1f6ffa7b441701cb2b1254e4bb48241e1e2895de",
+  "status": "accepted_local_engineering_drill"
+}

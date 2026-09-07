@@ -1,0 +1,135 @@
+{
+  "schema": "microcosm.recorded_age_development_evidence.v1",
+  "recorded_at": "2026-09-06T18:39:48.807902+00:00",
+  "scope": "New, actual recorded executions at169 and17004 households. Numerical results match historical age-only experiments. Local aggregate exports accepted; local US browser checks passed; final display changes independently accepted. No release or district validation.",
+  "records": [
+    {
+      "households": 169,
+      "persons": 383,
+      "run_id": "national-age-calibration-169hh-a4e69c0a-manifest-v2",
+      "source_head": "84e7a011f7bc4d8cb5a7cbd2599b4d893558b1e0",
+      "runner_sha256": "eddc85e9702f2348a15df6eff0f5e5c357e7051ea3162fb4aa1d58a6e78624a8",
+      "root_calibration_acceptance_sha256": "a160cd86b9c695672aa4541e752e3d4163132d822634ba612d2a8ece4c82be92",
+      "root_materialization_acceptance_sha256": "8b3df1dffa386d2d4162acf63533273f998d7646f97f96a38334e33665cb88e5",
+      "root_export_acceptance_sha256": "fc4853cdde147ada2b09e2969757c86f68c4e8d8a416df7bf090e3b1b6b73bcb",
+      "historical_numerical_result_exact": true,
+      "actual_execution_manifests": {
+        "calibrate": {
+          "bytes": 646492,
+          "filename": "calibrate-manifest.json",
+          "manifest_key": "1a8767b022a6a50c6448c3658fd48b31315813e7a91c81267125da926d238bb4",
+          "sha256": "9e2f07739e089ea01a19214153e91d0c1d1c6ce61c4665bccf1c4b0301e587a5"
+        },
+        "warm": {
+          "bytes": 646490,
+          "filename": "warm-manifest.json",
+          "manifest_key": "1a8767b022a6a50c6448c3658fd48b31315813e7a91c81267125da926d238bb4",
+          "sha256": "e13024e3b473259fe09bfb88bac1456ae1ee38eb5a58565868d368c7ee2e61da"
+        }
+      },
+      "population_sha256": "dad4bf854c5300aa51549d86fff83871005d19942757d8495ec31c29ceb91343",
+      "calibrated_weights_sha256": "1433a2dad895f27a4a20843daaeec6fa62a2f1c3c412824271350952f4e5e5d5",
+      "materialization_receipt_sha256": "46d0b289ff4a2e8072eda44aca53268555bb7ba7f0f04843ccf67ead17927e92",
+      "candidate_release_id": "us-combined-age-169hh-development-manifest-v2-20260906",
+      "candidate_manifest_sha256": "04bf718d9dd406031a6886b0dc1e2bae4cf9f330375483d34314d13ea1646845",
+      "graph_receipts_sha256": "f2cdf00b8e13fbdad636cb2d43106423d6be9728a915c2c6dca81ee92ee267cc",
+      "public_files_verified": 3,
+      "four_execution_counts": [
+        {
+          "hits": 0,
+          "kernel_calls": 9
+        },
+        {
+          "hits": 9,
+          "kernel_calls": 0
+        },
+        {
+          "hits": 9,
+          "kernel_calls": 2
+        },
+        {
+          "hits": 11,
+          "kernel_calls": 0
+        }
+      ],
+      "age_cells_independently_recomputed": true,
+      "materialization_source_parses": 0,
+      "materialization_kernel_calls": 0,
+      "release_eligible": false
+    },
+    {
+      "households": 17004,
+      "persons": 38604,
+      "run_id": "national-age-calibration-17004hh-a4e69c0a-manifest-v2",
+      "source_head": "84e7a011f7bc4d8cb5a7cbd2599b4d893558b1e0",
+      "runner_sha256": "eddc85e9702f2348a15df6eff0f5e5c357e7051ea3162fb4aa1d58a6e78624a8",
+      "root_calibration_acceptance_sha256": "d28d33192105fe6a40388ffb2d782c9301f599ed9c44a35d0806f2987805ec33",
+      "root_materialization_acceptance_sha256": "68603e549ab6e9d366bd0c454a6b0bba2b7d22720fa2fb0546c95968b9148c5e",
+      "root_export_acceptance_sha256": "c6d894e4c4c161309ffd31e4b31bf051cbc5db240a8cfa45eba487df289e0d10",
+      "historical_numerical_result_exact": true,
+      "actual_execution_manifests": {
+        "calibrate": {
+          "bytes": 645273,
+          "filename": "calibrate-manifest.json",
+          "manifest_key": "e4316452dca9a199a041afb715d88f24aad7d3ff7a9d72c0a32df91af9bc730e",
+          "sha256": "8353ebf5f4448a67deac66cddf6f53c508c3905dc53361d31f6d0616256a7ccd"
+        },
+        "warm": {
+          "bytes": 645272,
+          "filename": "warm-manifest.json",
+          "manifest_key": "e4316452dca9a199a041afb715d88f24aad7d3ff7a9d72c0a32df91af9bc730e",
+          "sha256": "ab28c26cff74156f4744674e6851f0cdb31cb3c10b64b9e82ed15cfd5796920f"
+        }
+      },
+      "population_sha256": "18cc142c3f3adb3aef2f323094c1d6498c10e72e7eec202d74bac7261c421976",
+      "calibrated_weights_sha256": "819a1cf2582498a054b5453b4834064ef7fcb04f7d7cc03e23d6bf576f7a6715",
+      "materialization_receipt_sha256": "954a805850dd49d4ed2c0e675d5d05117ed80d578e1f34cae9781ff6bc6c6843",
+      "candidate_release_id": "us-combined-age-17004hh-development-manifest-v2-20260906",
+      "candidate_manifest_sha256": "cfd7408f20cbe425f3e153ef5066ccddf9c8a6cbeeae8dbd58396b5937ecd041",
+      "graph_receipts_sha256": "fc8192c7fe207948c204f8b6f8c123561ec8b775998db406f9f896ad9270c27b",
+      "public_files_verified": 3,
+      "four_execution_counts": [
+        {
+          "hits": 0,
+          "kernel_calls": 9
+        },
+        {
+          "hits": 9,
+          "kernel_calls": 0
+        },
+        {
+          "hits": 9,
+          "kernel_calls": 2
+        },
+        {
+          "hits": 11,
+          "kernel_calls": 0
+        }
+      ],
+      "age_cells_independently_recomputed": true,
+      "materialization_source_parses": 0,
+      "materialization_kernel_calls": 0,
+      "release_eligible": false
+    }
+  ],
+  "browser_validation": {
+    "status": "root_checks_passed_independent_display_review_accepted",
+    "frontend_head": "280ff436c803788f17599d45c5fadcbbcb4b1a59",
+    "desktop_and_mobile_checks": 137,
+    "population_history_regression_checks": 29,
+    "numerical_values_unchanged": true,
+    "country_data_availability": "Country switching passed14 behavioral checks; a separate error gate remains failed on aborted Next prefetches and the UK releases endpoint HTTP502.",
+    "independent_review": {
+      "model": "Fable5.1",
+      "verdict": "ACCEPT",
+      "scope": "Local US display and navigation, not scientific release eligibility"
+    },
+    "unit_tests": {
+      "passed": 656,
+      "failed": 0,
+      "assertions": 2247
+    }
+  },
+  "public_deployment_updated": false,
+  "historical_manifests_reconstructed": false
+}

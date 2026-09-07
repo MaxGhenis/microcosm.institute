@@ -55,14 +55,15 @@
       </h1>
       <p class="lede reveal" style="--d:2">
         <strong>microcosm</strong> is a stack for constructing calibrated synthetic
-        microdata from public survey and administrative data — realistic enough
-        to model tax and benefit policy for everyone, private by construction,
-        and improved in the open.
+        microdata from survey and administrative sources, with explicit
+        provenance and <a href="/methods#privacy">release boundaries</a>.
+        Its methods and evidence improve in the open.
       </p>
       <div class="hero-cta reveal" style="--d:3">
         <a class="btn btn-primary" href="#idea">How it works</a>
         <a class="btn btn-ghost" href="https://github.com/PolicyEngine/microcosm">Read the code</a>
         <a class="btn btn-ghost" href="/papers">Read the papers</a>
+        <a class="btn btn-ghost" href="/methods">Methods and evidence status</a>
       </div>
       <p class="hero-foot reveal" style="--d:4">
         <span class="mono">every point above is a synthetic household · brightness ∝ survey weight</span>
@@ -464,6 +465,8 @@
           file — rather than a separate survey to source and calibrate for
           every locality. Calibrated to state administrative totals and
           state and congressional-district populations.
+          Each release's geographic scope depends on its own boundaries,
+          support and evaluation evidence.
         </p>
         <span class="strategy-paper-link mono">see the release →</span>
       </a>
@@ -653,18 +656,18 @@ sim = managed_microsimulation()<span class="qs-c">   # policyengine_us.Microsimu
     <div class="prose">
       <p>
         The long-run goal is a communal population that many parties improve — at
-        full scale, one statistically faithful record for every person, carrying no
-        one's private data. Contributions come in three forms, and they are exactly
+        full scale, one statistically faithful record for every person, subject to
+        the charter's source and disclosure requirements. Contributions come in three forms, and they are exactly
         the three operators: <strong>records</strong> as new strata,
         <strong>conditional models</strong> trained on data a contributor holds, and
         <strong>facts</strong> as calibration targets.
       </p>
       <p>
-        A contribution merges only if it improves the population's score on
-        held-out, rotating evidence without degrading any protected family. Privacy
-        is enforced by provenance and measurement, not by blurring: public sources
-        can be sharp, private evidence enters only through certified models, and the
-        population must resemble held-out data — never anyone's training data.
+        The charter requires contributions to improve held-out evidence without
+        degrading protected families. Private-source onboarding also requires
+        formal privacy certificates, disclosure checks and a composition policy;
+        that attestation and audit infrastructure remains unfinished.
+        <a href="/methods#privacy">Read the data-access and privacy boundaries</a>.
       </p>
     </div>
     <ul class="commons-rails">

@@ -1,0 +1,63 @@
+{
+  "schema": "microcosm.public_engineering_note.v1",
+  "experiment": "us-graph-f001-geography-20260905-v1",
+  "scope": "assembly_geography_development",
+  "measurement_scope": "Load the existing 1% source assembly, assign geography, check assignment integrity and export the checkpoint. Does not include reparsing the source files.",
+  "code_scope": "Local working tree, not a published release",
+  "associated_commit": "c71e31654faf0e3f874e68e8c100b09c7eb9955f",
+  "implementation_sha256": "18e1570b739557c70f3133988542747149c6a5977f7cb75ef492f7b4dba658d0",
+  "sample_fraction": 0.01,
+  "sample_seed": 578,
+  "assembly_population_sha256": "95a9b4d3cb3719ef9e831ae258e281699ab00ff0f6a2d34d20a5352797ec6fea",
+  "population_sha256": "9d64839e065953d94511dde19b29b2240f91c6a08bdec6b6aa3902f60553f9c6",
+  "rows": {
+    "person": 38604,
+    "household": 17004,
+    "tax_unit": 23179,
+    "spm_unit": 17079,
+    "family": 17212,
+    "marital_unit": 30917
+  },
+  "graph_execution_status": "passed",
+  "required_cache_replay_status": "passed",
+  "geography_integrity_gate_status": "passed",
+  "release_eligible": false,
+  "calibration_status": "not_run",
+  "national_acceptance_status": "not_evaluated",
+  "congressional_district_acceptance_status": "not_evaluated",
+  "runs": [
+    {
+      "mode": "direct",
+      "started_at_utc": "2026-09-05T06:06:07.725834+00:00",
+      "status": "passed_engineering_checks",
+      "wall_time_seconds": 23.86733358300262,
+      "peak_rss_bytes_macos": 1985134592,
+      "population_sha256": "9d64839e065953d94511dde19b29b2240f91c6a08bdec6b6aa3902f60553f9c6",
+      "source_profile_sha256": "998e0c045af6b9224f636df8401ec7c841bbf594125edd4332fc090f38bf81bf"
+    },
+    {
+      "mode": "cold",
+      "started_at_utc": "2026-09-05T06:07:03.845846+00:00",
+      "status": "passed_engineering_checks",
+      "wall_time_seconds": 26.723163500006194,
+      "peak_rss_bytes_macos": 2190557184,
+      "population_sha256": "9d64839e065953d94511dde19b29b2240f91c6a08bdec6b6aa3902f60553f9c6",
+      "source_profile_sha256": "7c1140f20a62e33c8999d4631760f20b2c98df23c3d5661ae1c896657a37a6d7",
+      "kernel_calls": 4,
+      "manifest_sha256": "73639eb8dee60b18f0da3a77aa058aba25bac3c57260ac2ccee3d488cf73e02a",
+      "geography_integrity_gate_status": "passed"
+    },
+    {
+      "mode": "resume",
+      "started_at_utc": "2026-09-05T06:08:19.976711+00:00",
+      "status": "passed_engineering_checks",
+      "wall_time_seconds": 26.970482542004902,
+      "peak_rss_bytes_macos": 2249916416,
+      "population_sha256": "9d64839e065953d94511dde19b29b2240f91c6a08bdec6b6aa3902f60553f9c6",
+      "source_profile_sha256": "3b24f996231145efa66a357d85f9fc9380317e1f1257f28433833d5beadd2510",
+      "kernel_calls": 0,
+      "manifest_sha256": "73639eb8dee60b18f0da3a77aa058aba25bac3c57260ac2ccee3d488cf73e02a",
+      "geography_integrity_gate_status": "passed"
+    }
+  ]
+}

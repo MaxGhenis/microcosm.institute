@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_sipp_annual_measurement_audit.v1",
+  "purpose": "Aggregate-only observed record coverage, same-row amount/status associations and within-residence consistency; not a source universe, structural-zero, donor eligibility or fitting decision",
+  "run_date": "2026-09-05",
+  "source_sha256": "5c30439e365fc26483318ef61d1d8f4bb2f0e9d6bb47c22c06756a7698733ee2",
+  "source_bytes": 3726010471,
+  "source_bytes_unchanged": true,
+  "audit_sha256": "24fe8dcaecbe4dc4e228e2d230f6c32f0fec94730d1b73738badf85c4f996228",
+  "runner_sha256": "912934b2deb11a5e3ade478f2a54d184b4d0ae69d924121a5f9662d028050300",
+  "master_dictionary_sha256": "b62876a0763a0b45f2c4873b055b35c264d3a67640b8a8b3590b650aa1db679e",
+  "rows": 476744,
+  "fields": 259,
+  "people": 40263,
+  "people_with_twelve_records": 39250,
+  "total_earnings": {
+    "field": "TPEARN_ALT",
+    "twelve_record_people_by_numeric_months": {
+      "0": 19891,
+      "1": 179,
+      "2": 225,
+      "3": 241,
+      "4": 270,
+      "5": 321,
+      "6": 252,
+      "7": 270,
+      "8": 256,
+      "9": 232,
+      "10": 304,
+      "11": 353,
+      "12": 16456
+    },
+    "annual_sum_differs_from_december_times_twelve": 7798,
+    "comparison_denominator": 16456,
+    "amount_flag_joint": [
+      {
+        "amount_class": "blank",
+        "rows": 258612,
+        "status": "item:0"
+      },
+      {
+        "amount_class": "valid_negative",
+        "rows": 2387,
+        "status": "item:9"
+      },
+      {
+        "amount_class": "valid_positive",
+        "rows": 208855,
+        "status": "item:9"
+      },
+      {
+        "amount_class": "valid_zero",
+        "rows": 6890,
+        "status": "item:9"
+      }
+    ],
+    "interpretation": "Total earnings includes wages and business profits/losses. Numeric coverage is not donor eligibility, and a blank month has not been replaced by zero."
+  },
+  "december_households": {
+    "grouping_fields": [
+      "SSUID",
+      "ERESIDENCEID"
+    ],
+    "groups": 17646,
+    "people": 39513,
+    "members_disagree_total_vehicle_value": 38,
+    "members_disagree_vehicle_count": 32,
+    "members_disagree_vehicle_count_or_status": 34,
+    "first_row_weight_differs_from_mean_member_weight": 7171
+  },
+  "release_eligible": false,
+  "limitations": [
+    "Microcosm-derived unweighted source counts; not publisher statements or population estimates",
+    "Source definitions are retained separately from these measured observations",
+    "No complete public job-slot reconstruction, annual donor product, stock-year translation, fitting or calibration",
+    "No blank replacement or first/max household collapse is approved by these diagnostics"
+  ]
+}

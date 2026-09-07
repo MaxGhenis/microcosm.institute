@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "kind": "microcosm.public_sipp_housing_predictor_source_note.v1",
+  "date": "2026-09-06",
+  "status": "accepted_local_source_extraction",
+  "implementation_head": "bed98d54308e67ee5960a423934e43c2361bba88",
+  "proposal_sha256": "3398a3f7ede6d05b33709d2c4b0db7b45a0d4a4a43be45d9acf71034f9be0c09",
+  "recipe_sha256": "e8c809b2a1788d3b2016d03f6ac4b9f37b955bd7a7b855cd94372d7ab4ea1bc4",
+  "recipe_version": "sipp-december-housing-projection/3",
+  "output_digests": {
+    "housing-projection-receipt.json": {
+      "bytes": 43751,
+      "sha256": "8b07058d04bc9ad8dedee4bab756fbb084752fe4043aac5e4abe5d3209e1afd5"
+    },
+    "housing-projection-diagnostics.json": {
+      "bytes": 12331,
+      "sha256": "2e3b2f16788d54eb3fcf7e7a0940c7f915e5657e940e3183befe52a41960adc9"
+    },
+    "housing-projection-run.json": {
+      "bytes": 5734,
+      "sha256": "bd47491e9d7e21666723e23842a1decd02b4810f935f2ad23d89bb8a3ddc038b"
+    }
+  },
+  "measurement_digest": "f14be412e34a15684d48855e508782462ca5cdec6b5c12db8c5d39853b67f0a9",
+  "membership_digest": "e040e25bfc9201ffe87e3eabc6fe85bff39ef39a46d5088bd7be633ab16f7779",
+  "predictor_digest": "5c00cd671da83e392cf7be23da55762dd863f3e3d38865d3e37c118f53311bdc",
+  "prior_measurement_diagnostics_identical": true,
+  "households": 17646,
+  "people": 39513,
+  "selected_ssuids": 17314,
+  "admitted_unassisted_renters": 4348,
+  "predictor_complete": {
+    "predictor_complete": 17646
+  },
+  "predictor_complete_admitted": {
+    "predictor_complete": 4348
+  },
+  "age_coverage": {
+    "complete": 17646
+  },
+  "person_age_admissible_measurements": 39513,
+  "household_size_agreement": {
+    "agree": 17646
+  },
+  "children_under_18_agreement": {
+    "agree": 17645,
+    "disagree": 1
+  },
+  "income_sign": {
+    "negative": 40,
+    "positive": 17294,
+    "zero": 312
+  },
+  "predictor_field_quality": {
+    "RHNUMPER": {
+      "component_derived_allocation_unresolved": 17646
+    },
+    "RHNUMU18": {
+      "component_derived_allocation_unresolved": 17646
+    },
+    "TEHC_ST": {
+      "hot_deck_imputed": 2,
+      "reported": 17644
+    },
+    "THTOTINC": {
+      "component_derived_allocation_unresolved": 17646
+    }
+  },
+  "predictor_copy_conflicts": {
+    "RHNUMPER": 0,
+    "RHNUMU18": 0,
+    "TEHC_ST": 0,
+    "THTOTINC": 0
+  },
+  "predictor_unknown_measurements": {
+    "RHNUMPER": 0,
+    "RHNUMU18": 0,
+    "TEHC_ST": 0,
+    "THTOTINC": 0
+  },
+  "residence_code_61_households": 13,
+  "maximum_age_at_domain_maximum_households": 82,
+  "maximum_age_domain": 90,
+  "execution": {
+    "wall_seconds": 52.163115916977404,
+    "peak_rss_bytes": 3394863104,
+    "git_verified_loaded_module_files": 56
+  },
+  "source_basis": "Nominal signed monthly household income and housing measurements for December 2022. No annualization or price conversion.",
+  "allocation_interpretation": "Component-derived allocation-unresolved does not establish fully reported components or prove wholly imputed households. Donor admission is a separate decision.",
+  "child_count_discrepancy_repaired": false,
+  "non_state_residence_recoded": false,
+  "fit_admission": false,
+  "donor_mask_admitted": false,
+  "fit_weight_admitted": false,
+  "source_year_or_price_bridge_admitted": false,
+  "counterfactual_housing_charge_constructed": false,
+  "published": false,
+  "privacy": "Aggregate counts, code identities and execution measurements only; no source identifiers, household rows or local filesystem paths."
+}
