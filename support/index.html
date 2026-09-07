@@ -106,14 +106,14 @@
     </div>
     <div class="cards">
       <article class="card">
-        <header><span class="card-id mono">composition</span><span class="tag tag-live">shipped</span></header>
+        <header><span class="card-id mono">composition</span><span class="tag tag-draft">development</span></header>
         <h3>Multispine</h3>
         <p>
-          Every record in the support is an observed survey record, never a
-          synthesized one: a CPS ASEC spine carries the demographics, a PUF
-          support channel carries tax detail, and an ACS channel is planned.
-          Cloned records keep their source identity, so every value traces to
-          the survey that observed it.
+          The US development pool combines observed CPS ASEC and ACS
+          household records. A small <a href="/methods#combined-clone-export">whole-household clone run</a>
+          preserves both survey channels and their existing importance mass.
+          PUF observations remain a separate donor source; tax-detail transfer
+          into this pool has not completed.
         </p>
       </article>
       <article class="card">
@@ -143,8 +143,8 @@
     </p>
     <figure class="diagram-figure">
       <svg viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="support-flow-title support-flow-desc">
-        <title id="support-flow-title">How the support is built</title>
-        <desc id="support-flow-desc">Three observed-survey channels — the CPS ASEC spine, the PUF donor channel, and a planned ACS channel — feed a clone step that preserves each record's source identity, then a sequential zero-inflated quantile-regression-forest completion step draws every variable a record's own survey didn't observe. The output is the support.</desc>
+        <title id="support-flow-title">Survey support and donor-completion roles</title>
+        <desc id="support-flow-desc">CPS ASEC and ACS households feed a clone step that preserves their source identity. The PUF is a separate donor input to the planned completion step, which uses a gate and sequential quantile-regression-forest draws. Donor transfer into the current US development pool remains pending.</desc>
 
         <!-- source channels -->
         <rect class="dg-box-accent" x="8" y="18" width="196" height="56" rx="5"/>
@@ -152,20 +152,20 @@
         <text class="dg-title" x="24" y="56">CPS ASEC</text>
         <text class="dg-label" x="24" y="70">demographics</text>
 
-        <rect class="dg-box" x="8" y="94" width="196" height="56" rx="5"/>
+        <rect class="dg-box-planned" x="8" y="94" width="196" height="56" rx="5"/>
         <text class="dg-kicker" x="24" y="112">donor channel</text>
         <text class="dg-title" x="24" y="132">IRS SOI PUF</text>
-        <text class="dg-label" x="24" y="146">tax detail</text>
+        <text class="dg-label" x="24" y="146">transfer pending</text>
 
-        <rect class="dg-box-planned" x="8" y="170" width="196" height="56" rx="5"/>
-        <text class="dg-kicker" x="24" y="188">donor channel · planned</text>
+        <rect class="dg-box-accent" x="8" y="170" width="196" height="56" rx="5"/>
+        <text class="dg-kicker" x="24" y="188">spine</text>
         <text class="dg-title" x="24" y="208">Census ACS</text>
-        <text class="dg-label" x="24" y="222">not yet integrated</text>
+        <text class="dg-label" x="24" y="222">whole households</text>
 
         <!-- edges into clone -->
         <path class="dg-edge" d="M 204 46 C 250 46, 250 100, 300 100"/>
-        <path class="dg-edge" d="M 204 122 L 300 122"/>
-        <path class="dg-edge-planned" d="M 204 198 C 250 198, 250 144, 300 144"/>
+        <path class="dg-edge-planned" d="M 204 122 C 250 122, 250 8, 290 8 L 480 8 Q 500 8, 500 50 L 510 50"/>
+        <path class="dg-edge" d="M 204 198 C 250 198, 250 144, 300 144"/>
 
         <!-- clone stage -->
         <rect class="dg-box-accent" x="300" y="76" width="150" height="72" rx="5"/>
@@ -209,7 +209,7 @@
         <path class="dg-edge" d="M 620 248 L 620 224" stroke-dasharray="2 2"/>
       </svg>
       <figcaption>
-        The support's build path: each channel is an <strong>observed</strong> survey record, never a synthesized one. Cloning keeps every record's source identity, so a value can always be traced back to the survey that measured it. Completion runs a gate model (zero/participation regime) then a quantile regression forest (the amount), sequencing multi-component targets so each is conditioned on the ones already drawn.
+        Survey and donor roles in the US development path, as of September 6, 2026. ASEC and ACS households have been composed and cloned in a small engineering run. Clones preserve their original survey support; they add no independent observations. The dashed PUF path denotes pending donor transfer. The completion method uses a gate for the zero/participation regime, then sequential quantile-regression-forest amount draws. Its benchmark results above remain separate from current population construction.
       </figcaption>
     </figure>
   </section>

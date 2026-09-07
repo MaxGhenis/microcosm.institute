@@ -28,9 +28,20 @@ deployment, dependency upgrade, or changes to the existing preview.
 - Pinned the 13 supplied metadata inputs for this update; no private payloads
   were opened. The 77 focused provenance, value, schema and refusal checks pass.
 
+- Added a short dated home-page progress entry and focused methods/paper notes.
+  Corrected the support diagram so ASEC and ACS feed the clone while PUF
+  transfer remains pending. Historical benchmarks and age calibrations retain
+  their original scope.
+- The independent content review found two issues: an older PUF sentence
+  double-counted aggregates in its wording, and a link label promised a design
+  note instead of price evidence. Both are corrected.
+- Local links and fragment targets pass for all seven edited HTML pages.
+- Port 4607 was free. The separate local server attempt failed at bind with
+  `PermissionError: [Errno 1] Operation not permitted`; existing listeners
+  remain untouched. Headless WebKit was attempted with the installed runtime.
+
 ## Next
 
-- Finish focused visible prose and methods/paper links for the new receipts.
 - Check local HTML, links and JSON; attempt separate headless WebKit QA.
 - Freeze coherent commits and write the final Markdown and JSON report.
 
