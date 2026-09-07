@@ -2,8 +2,11 @@
 
 ## State
 
-Local source and documentation update in a fresh sibling worktree. No push,
-deployment, dependency upgrade, or changes to the existing preview.
+Local source and documentation update complete in a fresh sibling worktree.
+Static and evidence checks pass. Visual acceptance and current upstream
+verification remain unestablished because of the local environment failures
+recorded below. No push, deployment or dependency upgrade occurred; the frozen
+reference and existing preview remain unchanged.
 
 ## Done
 
@@ -38,12 +41,28 @@ deployment, dependency upgrade, or changes to the existing preview.
 - Local links and fragment targets pass for all seven edited HTML pages.
 - Port 4607 was free. The separate local server attempt failed at bind with
   `PermissionError: [Errno 1] Operation not permitted`; existing listeners
-  remain untouched. Headless WebKit was attempted with the installed runtime.
+  remain untouched. Installed headless WebKit aborted at launch (exit 134,
+  `Abort trap: 6`), before any page check or screenshot. No visual acceptance
+  is claimed.
+
+- Final focused verification: 77 aggregate/provenance/schema checks and 74
+  HTML/SVG/privacy/preservation/scope checks pass, plus local links for seven
+  pages. All 29 earlier methods JSON files remain byte-identical to the frozen
+  source. The initial structural-check harness mishandled self-closing tags;
+  the corrected harness passes and the earlier failed version is retained.
+- All 13 supplied metadata files still match their pinned input hashes.
+- Coherent commits and their actual messages were checked after writing.
+- Final output reports: `us-site-paper-current-evidence-REPORT.md` and `.json`
+  in the requested review output directory. They record exact source and file
+  identities, evidence inputs, checks and failed preview/browser attempts.
 
 ## Next
 
-- Check local HTML, links and JSON; attempt separate headless WebKit QA.
-- Freeze coherent commits and write the final Markdown and JSON report.
+Root can run the saved local server and WebKit QA outside this sandbox and
+verify upstream when GitHub DNS is available. Scientific work remains donor
+feature/period admission and transfer, housing, grouped clone-cap calibration,
+national and district validation, and pruning. Target standard errors remain
+deferred. This local documentation update makes no release claim.
 
 ---
 
