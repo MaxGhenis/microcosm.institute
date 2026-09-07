@@ -1,0 +1,64 @@
+{
+  "$schema": "./us-development-evidence-v2.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v2",
+  "recorded_date": "2026-09-07",
+  "date_timezone": "UTC",
+  "kind": "sipp_annual_panel_genuine_diagnostic",
+  "status": "ROOT_ACCEPTS_GENUINE_FIRST32_SOURCE_ONLY_DIAGNOSTIC_PILOT",
+  "summary": "A genuine source-only SIPP pilot retained the annual person-month panel for 32 selected sample units and checked source income identities.",
+  "evidence": {
+    "accepted_at_utc": "2026-09-07T00:50:56.233445+00:00",
+    "source_head": "02e7b2933035ae609187d1c715531ca300ed50d7",
+    "helper_head": "dabaf0c7966a1e09e8d59ecd56777f293e78a5a3",
+    "selected_sample_units": 32,
+    "people": 66,
+    "person_month_rows": 785,
+    "december_residence_groups": 33,
+    "monthly_group_income_identity_checks": {
+      "groups": 400,
+      "identity_equal": 383,
+      "identity_skipped_income_universe": 17,
+      "identity_tested": 383
+    },
+    "source_universe_masks_person_month_rows": {
+      "in": 672,
+      "pre15_without_ssi": 96,
+      "unknown_child_receipt": 17
+    },
+    "annual_contributor_scope": "December members aged 15 or older, followed across their months and residences; unknown child receipt stays masked.",
+    "complete_december_adult_contributor_groups": 33,
+    "complete_december_adult_contributor_groups_with_known_weight": 33,
+    "full_source_passes": 2,
+    "source_pass_hashes_agree": true,
+    "source_pass_byte_counts_agree": true,
+    "root_verified_source_files": 52,
+    "root_verified_helper_files": 5,
+    "actual_project_python_loads_verified": 51,
+    "wall_seconds": 53.65797949999978,
+    "peak_rss_bytes": 325763072,
+    "genuine_panel_executed": true,
+    "housing_imputation_executed": false,
+    "housing_fit_executed": false,
+    "donor_transfer_executed": false,
+    "calibration_executed": false
+  },
+  "limitations": [
+    "This is a 32-sample-unit diagnostic pilot with 33 December residence groups, not a population estimate or a fitted housing model.",
+    "The 383 tested income identities and 17 skipped cases concern monthly groups, not people or person-month records. The separately counted 17 unknown-child person-month rows do not establish a one-to-one link to skipped groups.",
+    "Complete December adult-contributor coverage does not establish unrestricted annual household-income completeness. Source-valid masks and unknown child receipt remain explicit.",
+    "No monetary microdata or income totals are published here. Income identity agreement is a source consistency diagnostic, not transfer accuracy.",
+    "Cross-survey income/price alignment, housing fitting and transfer, calibration, national/CD validation and pruning remain separate; no release acceptance follows."
+  ],
+  "sources": [
+    {
+      "document": "us-sipp-first32-genuine-root-acceptance-20260907.json",
+      "sha256": "a799bf26bb4e2bc6f642bc9fb6b9ffb4fbc5aea794a8e685544f61c4ec4c11b4"
+    },
+    {
+      "document": "us-sipp-annual-panel-preparation-20260906.json",
+      "sha256": "58a3b9c43a09e4c3ff05f69cfb680640f1b732fde61cc1920cdb6bdee7d74747",
+      "public_path": "/methods/us-sipp-annual-panel-preparation-20260906.json"
+    }
+  ],
+  "release_eligible": false
+}

@@ -19,12 +19,20 @@ untouched. No source execution, dependencies, merge, push, PR or deployment.
   site WebKit receipt contains 35 passing mobile checks, then an ambiguous
   screenshot selector failure; it does not establish complete browser QA.
 
+- Added separate public receipts for the genuine 32-sample-unit SIPP pilot
+  and accepted local clone dashboard, with a new envelope schema that leaves
+  every earlier JSON file unchanged.
+- Updated six affected pages. Monthly group identities, person-month masks
+  and December-adult completeness remain distinct. The exact clone export
+  is unchanged; its display acceptance adds no calibration or release result.
+- The independent evidence review confirmed the claims and boundaries. Its
+  wording refinement distinguishes 33 genuine browser checks from 102 tests
+  of the frontend feature; that refinement is applied.
+- All 118 focused evidence/schema/HTML/privacy/scope checks pass, preserving
+  all 35 earlier methods JSON files. Local links pass on the six edited pages.
+
 ## Next
 
-- Add distinct public receipts for the genuine SIPP diagnostic pilot and clone
-  dashboard browser acceptance, preserving all earlier evidence.
-- Update only affected progress and methods/paper claims. Genuine 17-node
-  integration remains pending and PUF price restatement remains refused.
 - Fix the owned WebKit harness's diagram selector and distinguish unavailable
   external release APIs from local failures. Check unavailable-network fallback.
 - Run focused local checks, freeze commits and emit the follow-up reports with

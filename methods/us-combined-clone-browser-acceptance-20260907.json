@@ -1,0 +1,45 @@
+{
+  "$schema": "./us-development-evidence-v2.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v2",
+  "recorded_date": "2026-09-07",
+  "date_timezone": "UTC",
+  "kind": "combined_clone_browser_acceptance",
+  "status": "ROOT_ACCEPTED_GENUINE_CLONE_DASHBOARD_LOCAL_PREVIEW",
+  "summary": "The local genuine combined-clone dashboard passed desktop and mobile WebKit checks for the previously accepted small export.",
+  "evidence": {
+    "checked_at_utc": "2026-09-07T00:27:15.100247+00:00",
+    "frontend_head": "ad843b74978f04850350174e9792e84f87210ed7",
+    "genuine_manifest_sha256": "c778d07160ffde5ea9187a3e6d4411fabb1ccbfba22aca8821332554c5adb89b",
+    "genuine_desktop_mobile_webkit_checks": 33,
+    "genuine_browser_receipt_sha256": "8f3e9d574a14581a4ed5f9a84b5041448a23a561d02102e16bfb76a0754c96d9",
+    "separate_invented_webkit_checks": 31,
+    "focused_tests_passed": 102,
+    "focused_tests_failed": 0,
+    "focused_test_assertions": 178,
+    "dashboard_browser_acceptance": true,
+    "recorded_geography_failure_preserved": true,
+    "base_household_records": 169,
+    "expanded_household_rows": 338,
+    "expanded_people": 766,
+    "puf_donor_attached": false,
+    "calibration_executed": false
+  },
+  "limitations": [
+    "Acceptance covers this exact local dashboard frontend and export, not the separate site/paper continuation or an external release API.",
+    "The export remains 169 base household records expanded to 338 rows. It is not a 17,004-household clone file or a launch file, and the base record count does not establish independent survey origins.",
+    "Current importance pair mass is conserved; copied original design anchors provide no additional independent survey support and require an explicit grouped-cap policy for later calibration.",
+    "The recorded geography failure remains visible. No donor transfer, calibration, national/CD validation, pruning or release acceptance follows."
+  ],
+  "sources": [
+    {
+      "document": "us-combined-clone-dashboard-genuine-root-ui-acceptance-20260906.json",
+      "sha256": "773187330199c7ff4d6ca2a4d9e1d7ae9d2e2e3298946bcedaaab73a9e0ad567"
+    },
+    {
+      "document": "us-combined-clone-export-338hh-20260906.json",
+      "sha256": "65e37dce06e0a5b1a2d61ca6ab9be8daf26193e9a423eeb3dca3065fe96410ce",
+      "public_path": "/methods/us-combined-clone-export-338hh-20260906.json"
+    }
+  ],
+  "release_eligible": false
+}
