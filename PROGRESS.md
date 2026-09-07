@@ -1,3 +1,17 @@
+# Current price and integration evidence — September 7, 2026
+
+Local content update in a fresh sibling of accepted site 451b8862. Fetch of origin/master succeeded at f97322f1, an ancestor of the accepted parent (0 upstream-only / 63 local-only commits). Earlier worktrees, evidence JSON and previews remain untouched. No data read, source graph execution, push, deployment or release.
+
+The site now records accepted genuine PUF development price conversion: 207,692 ordinary records, 4 lexical aggregates excluded from numerical use, 13 monetary fields, 4 cold kernels and 4 REQUIRED warm hits with 0 calls. The 2015 file baseline→2024 price convention does not resolve period/basis or donor-fit admission. One strict public summary records only counts, code/review identities and scoped statuses; no private acceptance payload, raw IDs, monetary diagnostic values or local paths are copied. Historical refusal JSON is unchanged.
+
+Separately, source 959 invented PUF transfer is independently accepted. The visible 338-household, 766-person clone still has no donors. The genuine 17-node graph at source 74f previously failed with unknown cause; diagnostic helper d79 is independently accepted and its root-authorized retry is running as of 02:43 UTC. Shared cap 711 remains author-complete under independent review, without genuine calibration or scientific acceptance. Target standard errors remain deferred.
+
+Verification is underway on this content revision: schema and local-link checks, unchanged 80 offline WebKit classifier / 13 release-fallback checks, then the unchanged accepted WebKit harness on a new owned port. Four screenshot images will be inspected; mobile support-flow labels are a known small-text limitation. Final results and exact head belong in the external report after source freeze, not inferred from prior QA.
+
+---
+
+## Previous updates (historical; statuses apply to their recorded revisions)
+
 # US evidence follow-up — September 7, 2026
 
 ## State

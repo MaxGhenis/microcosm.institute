@@ -1,0 +1,111 @@
+{
+  "$schema": "./us-development-evidence-v3.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v3",
+  "recorded_date": "2026-09-07",
+  "date_timezone": "UTC",
+  "kind": "us_price_and_integration_progress",
+  "status": "DEVELOPMENT_PRICE_ACCEPTED_GENUINE_FIT_NOT_ADMITTED",
+  "summary": "Genuine PUF development price conversion is accepted. Invented transfer checks and the separate genuine survey integration retry retain their own scopes.",
+  "evidence": {
+    "as_of_utc": "2026-09-07T02:43:27Z",
+    "puf_price": {
+      "status": "ROOT_ACCEPTED_GENUINE_DEVELOPMENT_PRICE_CONVERSION",
+      "source_head": "c5c34a048fc38c01840b2da5454385e0a51d1c49",
+      "helper_head": "dea036278cc3f7c29c99da67bcadd968822c1d7a",
+      "ordinary_records": 207692,
+      "lexical_publisher_aggregate_records": 4,
+      "monetary_fields": 13,
+      "cold_kernel_calls": 4,
+      "required_replay_hits": 4,
+      "required_replay_kernel_calls": 0,
+      "required_replay_transformation_calls": 0,
+      "identical_graph_keys_and_array_bytes": true,
+      "file_baseline_year": 2015,
+      "price_year": 2024,
+      "index": "annual CPI-U",
+      "original_period_and_weight_evidence_preserved": true,
+      "publisher_aggregates_excluded_from_numerical_use": true,
+      "source_fit_admission": "not_admitted_pending_basis_review",
+      "nominal_income_aging": false,
+      "registered_grown_artifact_codec": false
+    },
+    "invented_transfer": {
+      "status": "INDEPENDENTLY_ACCEPTED_INVENTED_MACHINERY_ONLY",
+      "source_head": "95934550a583e68893991a95eb99fd3309bf233f",
+      "target_fields": 1,
+      "feature_columns": 5,
+      "trees": 2,
+      "cold_kernel_calls": 17,
+      "required_replay_hits": 17,
+      "required_replay_kernel_calls": 0,
+      "required_replay_graph_source_codec_calls": 0,
+      "main_graph_original_design_anchor_entities": 0,
+      "separate_nonempty_and_zero_anchor_refusal_checks": true,
+      "genuine_fit": false
+    },
+    "survey_integration": {
+      "status": "ROOT_AUTHORIZED_GENUINE_RETRY_RUNNING_NO_ACCEPTED_RESULT",
+      "source_head": "74f711382029619cdd9f2e8b01330628da0c228b",
+      "diagnostic_helper_head": "d79e55970c82c760cb1f7e0e732837b14ba0ec45",
+      "previous_genuine_cold_failure_cause": "unknown",
+      "diagnostic_helper_independent_review": "ACCEPT",
+      "genuine_result_accepted": false
+    },
+    "grouped_caps": {
+      "source_head": "71145a427fcb682279d4e765ac8a2fd941e12132",
+      "status": "AUTHOR_COMPLETE_INDEPENDENT_REVIEW_PENDING",
+      "genuine_calibration": false,
+      "scientific_acceptance": false
+    },
+    "visible_clone": {
+      "household_rows": 338,
+      "person_rows": 766,
+      "manifest_sha256": "c778d07160ffde5ea9187a3e6d4411fabb1ccbfba22aca8821332554c5adb89b",
+      "puf_donor_attached": false,
+      "calibrated": false
+    }
+  },
+  "limitations": [
+    "Price conversion uses a development file-baseline convention; mixed source return years and measurement-basis interpretation remain unresolved. It does not admit target-period income, fitting, calibration or release.",
+    "The price output is a local runner payload. It is not a registered grown-artifact codec or a completed donor transfer.",
+    "The independently reviewed transfer runs on invented source records and literal survey fixtures. It establishes no genuine wage/cohort/universe admission, filer coverage or conditional model adequacy.",
+    "Invented transfer warm setup reconstructs and parses fixture definitions; zero graph source-codec calls is scoped to graph execution. Its main original-design anchor roster is empty and preservation there is vacuous.",
+    "The visible 338-household clone remains separate from the running genuine 17-node integration retry and contains no PUF donors.",
+    "The previous genuine survey integration failure has an unknown cause. Diagnostic corrections do not establish why it failed; a running retry is not an accepted result.",
+    "Grouped-cap implementation remains under independent review, with no genuine calibration or scientific acceptance.",
+    "Historical refusals remain valid evidence of their own attempts. No new national or congressional-district release quality or launch readiness is established."
+  ],
+  "sources": [
+    {
+      "document": "us-puf-price-v3-genuine-root-acceptance-20260907.json",
+      "sha256": "da4755894ed243a1be224b8f5c9059ba986d1e338505b8f5aac539d00c63a0ff"
+    },
+    {
+      "document": "us-puf-combined-invented-transfer-independent-review.json",
+      "sha256": "fae724fa6a7eaa3402dc8feb94b17db7309e7519ecb3e82e95d64a7928c44330"
+    },
+    {
+      "document": "us-survey-lineage-secondary-diagnostic-independent-review.json",
+      "sha256": "941e8c3bce8667217706c79211c717f1ed3a2dd0936f785f1e3669c0407feca5"
+    },
+    {
+      "document": "us-survey-lineage-secondary-diagnostic-root-approval.json",
+      "sha256": "5a3903d5687dff9eb9fa4fcdefcfbc2dba793fa6b8fba28957f68604a14b52dc"
+    },
+    {
+      "document": "root-progress-20260906-2240.md",
+      "sha256": "fd22966caf66566aa65932e15e090ae196e3904f7366ecb98ff3acc716e37384"
+    },
+    {
+      "document": "us-combined-clone-browser-acceptance-20260907.json",
+      "sha256": "a34dafdf0fa146429b76156d8c0f06350191d8580f0fe02f3881115267d97f6a",
+      "public_path": "/methods/us-combined-clone-browser-acceptance-20260907.json"
+    },
+    {
+      "document": "us-puf-price-restatement-refusal-20260906.json",
+      "sha256": "69bed33c118e64633e6177bc295b2d997f8f55922b34dcf71cadfb5de2ad359e",
+      "public_path": "/methods/us-puf-price-restatement-refusal-20260906.json"
+    }
+  ],
+  "release_eligible": false
+}

@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public US price and integration progress summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema",
+    "recorded_date",
+    "date_timezone",
+    "kind",
+    "status",
+    "summary",
+    "evidence",
+    "limitations",
+    "sources",
+    "release_eligible"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "./us-development-evidence-v3.schema.json"
+    },
+    "schema": {
+      "const": "microcosm.public_us_development_evidence.v3"
+    },
+    "recorded_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "date_timezone": {
+      "const": "UTC"
+    },
+    "kind": {
+      "enum": [
+        "us_price_and_integration_progress"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of_utc",
+        "puf_price",
+        "invented_transfer",
+        "survey_integration",
+        "grouped_caps",
+        "visible_clone"
+      ],
+      "properties": {
+        "as_of_utc": {
+          "type": "string",
+          "minLength": 1
+        },
+        "puf_price": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_head",
+            "helper_head",
+            "ordinary_records",
+            "lexical_publisher_aggregate_records",
+            "monetary_fields",
+            "cold_kernel_calls",
+            "required_replay_hits",
+            "required_replay_kernel_calls",
+            "required_replay_transformation_calls",
+            "identical_graph_keys_and_array_bytes",
+            "file_baseline_year",
+            "price_year",
+            "index",
+            "original_period_and_weight_evidence_preserved",
+            "publisher_aggregates_excluded_from_numerical_use",
+            "source_fit_admission",
+            "nominal_income_aging",
+            "registered_grown_artifact_codec"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_head": {
+              "type": "string",
+              "minLength": 1
+            },
+            "helper_head": {
+              "type": "string",
+              "minLength": 1
+            },
+            "ordinary_records": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "lexical_publisher_aggregate_records": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "monetary_fields": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "cold_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_hits": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_transformation_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "identical_graph_keys_and_array_bytes": {
+              "type": "boolean"
+            },
+            "file_baseline_year": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "price_year": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "index": {
+              "type": "string",
+              "minLength": 1
+            },
+            "original_period_and_weight_evidence_preserved": {
+              "type": "boolean"
+            },
+            "publisher_aggregates_excluded_from_numerical_use": {
+              "type": "boolean"
+            },
+            "source_fit_admission": {
+              "type": "string",
+              "minLength": 1
+            },
+            "nominal_income_aging": {
+              "type": "boolean"
+            },
+            "registered_grown_artifact_codec": {
+              "type": "boolean"
+            }
+          }
+        },
+        "invented_transfer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_head",
+            "target_fields",
+            "feature_columns",
+            "trees",
+            "cold_kernel_calls",
+            "required_replay_hits",
+            "required_replay_kernel_calls",
+            "required_replay_graph_source_codec_calls",
+            "main_graph_original_design_anchor_entities",
+            "separate_nonempty_and_zero_anchor_refusal_checks",
+            "genuine_fit"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_head": {
+              "type": "string",
+              "minLength": 1
+            },
+            "target_fields": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "feature_columns": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "trees": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "cold_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_hits": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_graph_source_codec_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "main_graph_original_design_anchor_entities": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "separate_nonempty_and_zero_anchor_refusal_checks": {
+              "type": "boolean"
+            },
+            "genuine_fit": {
+              "type": "boolean"
+            }
+          }
+        },
+        "survey_integration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_head",
+            "diagnostic_helper_head",
+            "previous_genuine_cold_failure_cause",
+            "diagnostic_helper_independent_review",
+            "genuine_result_accepted"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_head": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic_helper_head": {
+              "type": "string",
+              "minLength": 1
+            },
+            "previous_genuine_cold_failure_cause": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic_helper_independent_review": {
+              "type": "string",
+              "minLength": 1
+            },
+            "genuine_result_accepted": {
+              "type": "boolean"
+            }
+          }
+        },
+        "grouped_caps": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_head",
+            "status",
+            "genuine_calibration",
+            "scientific_acceptance"
+          ],
+          "properties": {
+            "source_head": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "genuine_calibration": {
+              "type": "boolean"
+            },
+            "scientific_acceptance": {
+              "type": "boolean"
+            }
+          }
+        },
+        "visible_clone": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "household_rows",
+            "person_rows",
+            "manifest_sha256",
+            "puf_donor_attached",
+            "calibrated"
+          ],
+          "properties": {
+            "household_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "person_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "manifest_sha256": {
+              "type": "string",
+              "minLength": 1
+            },
+            "puf_donor_attached": {
+              "type": "boolean"
+            },
+            "calibrated": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "release_eligible": {
+      "const": false
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "document",
+          "sha256"
+        ],
+        "properties": {
+          "document": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.-]+$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "public_path": {
+            "type": "string",
+            "pattern": "^/methods/[a-zA-Z0-9_.-]+[.]json$"
+          }
+        }
+      }
+    }
+  }
+}
