@@ -161,6 +161,8 @@ function observe(page, scenario) {
     if (knownReleaseRedirect(request.url(), request.redirectedFrom()?.url())) observedReleaseRedirects.add(request.url());
   });
   const knownURL = (url) => isReleaseAPI(url) || observedReleaseRedirects.has(url);
+  const knownRequest = (request) => isReleaseAPI(request.url())
+    || knownReleaseRedirect(request.url(), request.redirectedFrom()?.url());
   page.on('pageerror', (error) => {
     const text = String(error);
     const url = knownReleasePageError(text, knownURL);
@@ -169,13 +171,13 @@ function observe(page, scenario) {
   });
   page.on('requestfailed', (request) => {
     const item = { scenario, url: request.url(), error: request.failure()?.errorText };
-    if (knownURL(item.url)) external.push({ ...item, kind: 'release API request failure', ...(observedReleaseRedirects.has(item.url) ? { redirected_from: request.redirectedFrom()?.url() } : {}) });
+    if (knownRequest(request)) external.push({ ...item, kind: 'release API request failure', ...(!isReleaseAPI(item.url) ? { redirected_from: request.redirectedFrom()?.url() } : {}) });
     else result.failed_requests.push(item);
   });
   page.on('response', (response) => {
     if (response.status() < 400) return;
     const item = { scenario, url: response.url(), status: response.status() };
-    if (knownURL(item.url)) external.push({ ...item, kind: 'release API HTTP failure' });
+    if (knownRequest(response.request())) external.push({ ...item, kind: 'release API HTTP failure' });
     else result.bad_responses.push(item);
   });
 }
