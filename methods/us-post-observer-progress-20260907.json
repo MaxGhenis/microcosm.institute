@@ -1,0 +1,231 @@
+{
+  "$schema": "./us-development-evidence-v4.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v4",
+  "recorded_date": "2026-09-07",
+  "date_timezone": "UTC",
+  "kind": "us_post_observer_progress",
+  "status": "LOCAL_ENGINEERING_PROGRESS_RELEASE_NOT_ADMITTED",
+  "summary": "The genuine 17-node demographic, native-origin and combined survey clone run is accepted as engineering evidence. Grouped caps and the supplied-row SIPP annual-housing codec have separate source and invented acceptance; no donor fit or release follows.",
+  "evidence": {
+    "as_of_utc": "2026-09-07T03:37:04.126194+00:00",
+    "puf_price": {
+      "status": "ROOT_ACCEPTED_GENUINE_DEVELOPMENT_PRICE_CONVERSION",
+      "source_head": "c5c34a048fc38c01840b2da5454385e0a51d1c49",
+      "helper_head": "dea036278cc3f7c29c99da67bcadd968822c1d7a",
+      "ordinary_records": 207692,
+      "lexical_publisher_aggregate_records": 4,
+      "monetary_fields": 13,
+      "cold_kernel_calls": 4,
+      "required_replay_hits": 4,
+      "required_replay_kernel_calls": 0,
+      "required_replay_transformation_calls": 0,
+      "identical_graph_keys_and_array_bytes": true,
+      "file_baseline_year": 2015,
+      "price_year": 2024,
+      "index": "annual CPI-U",
+      "original_period_and_weight_evidence_preserved": true,
+      "publisher_aggregates_excluded_from_numerical_use": true,
+      "source_fit_admission": "not_admitted_pending_basis_review",
+      "nominal_income_aging": false,
+      "registered_grown_artifact_codec": false
+    },
+    "invented_transfer": {
+      "status": "INDEPENDENTLY_ACCEPTED_INVENTED_MACHINERY_ONLY",
+      "source_head": "95934550a583e68893991a95eb99fd3309bf233f",
+      "target_fields": 1,
+      "feature_columns": 5,
+      "trees": 2,
+      "cold_kernel_calls": 17,
+      "required_replay_hits": 17,
+      "required_replay_kernel_calls": 0,
+      "required_replay_graph_source_codec_calls": 0,
+      "main_graph_original_design_anchor_entities": 0,
+      "separate_nonempty_and_zero_anchor_refusal_checks": true,
+      "genuine_fit": false
+    },
+    "visible_clone": {
+      "household_rows": 338,
+      "person_rows": 766,
+      "manifest_sha256": "c778d07160ffde5ea9187a3e6d4411fabb1ccbfba22aca8821332554c5adb89b",
+      "puf_donor_attached": false,
+      "calibrated": false
+    },
+    "grouped_caps": {
+      "source_head": "0e5c73e8cfb6300fd9350c5977d4b9a4c4e7d01d",
+      "status": "ROOT_ACCEPTED_LOCAL_INVENTED_GROUP_CAP_IMPLEMENTATION",
+      "final_affected_tests_passed": 69,
+      "historical_tests_passed": 612,
+      "historical_tests_are_full_final_head_rerun": false,
+      "full_final_diagnostics_verified_on_required_replay": true,
+      "frame_storage_version": 2,
+      "older_frame_v1_reuse": "refused",
+      "genuine_store_migration_performed": false,
+      "scope": "Positive initial weights on complete two-role clone groups; one shared budget per native household origin. No grouped sparsity, successor pruning or cap-ratio selection is admitted.",
+      "genuine_calibration": false,
+      "scientific_cap_ratios_admitted": false,
+      "integrated_into_genuine_survey_run": false
+    },
+    "sipp_annual_housing": {
+      "source_head": "a593f777cf75fb0867177fe084db67b62bb4b7c4",
+      "status": "ROOT_ACCEPTED_SOURCE_AND_RETAINED_INVENTED_EVIDENCE",
+      "source_contract": "supplied_rows_only",
+      "author_tests_passed": 557,
+      "frozen_annual_comparisons": 10,
+      "independent_source_proof_entries": 124,
+      "source_authentication_claimed_by_codec": false,
+      "selection_authentication_claimed_by_codec": false,
+      "expanded_wrapper_fields": 95,
+      "expanded_wrapper_status": "IN_DEVELOPMENT_NOT_GENUINELY_EXECUTED",
+      "previous_genuine_pilot_fields": 67,
+      "previous_genuine_pilot_sample_units": 32,
+      "known_missing_and_source_flags": "Retained explicitly; unknown annual contributor values are not zero-filled.",
+      "genuine_expanded_panel_executed": false,
+      "housing_fit": false,
+      "cross_survey_income_price_recipe_admitted": false
+    },
+    "observer": {
+      "helper_head": "1b764dd4338fe2497d5c74dfbdda78d1735c8aee",
+      "source_head": "74f711382029619cdd9f2e8b01330628da0c228b",
+      "status": "ROOT_AND_INDEPENDENT_ACCEPTED_HELPER_ONLY",
+      "boundary": "Executor patch and cached-expansion return aliases replace global Python profiling.",
+      "invented_graph_nodes": 17,
+      "invented_cold_inherited_hits": 6,
+      "invented_cold_kernel_calls": 11,
+      "invented_required_replay_hits": 17,
+      "invented_required_replay_kernel_calls": 0,
+      "ordered_native_observations_equal": true,
+      "effective_clone_anchors_and_ledgers_equal": true,
+      "old_clone_return_captures": 28,
+      "new_clone_return_captures": 14,
+      "removed_incidental_from_frame_returns": 14,
+      "scientific_source_unchanged": true,
+      "genuine_resource_caps_unchanged": true,
+      "genuine_speedup_established": false
+    },
+    "survey_integration": {
+      "source_head": "74f711382029619cdd9f2e8b01330628da0c228b",
+      "original_proposal2_failure_cause": "unknown",
+      "proposal4": {
+        "status": "REFUSED_CPU_LIMIT",
+        "returncode": -24,
+        "signal": "SIGXCPU",
+        "wall_seconds": 609.1009,
+        "status_receipt_sha256": "e48f58ffcb5f349bf6d23d8a443001143a9379e1bb6ccbac7060f06b47cbf5ae",
+        "worker_rss_refusal": false
+      },
+      "proposal5": {
+        "status": "ROOT_ACCEPTED_GENUINE_SURVEY_DEMOGRAPHIC_ORIGIN_CLONE_ENGINEERING_RUN",
+        "helper_head": "1b764dd4338fe2497d5c74dfbdda78d1735c8aee",
+        "proposal_sha256": "d4904a2d12a296dc90ea73ee379d2bd7d4f71db9462eee3c035a21db9b6df686",
+        "genuine_result_accepted": true,
+        "source_head": "74f711382029619cdd9f2e8b01330628da0c228b",
+        "nodes": 17,
+        "cold_inherited_hits": 6,
+        "cold_kernel_calls": 11,
+        "required_replay_hits": 17,
+        "required_replay_kernel_calls": 0,
+        "required_replay_source_codec_calls": 0,
+        "native_household_rows": 169,
+        "native_person_rows": 383,
+        "native_household_arms": {
+          "acs": 153,
+          "asec": 16
+        },
+        "clone_household_rows": 338,
+        "clone_person_rows": 766,
+        "authenticated_source_household_origins": 169,
+        "independent_cross_survey_people_established": false,
+        "original_design_anchors": "Copied unhalved in live graph evidence; not independently persisted by the exported Frame.",
+        "current_pair_importance_weights": "Conserved",
+        "manifest_key": "526fb1e9cc9c423f596b55c05409445ab5b17d375cc5a3a497cb0f3adda2b795",
+        "checkpoint_sha256": "80e2420f3249b43febc7a2b6cd1d89176030723ae4eb91989f8cc537d3560d21",
+        "population_content_sha256": "59034bb2e825106d4fa2cc0b2723a8a5bdf09f30f79aae212da2937cbebeab5f",
+        "completion_sha256": "253a48f0c3b8d36fb767d4955d3bf6d439d339f2ac63cee378b6497d26403f78",
+        "completion_seal_sha256": "43b60a7a4c4b54a00b6c30e7f213d6b4fa525aadc0065a4869c9e94a1d6420b2",
+        "root_acceptance_sha256": "e4cab5f4090a6dbb3fd28d064cb28fa807a7d90c40f158227cf0ed99b148e2fe",
+        "root_output_audit_sha256": "03b80110cfe88adefe28ace821065c3f435f96b650d3461d38e2dfea294fa17d",
+        "verification": {
+          "output_bytes_rehashed": 5194242373,
+          "output_files_rehashed": 6765,
+          "parity_fields_compared": 17,
+          "root_new_microdata_decoding": false,
+          "root_new_scientific_diagnostic_computation": false,
+          "unique_source_files_git_rechecked": 233
+        },
+        "phases": {
+          "cold": {
+            "wall_seconds": 331.74520204200235,
+            "peak_rss_bytes": 6251364352
+          },
+          "stage": {
+            "wall_seconds": 52.27962029199989,
+            "peak_rss_bytes": 1825161216
+          },
+          "verify": {
+            "wall_seconds": 24.13413516700166,
+            "peak_rss_bytes": 900235264
+          },
+          "warm": {
+            "wall_seconds": 80.40652450000198,
+            "peak_rss_bytes": 3546071040
+          }
+        },
+        "genuine_resource_caps_unchanged": true,
+        "general_speedup_established": false,
+        "puf_donor_attached": false,
+        "housing_fit": false,
+        "grouped_cap_calibration": false,
+        "new_dashboard_export": false,
+        "release_eligible": false
+      }
+    }
+  },
+  "limitations": [
+    "This record contains counts, source/review identities and statuses only. It does not publish raw source records, monetary diagnostics or a new dashboard candidate.",
+    "The genuine PUF conversion remains the accepted 2015 file-baseline to 2024 price convention. Mixed source periods, measurement basis and genuine donor-fit admission remain unresolved.",
+    "The transfer graph is tested on invented inputs. The visible 338-household, 766-person clone has no PUF donors and no calibration.",
+    "Grouped-cap acceptance concerns implementation and invented tests. Scientific cap ratios, genuine calibration and Frame v2 artifact integration remain separate decisions.",
+    "The SIPP codec consumes supplied rows and does not authenticate a genuine source or selection. Its 95-field wrapper is in development; the accepted 67-field, 32-sample-unit genuine diagnostic remains separate evidence.",
+    "The 557 SIPP author tests and 612 historical cap cases are retained evidence, not new execution by this site update or full final-head reruns. Final cap affected checks number 69.",
+    "The observer removes incidental duplicate returns while preserving ordered native and effective clone evidence on invented graphs. It does not establish a genuine runtime improvement or explain the original unknown failure.",
+    "Housing transfer, national and congressional-district validation and pruning remain unfinished. Target standard errors remain deferred. No release eligibility is established.",
+    "The genuine 17-node execution authenticates native source-household origins and preserves live graph anchors and ledgers. The exported Frame does not independently persist design anchors, and the separate Frame v2 grouped-cap branch is not integrated. Source origins do not certify independent people across surveys and years."
+  ],
+  "sources": [
+    {
+      "document": "us-price-and-integration-progress-20260907.json",
+      "sha256": "ef00015d8b518e87b7313b8d5113b2026ffaf86ff39d348e7fcd678f7d305909",
+      "public_path": "/methods/us-price-and-integration-progress-20260907.json"
+    },
+    {
+      "document": "us-origin-group-cap-root-acceptance-20260907.json",
+      "sha256": "8b197cee588f0b55bee8c62fcb8985940459dd7182b90d0c2b5bc0e2b4f18710"
+    },
+    {
+      "document": "us-sipp-annual-housing-root-acceptance-20260907.json",
+      "sha256": "ba1d625a48484e204cef9063a87435dc69758233379970037722c1653dbe76f3"
+    },
+    {
+      "document": "us-survey-lineage-return-observer-fix-REPORT.json",
+      "sha256": "62e61b21e5f35bf4f63b8258028ab25d5cccee3108c97e2f696ac9b7a92d3c55"
+    },
+    {
+      "document": "us-survey-lineage-return-observer-independent-review.json",
+      "sha256": "726c22f98b74cb908f190cd6931674e32e71295d37d3baaf362b320d1f382ff5"
+    },
+    {
+      "document": "us-survey-lineage-return-observer-root-approval-20260907.json",
+      "sha256": "be405f44e4a3a684ddd1d99c790353036a966c2dc3b70b536327145e7241c4fd"
+    },
+    {
+      "document": "us-sipp-annual-panel-first32-genuine-20260907.json",
+      "sha256": "b1f7d17c3655f06cee33ee524ff069d477968379b269dcd7704830d48b5985c6",
+      "public_path": "/methods/us-sipp-annual-panel-first32-genuine-20260907.json"
+    },
+    {
+      "document": "us-survey-lineage-proposal5-genuine-root-acceptance-20260907.json",
+      "sha256": "e4cab5f4090a6dbb3fd28d064cb28fa807a7d90c40f158227cf0ed99b148e2fe"
+    }
+  ],
+  "release_eligible": false
+}

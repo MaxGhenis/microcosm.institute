@@ -1,3 +1,23 @@
+# Accepted survey integration and source contracts — September 7, 2026
+
+Local content update from accepted site b8167bc1. Fetch of origin/master succeeded at f97322f1 (0 upstream-only / 64 accepted-base-only commits). Previous worktrees and previews remain untouched. All 40 earlier methods JSON files, including schemas and failed-attempt snapshots, remain byte-identical. No deployment, push, PR, merge, new source-data read or scientific calculation.
+
+The dated snapshot is 03:37 UTC. Root accepted the genuine 17-node survey demographic, native-origin and combined clone run: 6 inherited hits / 11 cold calls, then 17 REQUIRED replay hits / 0 kernel or source-codec calls. The native 169-household, 383-person pool contains 153 ACS and 16 ASEC households; whole-household clones contain 338 household rows and 766 person rows, with 169 authenticated source-household origins. Root rehashed 6,765 outputs and checked 233 loaded source files and 17 parity fields without a new microdata decode or scientific recomputation. Design anchors are retained as live graph evidence; the exported Frame does not independently persist them. The dashboard still displays its prior export.
+
+The original proposal2 failure remains unexplained. Proposal4 ended with SIGXCPU after 609.1009 seconds. The successful proposal5 retained source 74f and all resource caps; its helper observes actual executor returns instead of globally profiling every event. Ordered native and effective clone evidence agreed on invented graphs, while 14 incidental duplicate clone returns disappeared. No general speedup is claimed.
+
+Grouped caps at 0e5c have root and independent source/invented acceptance, with 69 final affected tests. The 612 historical cases are not a full final-head rerun. Frame storage v2 retains metadata and refuses v1 Frame reuse; existing genuine stores are untouched, and this branch is not integrated into the accepted survey run. Genuine grouped calibration and scientific cap ratios remain open.
+
+The SIPP supplied-row annual-housing codec at a593 has accepted source and retained invented evidence: 557 author tests and 10 frozen-annual comparisons. Its source/selection authentication flags remain false. A 95-field genuine wrapper is in development; the accepted 67-field, 32-sample-unit diagnostic remains separate. Known/missing/source flags stay explicit. Genuine housing fitting and cross-survey income/price alignment remain unfinished.
+
+The accepted genuine 13-field developmental PUF price result and invented959 transfer remain unchanged; source-basis and genuine fit admission remain unresolved. No donor, grouped calibration, national/CD scoring, pruning, new dashboard candidate or release is added. Target standard errors remain deferred.
+
+Verification for this source revision uses closed v4 schema refusal checks, immutable-history and privacy checks, six-page local links and the unchanged accepted WebKit harness on an owned new preview. Final exact-head results, served Git hashes and inspected screenshots belong in the external post-observer report; this source log does not infer them from earlier QA.
+
+---
+
+## Previous updates (historical; statuses apply to their recorded revisions)
+
 # Current price and integration evidence — September 7, 2026
 
 Local content update in a fresh sibling of accepted site 451b8862. Fetch of origin/master succeeded at f97322f1, an ancestor of the accepted parent (0 upstream-only / 63 local-only commits). Earlier worktrees, evidence JSON and previews remain untouched. No data read, source graph execution, push, deployment or release.

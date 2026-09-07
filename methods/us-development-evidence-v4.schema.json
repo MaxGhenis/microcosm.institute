@@ -1,0 +1,885 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://microcosm.institute/methods/us-development-evidence-v4.schema.json",
+  "title": "Microcosm dated post-observer development evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema",
+    "recorded_date",
+    "date_timezone",
+    "kind",
+    "status",
+    "summary",
+    "evidence",
+    "limitations",
+    "sources",
+    "release_eligible"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "./us-development-evidence-v4.schema.json"
+    },
+    "schema": {
+      "const": "microcosm.public_us_development_evidence.v4"
+    },
+    "recorded_date": {
+      "const": "2026-09-07"
+    },
+    "date_timezone": {
+      "const": "UTC"
+    },
+    "kind": {
+      "const": "us_post_observer_progress"
+    },
+    "status": {
+      "const": "LOCAL_ENGINEERING_PROGRESS_RELEASE_NOT_ADMITTED"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of_utc",
+        "puf_price",
+        "invented_transfer",
+        "visible_clone",
+        "grouped_caps",
+        "sipp_annual_housing",
+        "observer",
+        "survey_integration"
+      ],
+      "properties": {
+        "as_of_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "puf_price": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_head",
+            "helper_head",
+            "ordinary_records",
+            "lexical_publisher_aggregate_records",
+            "monetary_fields",
+            "cold_kernel_calls",
+            "required_replay_hits",
+            "required_replay_kernel_calls",
+            "required_replay_transformation_calls",
+            "identical_graph_keys_and_array_bytes",
+            "file_baseline_year",
+            "price_year",
+            "index",
+            "original_period_and_weight_evidence_preserved",
+            "publisher_aggregates_excluded_from_numerical_use",
+            "source_fit_admission",
+            "nominal_income_aging",
+            "registered_grown_artifact_codec"
+          ],
+          "properties": {
+            "status": {
+              "const": "ROOT_ACCEPTED_GENUINE_DEVELOPMENT_PRICE_CONVERSION"
+            },
+            "source_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "helper_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "ordinary_records": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "lexical_publisher_aggregate_records": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "monetary_fields": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "cold_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_hits": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_transformation_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "identical_graph_keys_and_array_bytes": {
+              "const": true
+            },
+            "file_baseline_year": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "price_year": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "index": {
+              "type": "string",
+              "minLength": 1
+            },
+            "original_period_and_weight_evidence_preserved": {
+              "const": true
+            },
+            "publisher_aggregates_excluded_from_numerical_use": {
+              "const": true
+            },
+            "source_fit_admission": {
+              "type": "string",
+              "minLength": 1
+            },
+            "nominal_income_aging": {
+              "const": false
+            },
+            "registered_grown_artifact_codec": {
+              "const": false
+            }
+          }
+        },
+        "invented_transfer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_head",
+            "target_fields",
+            "feature_columns",
+            "trees",
+            "cold_kernel_calls",
+            "required_replay_hits",
+            "required_replay_kernel_calls",
+            "required_replay_graph_source_codec_calls",
+            "main_graph_original_design_anchor_entities",
+            "separate_nonempty_and_zero_anchor_refusal_checks",
+            "genuine_fit"
+          ],
+          "properties": {
+            "status": {
+              "const": "INDEPENDENTLY_ACCEPTED_INVENTED_MACHINERY_ONLY"
+            },
+            "source_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "target_fields": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "feature_columns": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "trees": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "cold_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_hits": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required_replay_graph_source_codec_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "main_graph_original_design_anchor_entities": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "separate_nonempty_and_zero_anchor_refusal_checks": {
+              "const": true
+            },
+            "genuine_fit": {
+              "const": false
+            }
+          }
+        },
+        "visible_clone": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "household_rows",
+            "person_rows",
+            "manifest_sha256",
+            "puf_donor_attached",
+            "calibrated"
+          ],
+          "properties": {
+            "household_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "person_rows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "manifest_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "puf_donor_attached": {
+              "const": false
+            },
+            "calibrated": {
+              "const": false
+            }
+          }
+        },
+        "grouped_caps": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_head",
+            "status",
+            "final_affected_tests_passed",
+            "historical_tests_passed",
+            "historical_tests_are_full_final_head_rerun",
+            "full_final_diagnostics_verified_on_required_replay",
+            "frame_storage_version",
+            "older_frame_v1_reuse",
+            "genuine_store_migration_performed",
+            "scope",
+            "genuine_calibration",
+            "scientific_cap_ratios_admitted",
+            "integrated_into_genuine_survey_run"
+          ],
+          "properties": {
+            "source_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "status": {
+              "const": "ROOT_ACCEPTED_LOCAL_INVENTED_GROUP_CAP_IMPLEMENTATION"
+            },
+            "final_affected_tests_passed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "historical_tests_passed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "historical_tests_are_full_final_head_rerun": {
+              "const": false
+            },
+            "full_final_diagnostics_verified_on_required_replay": {
+              "const": true
+            },
+            "frame_storage_version": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "older_frame_v1_reuse": {
+              "const": "refused"
+            },
+            "genuine_store_migration_performed": {
+              "const": false
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "genuine_calibration": {
+              "const": false
+            },
+            "scientific_cap_ratios_admitted": {
+              "const": false
+            },
+            "integrated_into_genuine_survey_run": {
+              "const": false
+            }
+          }
+        },
+        "sipp_annual_housing": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_head",
+            "status",
+            "source_contract",
+            "author_tests_passed",
+            "frozen_annual_comparisons",
+            "independent_source_proof_entries",
+            "source_authentication_claimed_by_codec",
+            "selection_authentication_claimed_by_codec",
+            "expanded_wrapper_fields",
+            "expanded_wrapper_status",
+            "previous_genuine_pilot_fields",
+            "previous_genuine_pilot_sample_units",
+            "known_missing_and_source_flags",
+            "genuine_expanded_panel_executed",
+            "housing_fit",
+            "cross_survey_income_price_recipe_admitted"
+          ],
+          "properties": {
+            "source_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "status": {
+              "const": "ROOT_ACCEPTED_SOURCE_AND_RETAINED_INVENTED_EVIDENCE"
+            },
+            "source_contract": {
+              "const": "supplied_rows_only"
+            },
+            "author_tests_passed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "frozen_annual_comparisons": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "independent_source_proof_entries": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "source_authentication_claimed_by_codec": {
+              "const": false
+            },
+            "selection_authentication_claimed_by_codec": {
+              "const": false
+            },
+            "expanded_wrapper_fields": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "expanded_wrapper_status": {
+              "const": "IN_DEVELOPMENT_NOT_GENUINELY_EXECUTED"
+            },
+            "previous_genuine_pilot_fields": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "previous_genuine_pilot_sample_units": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "known_missing_and_source_flags": {
+              "type": "string",
+              "minLength": 1
+            },
+            "genuine_expanded_panel_executed": {
+              "const": false
+            },
+            "housing_fit": {
+              "const": false
+            },
+            "cross_survey_income_price_recipe_admitted": {
+              "const": false
+            }
+          }
+        },
+        "observer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "helper_head",
+            "source_head",
+            "status",
+            "boundary",
+            "invented_graph_nodes",
+            "invented_cold_inherited_hits",
+            "invented_cold_kernel_calls",
+            "invented_required_replay_hits",
+            "invented_required_replay_kernel_calls",
+            "ordered_native_observations_equal",
+            "effective_clone_anchors_and_ledgers_equal",
+            "old_clone_return_captures",
+            "new_clone_return_captures",
+            "removed_incidental_from_frame_returns",
+            "scientific_source_unchanged",
+            "genuine_resource_caps_unchanged",
+            "genuine_speedup_established"
+          ],
+          "properties": {
+            "helper_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "source_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "status": {
+              "const": "ROOT_AND_INDEPENDENT_ACCEPTED_HELPER_ONLY"
+            },
+            "boundary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "invented_graph_nodes": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "invented_cold_inherited_hits": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "invented_cold_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "invented_required_replay_hits": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "invented_required_replay_kernel_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ordered_native_observations_equal": {
+              "const": true
+            },
+            "effective_clone_anchors_and_ledgers_equal": {
+              "const": true
+            },
+            "old_clone_return_captures": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "new_clone_return_captures": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "removed_incidental_from_frame_returns": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "scientific_source_unchanged": {
+              "const": true
+            },
+            "genuine_resource_caps_unchanged": {
+              "const": true
+            },
+            "genuine_speedup_established": {
+              "const": false
+            }
+          }
+        },
+        "survey_integration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_head",
+            "original_proposal2_failure_cause",
+            "proposal4",
+            "proposal5"
+          ],
+          "properties": {
+            "source_head": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "original_proposal2_failure_cause": {
+              "type": "string",
+              "minLength": 1
+            },
+            "proposal4": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "returncode",
+                "signal",
+                "wall_seconds",
+                "status_receipt_sha256",
+                "worker_rss_refusal"
+              ],
+              "properties": {
+                "status": {
+                  "const": "REFUSED_CPU_LIMIT"
+                },
+                "returncode": {
+                  "type": "integer",
+                  "const": -24
+                },
+                "signal": {
+                  "const": "SIGXCPU"
+                },
+                "wall_seconds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "status_receipt_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "worker_rss_refusal": {
+                  "const": false
+                }
+              }
+            },
+            "proposal5": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "helper_head",
+                "proposal_sha256",
+                "genuine_result_accepted",
+                "source_head",
+                "nodes",
+                "cold_inherited_hits",
+                "cold_kernel_calls",
+                "required_replay_hits",
+                "required_replay_kernel_calls",
+                "required_replay_source_codec_calls",
+                "native_household_rows",
+                "native_person_rows",
+                "native_household_arms",
+                "clone_household_rows",
+                "clone_person_rows",
+                "authenticated_source_household_origins",
+                "independent_cross_survey_people_established",
+                "original_design_anchors",
+                "current_pair_importance_weights",
+                "manifest_key",
+                "checkpoint_sha256",
+                "population_content_sha256",
+                "completion_sha256",
+                "completion_seal_sha256",
+                "root_acceptance_sha256",
+                "root_output_audit_sha256",
+                "verification",
+                "phases",
+                "genuine_resource_caps_unchanged",
+                "general_speedup_established",
+                "puf_donor_attached",
+                "housing_fit",
+                "grouped_cap_calibration",
+                "new_dashboard_export",
+                "release_eligible"
+              ],
+              "properties": {
+                "status": {
+                  "const": "ROOT_ACCEPTED_GENUINE_SURVEY_DEMOGRAPHIC_ORIGIN_CLONE_ENGINEERING_RUN"
+                },
+                "helper_head": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "proposal_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "genuine_result_accepted": {
+                  "const": true
+                },
+                "source_head": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "nodes": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cold_inherited_hits": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cold_kernel_calls": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "required_replay_hits": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "required_replay_kernel_calls": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "required_replay_source_codec_calls": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "native_household_rows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "native_person_rows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "native_household_arms": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "acs",
+                    "asec"
+                  ],
+                  "properties": {
+                    "acs": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "asec": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "clone_household_rows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "clone_person_rows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "authenticated_source_household_origins": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "independent_cross_survey_people_established": {
+                  "const": false
+                },
+                "original_design_anchors": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "current_pair_importance_weights": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "manifest_key": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "checkpoint_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "population_content_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "completion_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "completion_seal_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "root_acceptance_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "root_output_audit_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "verification": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "output_bytes_rehashed",
+                    "output_files_rehashed",
+                    "parity_fields_compared",
+                    "root_new_microdata_decoding",
+                    "root_new_scientific_diagnostic_computation",
+                    "unique_source_files_git_rechecked"
+                  ],
+                  "properties": {
+                    "output_bytes_rehashed": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "output_files_rehashed": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "parity_fields_compared": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "root_new_microdata_decoding": {
+                      "const": false
+                    },
+                    "root_new_scientific_diagnostic_computation": {
+                      "const": false
+                    },
+                    "unique_source_files_git_rechecked": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "phases": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "cold",
+                    "stage",
+                    "verify",
+                    "warm"
+                  ],
+                  "properties": {
+                    "cold": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "wall_seconds",
+                        "peak_rss_bytes"
+                      ],
+                      "properties": {
+                        "wall_seconds": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "peak_rss_bytes": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      }
+                    },
+                    "stage": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "wall_seconds",
+                        "peak_rss_bytes"
+                      ],
+                      "properties": {
+                        "wall_seconds": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "peak_rss_bytes": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      }
+                    },
+                    "verify": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "wall_seconds",
+                        "peak_rss_bytes"
+                      ],
+                      "properties": {
+                        "wall_seconds": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "peak_rss_bytes": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      }
+                    },
+                    "warm": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "wall_seconds",
+                        "peak_rss_bytes"
+                      ],
+                      "properties": {
+                        "wall_seconds": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "peak_rss_bytes": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  }
+                },
+                "genuine_resource_caps_unchanged": {
+                  "const": true
+                },
+                "general_speedup_established": {
+                  "const": false
+                },
+                "puf_donor_attached": {
+                  "const": false
+                },
+                "housing_fit": {
+                  "const": false
+                },
+                "grouped_cap_calibration": {
+                  "const": false
+                },
+                "new_dashboard_export": {
+                  "const": false
+                },
+                "release_eligible": {
+                  "const": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "document",
+          "sha256"
+        ],
+        "properties": {
+          "document": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.-]+$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "public_path": {
+            "type": "string",
+            "pattern": "^/methods/[a-zA-Z0-9_.-]+[.]json$"
+          }
+        }
+      }
+    },
+    "release_eligible": {
+      "const": false
+    }
+  }
+}
