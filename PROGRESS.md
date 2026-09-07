@@ -2,9 +2,11 @@
 
 ## State
 
-Bounded local continuation in a fresh sibling from committed `73664b0`.
-The original worktree, failed QA and previews on ports 4596 and 4607 remain
-untouched. No source execution, dependencies, merge, push, PR or deployment.
+Local continuation complete in a fresh sibling from committed `73664b0`.
+Evidence, static and offline QA checks pass; final-head browser acceptance is
+pending root execution. The original worktree, failed QA and previews on ports
+4596 and 4607 remain untouched. No source execution, dependency changes, merge,
+push, PR or deployment occurred.
 
 ## Done
 
@@ -42,10 +44,27 @@ untouched. No source execution, dependencies, merge, push, PR or deployment.
   and 4607 remain present. No server or browser was launched in this follow-up;
   root will run the final browser checks after the source freeze.
 
+- Four startup refusal checks passed without browser/network execution:
+  preserved ports, a nonlocal URL and an existing capture directory are refused.
+- Independent content and QA-source review found no remaining actionable issue.
+  The external release APIs are not certified by this work; their failures are
+  recorded separately from unexpected page/request errors.
+- Final reports are `us-site-paper-current-evidence-followup-REPORT.md` and
+  `.json` in the requested review directory, with exact source/tree/file/proof
+  identities, test results and root QA commands. Actual commit messages were
+  checked after every coherent step.
+
 ## Next
 
-- Run focused local checks, freeze commits and emit the follow-up reports with
-  exact identities, limitations and pending root browser QA.
+Root can serve this frozen worktree on port 4608 after rechecking it is free,
+then run `scripts/check_site_webkit.mjs` with a new capture directory. The runner
+checks source cleanliness and exact served bytes, the intended support diagram,
+local page rendering and the controlled unavailable-release-API fallback.
+Earlier partial site QA and accepted clone-dashboard QA keep their own scope.
+Current upstream remains unverified after the DNS failure. Genuine 17-node
+integration is pending; PUF price restatement remains refused. Donor admission
+and transfer, housing, grouped-cap calibration, national/CD validation and
+pruning remain separate work; target standard errors stay deferred.
 
 ---
 
