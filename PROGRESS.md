@@ -31,10 +31,19 @@ untouched. No source execution, dependencies, merge, push, PR or deployment.
 - All 118 focused evidence/schema/HTML/privacy/scope checks pass, preserving
   all 35 earlier methods JSON files. Local links pass on the six edited pages.
 
+- Added a committed WebKit runner with a unique support-diagram selector,
+  new-output-only captures, explicit separate port and clean-source checks.
+  It compares served page and aggregate JSON bytes to the frozen worktree.
+- Added the controlled unavailable-API browser scenario and an offline test
+  of unchanged `releases.js`: 13 fallback/positive-control checks pass.
+  Thirty-seven narrow URL/error classification assertions also pass; known
+  external API failures remain limitations, while unexpected errors fail QA.
+- Both JavaScript syntax checks pass. Port 4608 has no listener; ports 4596
+  and 4607 remain present. No server or browser was launched in this follow-up;
+  root will run the final browser checks after the source freeze.
+
 ## Next
 
-- Fix the owned WebKit harness's diagram selector and distinguish unavailable
-  external release APIs from local failures. Check unavailable-network fallback.
 - Run focused local checks, freeze commits and emit the follow-up reports with
   exact identities, limitations and pending root browser QA.
 
