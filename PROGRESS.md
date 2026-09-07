@@ -22,10 +22,15 @@ deployment, dependency upgrade, or changes to the existing preview.
   SIPP weights. The only merge conflict was this progress log; both records
   are retained below. All other imported files match the frozen reference.
 
+- Added five distinct public aggregate summaries and a common JSON Schema.
+  Preserved all earlier JSON bytes. PUF match counts are attributed to the
+  earlier receipt through the identical status-artifact hash.
+- Pinned the 13 supplied metadata inputs for this update; no private payloads
+  were opened. The 77 focused provenance, value, schema and refusal checks pass.
+
 ## Next
 
-- Read the supplied metadata and add public aggregate receipts and focused prose
-  for clone export, reported AGI, price refusal, lineage and housing preparation.
+- Finish focused visible prose and methods/paper links for the new receipts.
 - Check local HTML, links and JSON; attempt separate headless WebKit QA.
 - Freeze coherent commits and write the final Markdown and JSON report.
 

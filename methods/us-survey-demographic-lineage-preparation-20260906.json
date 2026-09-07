@@ -1,0 +1,58 @@
+{
+  "$schema": "./us-development-evidence.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v1",
+  "recorded_date": "2026-09-06",
+  "date_timezone": "America/New_York",
+  "kind": "survey_lineage_preparation",
+  "status": "independently_accepted_source_and_invented_integration_only",
+  "summary": "A production graph connects demographics, native survey origins and both-arm household clones in invented source tests.",
+  "evidence": {
+    "source_head": "74f711382029619cdd9f2e8b01330628da0c228b",
+    "independent_review": "ACCEPT",
+    "input_kind": "invented",
+    "nodes": 17,
+    "inherited_cache_hits": 6,
+    "kernel_calls": 11,
+    "required_cache_hits": 17,
+    "required_kernel_calls": 0,
+    "required_raw_decoder_calls": 0,
+    "full_materialized_verification_passed": true,
+    "canonical_nullable_adapter_has_new_identity": true,
+    "genuine_integration_executed": false
+  },
+  "limitations": [
+    "The source adapter canonicalizes storage beneath three nullable state columns with an explicitly new identity; it does not retroactively authenticate older cached bindings.",
+    "Full parent and descendant checks concern invented populations. Genuine demographic source extraction and the genuine plain clone remain separately completed evidence.",
+    "Native origin identity is source-record lineage, not proof of cross-survey or cross-year independence.",
+    "Genuine integrated execution, grouped calibration caps, donor transfer, national and district validation and pruning remain pending. Target standard errors are deferred."
+  ],
+  "sources": [
+    {
+      "document": "us-survey-demographic-lineage-integration-REPORT.md",
+      "sha256": "b6a284abae7d71cc2d1214a78e2fecdc8b0d294a68188343eb34d2d95894f1ca"
+    },
+    {
+      "document": "us-survey-demographic-lineage-integration-REPORT.json",
+      "sha256": "3f3e2062c74564f2579a6c59b5f21bb9c4766cf7ba6c364f714385aa93d517f2"
+    },
+    {
+      "document": "us-survey-demographic-lineage-independent-review.md",
+      "sha256": "06da15319ec32f5be93d5f8a1b4e95bed315855a9851014112e8700a51969c07"
+    },
+    {
+      "document": "us-survey-demographic-lineage-independent-review.json",
+      "sha256": "55461ed402a1642c24fe56a570280f2bdff14119148f787deaf9922dcfca20db"
+    },
+    {
+      "document": "us-asec-demographic-source-20260906.json",
+      "sha256": "07ad37574cc7f4351044267ab9ba48e9b607d1ac5930894de9c5026587f9a2f1",
+      "public_path": "/methods/us-asec-demographic-source-20260906.json"
+    },
+    {
+      "document": "us-combined-survey-clone-169hh-20260906.json",
+      "sha256": "b65c379b1966e339be05fb35baed4c7dfc3616513ae70dd4521f7e3eb524b90b",
+      "public_path": "/methods/us-combined-survey-clone-169hh-20260906.json"
+    }
+  ],
+  "release_eligible": false
+}

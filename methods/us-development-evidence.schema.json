@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public US development evidence summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema",
+    "recorded_date",
+    "date_timezone",
+    "kind",
+    "status",
+    "summary",
+    "evidence",
+    "limitations",
+    "sources",
+    "release_eligible"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "./us-development-evidence.schema.json"
+    },
+    "schema": {
+      "const": "microcosm.public_us_development_evidence.v1"
+    },
+    "recorded_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "date_timezone": {
+      "const": "America/New_York"
+    },
+    "kind": {
+      "enum": [
+        "combined_clone_export",
+        "puf_reported_agi_source",
+        "puf_price_refusal",
+        "survey_lineage_preparation",
+        "sipp_annual_panel_preparation"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "release_eligible": {
+      "const": false
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "document",
+          "sha256"
+        ],
+        "properties": {
+          "document": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.-]+$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "public_path": {
+            "type": "string",
+            "pattern": "^/methods/[a-zA-Z0-9_.-]+[.]json$"
+          }
+        }
+      }
+    }
+  }
+}

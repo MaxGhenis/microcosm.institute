@@ -1,0 +1,44 @@
+{
+  "$schema": "./us-development-evidence.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v1",
+  "recorded_date": "2026-09-06",
+  "date_timezone": "America/New_York",
+  "kind": "puf_price_refusal",
+  "status": "GENUINE_PRICE_ATTEMPT_REFUSED_BEFORE_GRAPH",
+  "summary": "The first genuine price-restatement attempt refused before graph execution.",
+  "evidence": {
+    "attempt_at_utc": "2026-09-07T00:16:42.691056+00:00",
+    "helper_head": "43a9f5121fd3cf7ecd7838058697a0cc6fb86b63",
+    "child_refusal": "AGGREGATE_ROSTER",
+    "parent_refusal": "RSS_SAMPLE_INVALID",
+    "genuine_projection_decoded_in_child": true,
+    "genuine_price_graph_executed": false,
+    "completion_exists": false,
+    "store_exists": false,
+    "refusal_context": "The aggregate roster check assumed a delivery order; the parent also reported an invalid RSS sample.",
+    "development_price_convention": {
+      "file_baseline_year": 2015,
+      "price_year": 2024,
+      "index": "retained annual CPI series",
+      "status": "developmental",
+      "original_row_periods_preserved": true,
+      "nominal_income_aging": false
+    }
+  },
+  "limitations": [
+    "No genuine price-restatement output or completed growth is established.",
+    "A bounded helper correction and a new reviewed attempt remain separate work.",
+    "The representative file baseline does not resolve mixed source return years or establish target-period, donor-fit or release admission."
+  ],
+  "sources": [
+    {
+      "document": "us-puf-price-first-genuine-root-refusal-20260906.json",
+      "sha256": "d0575d13af4b3e24cfcc5c41f68440fdfe4dd608b7f6c301814a6dfdbaaa6307"
+    },
+    {
+      "document": "graph-judgment-records-and-receipt-20260906.md",
+      "sha256": "4afb168f96a0ec5291ee2423902127dc278ec128848180346d09a31e3bbd89e7"
+    }
+  ],
+  "release_eligible": false
+}

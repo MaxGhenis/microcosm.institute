@@ -1,0 +1,66 @@
+{
+  "$schema": "./us-development-evidence.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v1",
+  "recorded_date": "2026-09-06",
+  "date_timezone": "America/New_York",
+  "kind": "puf_reported_agi_source",
+  "status": "ROOT_ACCEPTED_GENUINE_THIRTEEN_FIELD_PUF_SOURCE_PROJECTION",
+  "summary": "A distinct genuine raw PUF projection adds reported E00100 AGI to the earlier twelve-field evidence.",
+  "evidence": {
+    "accepted_at_utc": "2026-09-06T23:15:27.164783+00:00",
+    "source_head": "c5c34a048fc38c01840b2da5454385e0a51d1c49",
+    "helper_head": "0614de7f38f6b9281c829ddbd7252cd4bcf8dd94",
+    "artifact_sha256": "621b75e418453e0aae89e4867b6a2e039c45682c2c831c203e68f29f75862690",
+    "status_artifact_sha256": "439ddfe044c2bc8ddc1561d882088dc3141604abc486250910863a41f1b5b714",
+    "source_rows": 207696,
+    "ordinary_rows": 207692,
+    "lexical_aggregate_rows": 4,
+    "projected_fields": [
+      "E00200",
+      "E00300",
+      "E00400",
+      "E00600",
+      "E00650",
+      "E00900",
+      "E01000",
+      "E01500",
+      "E01700",
+      "E02100",
+      "E00100",
+      "P22250",
+      "P23250"
+    ],
+    "reported_agi_is_derived": false,
+    "row_class_rows": {
+      "disclosure_aggregate": 4,
+      "demographic_matched": 119675,
+      "demographic_unmatched": 88017
+    },
+    "row_class_provenance": "Counts come from the retained twelve-field receipt. Its status artifact SHA-256 matches the accepted thirteen-field receipt exactly.",
+    "direct_cold_warm_receipts_agree": true,
+    "cold_calls": 3,
+    "warm_hits": 3,
+    "warm_calls": 0,
+    "root_recomputed_monetary_values": false,
+    "fit_admission": false,
+    "target_period_admission": false
+  },
+  "limitations": [
+    "Acceptance covers extracted source bytes and recorded decoder checks; this site update does not recompute monetary values.",
+    "Source observations and status are retained; the four publisher aggregates remain lexical and are not individual monetary observations.",
+    "Source period, monetary basis, donor features and fit admission, return-to-person allocation and household attachment remain unresolved.",
+    "No completed price restatement, nominal income aging, national or district validation or release admission follows. Prior wages are excluded."
+  ],
+  "sources": [
+    {
+      "document": "us-puf-monetary-agi-source-root-acceptance.json",
+      "sha256": "934e83bea9bb0bbf0c5beec7d3e8fd0d1c030045bb27557f1490e0c12725e4dd"
+    },
+    {
+      "document": "us-puf-monetary-source-v3-20260906.json",
+      "sha256": "250b6d0264d283ee498eed6f71a1b44b41eb9ca6819f7f6b987d5d6ebd9cc361",
+      "public_path": "/methods/us-puf-monetary-source-v3-20260906.json"
+    }
+  ],
+  "release_eligible": false
+}

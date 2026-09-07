@@ -1,0 +1,52 @@
+{
+  "$schema": "./us-development-evidence.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v1",
+  "recorded_date": "2026-09-06",
+  "date_timezone": "America/New_York",
+  "kind": "combined_clone_export",
+  "status": "ROOT_ACCEPTED_GENUINE_COMBINED_CLONE_DASHBOARD_AGGREGATE_EXPORT",
+  "summary": "Accepted aggregate export of the genuine small combined ASEC+ACS whole-household clone run.",
+  "evidence": {
+    "source_head": "1f6ffa7b441701cb2b1254e4bb48241e1e2895de",
+    "helper_head": "de79684b9b18610dad35e45954cad221f1e6a010",
+    "manifest_sha256": "c778d07160ffde5ea9187a3e6d4411fabb1ccbfba22aca8821332554c5adb89b",
+    "base_household_records": 169,
+    "base_people": 383,
+    "expanded_household_rows": 338,
+    "expanded_person_rows": 766,
+    "survey_arms": [
+      "ASEC",
+      "ACS"
+    ],
+    "whole_households_preserved": true,
+    "current_importance_pair_mass_conserved": true,
+    "original_design_anchors_copied_unhalved": true,
+    "independent_survey_support_added": false,
+    "puf_donor_attached": false,
+    "calibration_executed": false,
+    "dashboard_browser_acceptance": false
+  },
+  "limitations": [
+    "This aggregate dashboard export describes 169 base household records, not a 17,004-household clone run or a release file.",
+    "The base record count is not a certified count of independent native survey origins.",
+    "Copied original design anchors double their summed reference mass; future calibration needs grouped parent caps or an explicit allocation to descendants.",
+    "The earlier materializer report tested invented data; the separate acceptance receipt establishes the genuine export. Browser acceptance is not established by these inputs.",
+    "No donor transfer, housing fit, national or congressional-district validation, pruning or release follows. Target standard-error work is deferred."
+  ],
+  "sources": [
+    {
+      "document": "us-combined-clone-dashboard-genuine-root-acceptance-20260906.json",
+      "sha256": "5fd987f4ffa5f241083168f69bc6e88115a84a0659c63a39675452be6b2de2e7"
+    },
+    {
+      "document": "us-combined-clone-dashboard-materializer-recovery-REPORT.md",
+      "sha256": "b9fde0a41712122632d6eada591a5a2cdb65d74804cedc60b17522b3b7dd0f34"
+    },
+    {
+      "document": "us-combined-survey-clone-169hh-20260906.json",
+      "sha256": "b65c379b1966e339be05fb35baed4c7dfc3616513ae70dd4521f7e3eb524b90b",
+      "public_path": "/methods/us-combined-survey-clone-169hh-20260906.json"
+    }
+  ],
+  "release_eligible": false
+}

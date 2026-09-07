@@ -1,0 +1,50 @@
+{
+  "$schema": "./us-development-evidence.schema.json",
+  "schema": "microcosm.public_us_development_evidence.v1",
+  "recorded_date": "2026-09-06",
+  "date_timezone": "America/New_York",
+  "kind": "sipp_annual_panel_preparation",
+  "status": "independently_accepted_prototype_genuine_pilot_not_run",
+  "summary": "The annual-panel prototype and bounded genuine-run preparation have passed invented checks; the genuine SIPP panel pilot has not run.",
+  "evidence": {
+    "source_head": "02e7b2933035ae609187d1c715531ca300ed50d7",
+    "pilot_sample_units": 32,
+    "selection": "First 32 canonical lexical SSUIDs from the eligible December identifier/status index, before monetary interpretation; no selection on income, age or weight.",
+    "panel_span": "all selected SSUID person-month rows, including all ages, movers and non-December residents",
+    "annual_contributors": "December-age15+ contributors, twelve admissible months; missing/structural/unknown universes explicitly withheld; complete subset counts disclosed",
+    "incomplete_coverage_zero_filled": false,
+    "weight_convention": "Mean person-month weight of all December members, including children and zero weights.",
+    "author_tests_passed": 60,
+    "independent_invented_probes_passed": 8,
+    "wrapper_invented_checks_passed": 16,
+    "genuine_source_hash_authenticated": true,
+    "genuine_panel_executed": false,
+    "housing_fit_executed": false,
+    "amount_basis": "nominal 2022"
+  },
+  "limitations": [
+    "Source hash authentication did not parse, select or decode genuine rows and is not a completed panel extraction.",
+    "The panel retains the full selected annual person-month span; December contributor sums are a separate measurement choice, not December income multiplied by twelve.",
+    "Membership, suppressed slots, source status and unknown annual coverage remain explicit. Source instructions and modeling choices are separate evidence.",
+    "No genuine annual-income, fit-accuracy or representative metrics are reported. Cross-survey income and price alignment, housing transfer and validation remain unfinished."
+  ],
+  "sources": [
+    {
+      "document": "us-housing-annual-panel-preparation-REPORT.md",
+      "sha256": "c649236155ce4064cd44573ffb196ec29b48a5b6b229990117bbd1d9f39557bd"
+    },
+    {
+      "document": "us-housing-annual-panel-preparation-REPORT.json",
+      "sha256": "ef56daa414b70b44d9f2bffd9c3585472d1c482eadc9f656895f04b23f58599f"
+    },
+    {
+      "document": "us-housing-annual-panel-independent-review.md",
+      "sha256": "2f1d6100bb14173e66134f7cac989a5dfe7b298549e94012b002294fafaf933a"
+    },
+    {
+      "document": "us-housing-annual-panel-genuine-preparation-REPORT.md",
+      "sha256": "7ee2a91151843b9cceaed954a4d9ae176126a3663d8d716d5e8869e00bc82a69"
+    }
+  ],
+  "release_eligible": false
+}
