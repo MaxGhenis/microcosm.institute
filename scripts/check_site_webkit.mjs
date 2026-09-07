@@ -17,22 +17,34 @@ const endpoints = [
   'https://raw.githubusercontent.com/PolicyEngine/policyengine.py/main/src/policyengine/data/bundle/manifest.json',
   'https://huggingface.co/api/datasets/policyengine/populace-us/refs',
 ];
-// The controlled scenario aborts exactly these three entry points. Ordinary
-// requests can also reach JSON manifests below the same fixed HF release root.
+// Both homepage scripts request latest.json. Abort every attempt to these
+// three entry points; duplicated requests are expected.
 const releaseEndpoints = new Set(endpoints);
+const contractFallback = 'https://raw.githubusercontent.com/PolicyEngine/microcosm/cae8640/packages/microcosm-build/src/microcosm/build/us/release_input_coverage_manifest.json';
 function isReleaseAPI(url) {
-  return releaseEndpoints.has(url) || /^https:\/\/huggingface\.co\/datasets\/policyengine\/populace-us\/resolve\/main\/(?:[A-Za-z0-9_-][A-Za-z0-9._-]*\/)*[A-Za-z0-9_-][A-Za-z0-9._-]*\.json$/.test(url);
+  return releaseEndpoints.has(url) || url === contractFallback || /^https:\/\/huggingface\.co\/datasets\/policyengine\/populace-us\/resolve\/main\/(?:[A-Za-z0-9_-][A-Za-z0-9._-]*\/)*[A-Za-z0-9_-][A-Za-z0-9._-]*\.json$/.test(url);
 }
 function knownReleasePageError(error) {
   // WebKit sometimes renders https:// as "https: /" in this exact CORS error.
   const normalized = String(error).replace(/https:\s*\/\s*\/?/g, 'https://');
-  const url = normalized.match(/^Fetch API cannot load (https:\/\/\S+) due to access control checks\.?$/)?.[1];
+  const complete = normalized.match(/^Fetch API cannot load (https:\/\/\S+) due to access control checks\.?$/)?.[1];
+  // error.message can omit WebKit's error-name prefix, including the scheme.
+  const stripped = normalized.match(/^\/((?:raw\.githubusercontent\.com|huggingface\.co)\/\S+) due to access control checks\.?$/)?.[1];
+  const url = complete || (stripped ? 'https://' + stripped : null);
   return url && isReleaseAPI(url) ? url : null;
 }
+function endpointAccounting(aborted, attempted, settled) {
+  const ordered = (values) => JSON.stringify([...values].sort());
+  return ordered(new Set(aborted)) === ordered(endpoints)
+    && ordered(aborted) === ordered(attempted)
+    && ordered(attempted) === ordered(settled);
+}
 if (process.argv.includes('--check-classification')) {
+  let assertions = 0;
+  const equal = (...args) => { assert.equal(...args); assertions++; };
   const hf = 'https://huggingface.co/datasets/policyengine/populace-us/resolve/main/';
   const accepted = [
-    ...endpoints, hf + 'build_manifest.json',
+    ...endpoints, contractFallback, hf + 'build_manifest.json',
     ...['build_manifest', 'release_manifest', 'gate_summary', 'calibration_diagnostics'].map((name) => hf + `releases/invented-fixture-20000101/${name}.json`),
   ];
   const rejected = [
@@ -43,19 +55,34 @@ if (process.argv.includes('--check-classification')) {
     'http://127.0.0.1:4608/methods/fixture.json',
     endpoints[1].replace('manifest.json', 'other.json'),
     endpoints[2] + '/unrelated',
+    contractFallback.replace('/cae8640/', '/another-ref/'),
   ];
   for (const url of accepted) {
-    assert.equal(isReleaseAPI(url), true, url);
-    assert.equal(knownReleasePageError(`Fetch API cannot load ${url} due to access control checks.`), url);
+    equal(isReleaseAPI(url), true, url);
+    equal(knownReleasePageError(`Fetch API cannot load ${url} due to access control checks.`), url);
+    equal(knownReleasePageError(`${url.replace('https://', '/')} due to access control checks.`), url);
   }
   for (const url of rejected) {
-    assert.equal(isReleaseAPI(url), false, url);
-    assert.equal(knownReleasePageError(`Fetch API cannot load ${url} due to access control checks.`), null);
+    equal(isReleaseAPI(url), false, url);
+    equal(knownReleasePageError(`Fetch API cannot load ${url} due to access control checks.`), null);
+    equal(knownReleasePageError(`${url.replace('https://', '/')} due to access control checks.`), null);
   }
-  assert.equal(knownReleasePageError(`Fetch API cannot load ${endpoints[1].replace('https://', 'https: /')} due to access control checks.`), endpoints[1]);
-  assert.equal(knownReleasePageError(`TypeError in release rendering: ${endpoints[0]}`), null);
-  assert.equal(knownReleasePageError('ReferenceError: releaseRow is not defined'), null);
-  console.log(JSON.stringify({ status: 'passed', scope: 'Offline invented URL/error classification checks', assertions: 2 * (accepted.length + rejected.length) + 3 }, null, 2));
+  equal(knownReleasePageError(`Fetch API cannot load ${endpoints[1].replace('https://', 'https: /')} due to access control checks.`), endpoints[1]);
+  equal(knownReleasePageError(`TypeError in release rendering: ${endpoints[0]}`), null);
+  equal(knownReleasePageError(`ReferenceError: /huggingface.co/api/datasets/policyengine/populace-us/refs due to access control checks.`), null);
+  equal(knownReleasePageError('ReferenceError: releaseRow is not defined'), null);
+  const duplicated = [endpoints[0], ...endpoints];
+  for (const [name, aborted, attempted, settled, expected] of [
+    ['one each', endpoints, endpoints, endpoints, true],
+    ['duplicate requests, different order', duplicated, [...duplicated].reverse(), duplicated, true],
+    ['missing endpoint', endpoints.slice(1), endpoints.slice(1), endpoints.slice(1), false],
+    ['unsettled duplicate', duplicated, duplicated, endpoints, false],
+    ['extra settlement', endpoints, endpoints, duplicated, false],
+    ['unaborted duplicate', endpoints, duplicated, duplicated, false],
+    ['wrong multiplicity', duplicated, duplicated, [...endpoints, endpoints[1]], false],
+    ['unknown endpoint', [...endpoints, 'https://example.com/'], [...endpoints, 'https://example.com/'], [...endpoints, 'https://example.com/'], false],
+  ]) equal(endpointAccounting(aborted, attempted, settled), expected, name);
+  console.log(JSON.stringify({ status: 'passed', scope: 'Offline invented URL/error classification and exact request-accounting checks', assertions }, null, 2));
   process.exit(0);
 }
 
@@ -105,7 +132,7 @@ function observe(page, scenario) {
   const external = scenario === 'controlled unavailable release APIs'
     ? result.controlled_external_failures : result.external_limitations;
   page.on('pageerror', (error) => {
-    const text = String(error.message || error);
+    const text = String(error);
     const url = knownReleasePageError(text);
     if (url) external.push({ scenario, kind: 'release API access control failure', url, error: text });
     else result.page_errors.push({ scenario, page: page.url(), error: text });
@@ -213,13 +240,13 @@ try {
   const scriptResponse = await context.request.get(base + '/releases.js');
   check('controlled unavailable APIs: production release script HTTP', scriptResponse.ok());
   verifyBytes('releases.js', await scriptResponse.body());
-  await page.waitForFunction((known) => known.every((url) => window.__releaseQA.settled.includes(url)), endpoints, { timeout: 15000 });
-  // All three fetches are sequential in releases.js. A subsequent task runs
-  // after the final rejection/catch microtasks, so the async IIFE has finished.
+  await page.waitForFunction((known) => known.every((url) => window.__releaseQA.settled.includes(url))
+    && window.__releaseQA.attempted.length === window.__releaseQA.settled.length, endpoints, { timeout: 15000 });
+  // A subsequent task runs after the final rejection/catch microtasks in both
+  // scripts. Assert exact endpoint coverage and attempt multiplicities below.
   await page.evaluate(() => new Promise((resolve) => setTimeout(resolve, 0)));
   const attempts = await page.evaluate(() => window.__releaseQA);
-  check('controlled unavailable APIs: exact three endpoints aborted', JSON.stringify(aborted) === JSON.stringify(endpoints), aborted);
-  check('controlled unavailable APIs: all three attempts settled', JSON.stringify(attempts.attempted) === JSON.stringify(endpoints) && JSON.stringify(attempts.settled) === JSON.stringify(endpoints), attempts);
+  check('controlled unavailable APIs: exact endpoint set, every attempt aborted and settled', endpointAccounting(aborted, attempts.attempted, attempts.settled), { aborted, ...attempts });
   for (const id of rowIds) {
     const row = page.locator('#' + id);
     check(`controlled unavailable APIs: ${id} unique`, await row.count() === 1);
