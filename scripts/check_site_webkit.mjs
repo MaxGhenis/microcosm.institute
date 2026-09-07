@@ -24,14 +24,24 @@ const contractFallback = 'https://raw.githubusercontent.com/PolicyEngine/microco
 function isReleaseAPI(url) {
   return releaseEndpoints.has(url) || url === contractFallback || /^https:\/\/huggingface\.co\/datasets\/policyengine\/populace-us\/resolve\/main\/(?:[A-Za-z0-9_-][A-Za-z0-9._-]*\/)*[A-Za-z0-9_-][A-Za-z0-9._-]*\.json$/.test(url);
 }
-function knownReleasePageError(error) {
+function knownReleaseRedirect(url, from) {
+  const prefix = 'https://huggingface.co/datasets/policyengine/populace-us/resolve/main/';
+  if (!from?.startsWith(prefix) || !isReleaseAPI(from)) return false;
+  try {
+    const target = new URL(url);
+    const path = target.pathname.match(/^\/api\/resolve-cache\/datasets\/policyengine\/populace-us\/[a-f0-9]{40}\/(.+)$/)?.[1];
+    return target.origin === 'https://huggingface.co' && !target.username && !target.password
+      && Boolean(path) && decodeURIComponent(path) === from.slice(prefix.length);
+  } catch { return false; }
+}
+function knownReleasePageError(error, knownURL = isReleaseAPI) {
   // WebKit sometimes renders https:// as "https: /" in this exact CORS error.
   const normalized = String(error).replace(/https:\s*\/\s*\/?/g, 'https://');
   const complete = normalized.match(/^Fetch API cannot load (https:\/\/\S+) due to access control checks\.?$/)?.[1];
   // error.message can omit WebKit's error-name prefix, including the scheme.
   const stripped = normalized.match(/^\/((?:raw\.githubusercontent\.com|huggingface\.co)\/\S+) due to access control checks\.?$/)?.[1];
   const url = complete || (stripped ? 'https://' + stripped : null);
-  return url && isReleaseAPI(url) ? url : null;
+  return url && knownURL(url) ? url : null;
 }
 function endpointAccounting(aborted, attempted, settled) {
   const ordered = (values) => JSON.stringify([...values].sort());
@@ -71,6 +81,21 @@ if (process.argv.includes('--check-classification')) {
   equal(knownReleasePageError(`TypeError in release rendering: ${endpoints[0]}`), null);
   equal(knownReleasePageError(`ReferenceError: /huggingface.co/api/datasets/policyengine/populace-us/refs due to access control checks.`), null);
   equal(knownReleasePageError('ReferenceError: releaseRow is not defined'), null);
+  const parent = hf + 'releases/invented-fixture/build_manifest.json';
+  const redirect = 'https://huggingface.co/api/resolve-cache/datasets/policyengine/populace-us/'
+    + '1'.repeat(40) + '/releases%2Finvented-fixture%2Fbuild_manifest.json?etag=invented';
+  equal(knownReleaseRedirect(redirect, parent), true);
+  for (const [url, from] of [
+    [redirect, undefined], [redirect, hf + 'latest.json'],
+    [redirect, 'https://example.com/' + parent],
+    [redirect.replace('huggingface.co/', 'huggingface.co.example/'), parent],
+    [redirect.replace('/populace-us/', '/another-dataset/'), parent],
+    [redirect.replace('build_manifest.json', 'different.json'), parent],
+    [redirect.replace('%2Finvented-fixture', '%2F..'), parent],
+    [redirect.replace('releases%2F', '%ZZ'), parent],
+  ]) equal(knownReleaseRedirect(url, from), false);
+  equal(knownReleasePageError(`Fetch API cannot load ${redirect} due to access control checks.`), null);
+  equal(knownReleasePageError(`Fetch API cannot load ${redirect} due to access control checks.`, (url) => knownReleaseRedirect(url, parent)), redirect);
   const duplicated = [endpoints[0], ...endpoints];
   for (const [name, aborted, attempted, settled, expected] of [
     ['one each', endpoints, endpoints, endpoints, true],
@@ -131,21 +156,26 @@ function verifyBytes(filename, bytes) {
 function observe(page, scenario) {
   const external = scenario === 'controlled unavailable release APIs'
     ? result.controlled_external_failures : result.external_limitations;
+  const observedReleaseRedirects = new Set();
+  page.on('request', (request) => {
+    if (knownReleaseRedirect(request.url(), request.redirectedFrom()?.url())) observedReleaseRedirects.add(request.url());
+  });
+  const knownURL = (url) => isReleaseAPI(url) || observedReleaseRedirects.has(url);
   page.on('pageerror', (error) => {
     const text = String(error);
-    const url = knownReleasePageError(text);
+    const url = knownReleasePageError(text, knownURL);
     if (url) external.push({ scenario, kind: 'release API access control failure', url, error: text });
     else result.page_errors.push({ scenario, page: page.url(), error: text });
   });
   page.on('requestfailed', (request) => {
     const item = { scenario, url: request.url(), error: request.failure()?.errorText };
-    if (isReleaseAPI(item.url)) external.push({ ...item, kind: 'release API request failure' });
+    if (knownURL(item.url)) external.push({ ...item, kind: 'release API request failure', ...(observedReleaseRedirects.has(item.url) ? { redirected_from: request.redirectedFrom()?.url() } : {}) });
     else result.failed_requests.push(item);
   });
   page.on('response', (response) => {
     if (response.status() < 400) return;
     const item = { scenario, url: response.url(), status: response.status() };
-    if (isReleaseAPI(item.url)) external.push({ ...item, kind: 'release API HTTP failure' });
+    if (knownURL(item.url)) external.push({ ...item, kind: 'release API HTTP failure' });
     else result.bad_responses.push(item);
   });
 }
