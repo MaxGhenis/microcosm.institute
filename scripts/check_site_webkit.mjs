@@ -238,7 +238,13 @@ try {
       await page.evaluate(() => document.fonts.ready);
       const node = page.locator(selector);
       check(`${width} screenshot ${label} unique`, await node.count() === 1);
-      await node.scrollIntoViewIfNeeded();
+      await node.evaluate((element) => element.scrollIntoView({ block: 'center', behavior: 'instant' }));
+      const placement = await node.evaluate((element) => {
+        const box = element.getBoundingClientRect();
+        const nav = document.querySelector('header.nav')?.getBoundingClientRect();
+        return { top: box.top, bottom: box.bottom, navBottom: nav?.bottom ?? 0, viewportHeight: innerHeight };
+      });
+      check(`${width} screenshot ${label} fully visible below navigation`, placement.top >= placement.navBottom && placement.bottom <= placement.viewportHeight, placement);
       const filename = `${label}-${width}.png`;
       await node.screenshot({ path: join(output, filename) });
       result.screenshots.push({ file: filename, sha256: sha256(readFileSync(join(output, filename))) });
