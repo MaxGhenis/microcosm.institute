@@ -1,3 +1,39 @@
+# US evidence follow-up — September 7, 2026
+
+## State
+
+Bounded local continuation in a fresh sibling from committed `73664b0`.
+The original worktree, failed QA and previews on ports 4596 and 4607 remain
+untouched. No source execution, dependencies, merge, push, PR or deployment.
+
+## Done
+
+- Read the continuation assignment and its three named root receipts.
+- Confirmed the previous worktree is clean at
+  `73664b027d85377361d645d9a90155de21cd7218`.
+- Attempted the live default-branch lookup and fetch. Both failed because
+  GitHub DNS could not resolve. Cached `origin/master` remains
+  `f97322f17f62cac9f1d541c5ccc71d2ac0b3ac0b`; current upstream is unverified.
+- Created this fresh sibling without merging or modifying the prior branch.
+- Verified the supplied SIPP and clone UI receipt SHA-256 values. The earlier
+  site WebKit receipt contains 35 passing mobile checks, then an ambiguous
+  screenshot selector failure; it does not establish complete browser QA.
+
+## Next
+
+- Add distinct public receipts for the genuine SIPP diagnostic pilot and clone
+  dashboard browser acceptance, preserving all earlier evidence.
+- Update only affected progress and methods/paper claims. Genuine 17-node
+  integration remains pending and PUF price restatement remains refused.
+- Fix the owned WebKit harness's diagram selector and distinguish unavailable
+  external release APIs from local failures. Check unavailable-network fallback.
+- Run focused local checks, freeze commits and emit the follow-up reports with
+  exact identities, limitations and pending root browser QA.
+
+---
+
+## Previous completed update (preserved)
+
 # US site evidence update — September 6, 2026
 
 ## State
